@@ -1,0 +1,98 @@
+.navbar-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98px;
+    width: 100%;
+    max-width: 1940px;
+    background: linear-gradient(165deg,#1C1C1C 35% ,#08463B);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .menu{
+        height: 26px;
+        width: 409px;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        .change-language-wrapper{
+            height: 28px;
+            width: 84px;
+            border: solid 1px #3DCFB6;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            .language{
+                height: 28px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 120%;
+                letter-spacing: 0%;
+                color: #3DCFB6;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .choosen-language{
+                width: 44px;
+                background-color: #3DCFB6;
+                border-radius: 100px;
+                font-weight: 700;
+                color: #FFFFFF;
+            }
+
+        }
+
+        a{
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: -3%;
+           
+        }
+
+    }
+    .initals{
+        height: 48px;
+        width: 132px;
+        display: flex;
+        align-items: center;
+
+        .span-wrapper{
+            display: flex;
+            flex-direction: column;
+            color: #3DCFB6;
+            font-size: 32px;
+            .first{
+                margin-bottom: -10px;
+            }
+            .second{
+                margin-top: -6px;
+            }
+            
+        }
+        .full-name{
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 400;
+            gap: 0;
+
+            span{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+    }
+
+}
