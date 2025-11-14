@@ -2,8 +2,12 @@ body{
     height: 100vh;
     width: 100%;
     max-width: 1940px;
+
     
 }
+
+$font: 'FiraCode';
+$Karla: 'Karla';
 
 .landingpage-content{
     height: 100vh;
@@ -27,13 +31,15 @@ body{
 
         h1{
             color: rgba(217, 217, 217, 1);
-            font-size: 100px;
+            font-family: $font;
+            font-size: 90px;
             font-weight: 700;
             font-style: bold;
             letter-spacing: -2%;
             line-height: 128px;
         }
         h3{
+            font-family: $font;
             font-size: 40px;
             color: #ffffff;
             font-weight: 400;
@@ -54,6 +60,7 @@ body{
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 100px;
+            font-family: $Karla;
             &:hover{
                 cursor: pointer;
             }
@@ -68,7 +75,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        border: 1px solid white;
+        //border: 1px solid white;
 
     }
     .left-lateral{
@@ -100,20 +107,29 @@ body{
         //bottom: 0;
         //left: 1312px;
         height: 480px;
-        width: 32px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 24px;
 
-        .mail{
+        .mail-wrapper{
             writing-mode: vertical-lr;
-            text-orientation: mixed;
-            height: auto;
-            width: 22px;
-            color: #ffffff;
-            //rotate: -90deg;
+            transform: rotate(180deg);
+            font-family: $font;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+           
+            .mail{
+                color: #ffffff;
+                text-decoration: none;
+                &:hover{
+                    color: #3DCFB6;
+                }
+            }
         }
+
+        
 
         img{
             height: 32px;

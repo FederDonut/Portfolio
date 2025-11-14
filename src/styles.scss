@@ -2,5 +2,56 @@
 *{
     margin: 0;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
+}
+
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'FiraCode';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./../public/assets/fonts/FiraCode-Regular.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'FiraCode';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../public/assets/fonts/FiraCode-Bold.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'FiraCode';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./../public/assets/fonts/FiraCode-Light.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./../public/assets/fonts/Karla-Bold.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./../public/assets/fonts/Karla-Regular.ttf');
+}
+
+
+.fontFiraCode {
+    font-family: 'FiraCode';
+}
+
+.fontKarla{
+    font-family: 'Karla';
 }
