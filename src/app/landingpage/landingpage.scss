@@ -56,14 +56,36 @@ $Karla: 'Karla';
         button{
             height: 48px;
             width: 172px;
-            color: #ffffff;
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 100px;
-            font-family: $Karla;
+            display: flex;
+            align-content: center;
+            transition: border-color 2s ease;
+            //overflow-x: auto;
+
+                       
             &:hover{
                 cursor: pointer;
+                border-color: #3DCFB6;
             }
+            .btn-content{
+                flex-grow: 1;
+                height: 100%;
+                width: 100%;
+                color: #ffffff;
+                font-family: $Karla;
+                transition: color 2s ease, transform 2s ease;
+               
+            }
+            &:hover .btn-content{
+                color: #3DCFB6;
+                transform: translateX(-100%);    
+            }
+            //@keyframes spin {
+            //    from {translate: 0;}
+            //    to {translate: -100%;}
+            //}
         }  
     }
     
@@ -117,7 +139,7 @@ $Karla: 'Karla';
             transform: rotate(180deg);
             font-family: $font;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 14px;//18px
             line-height: 120%;
            
             .mail{
@@ -140,6 +162,23 @@ $Karla: 'Karla';
             width: 1px;
             background-color: #ffffff;
         }
+    }
+
+    .carousel{
+        position: fixed;
+        bottom: 42px;
+        left: -21px;
+        z-index: 1 !important;
+        height: 62px;
+        width: 1990px;
+        rotate: -2.5deg;
+        //background-color: aliceblue;
+        background-color: #FFFFFF1F;
+        backdrop-filter: blur(5.3px);
+        -webkit-backdrop-filter: blur(5.3px);
+        //background: blur 5.3;
+        opacity: 0.8;
+        
     }
 
     
