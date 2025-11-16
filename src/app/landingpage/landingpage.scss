@@ -59,33 +59,64 @@ $Karla: 'Karla';
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 100px;
+            overflow-x: hidden; 
             display: flex;
-            align-content: center;
-            transition: border-color 2s ease;
-            //overflow-x: auto;
-
-                       
+            justify-content: center;
+            align-items: center;          
             &:hover{
                 cursor: pointer;
                 border-color: #3DCFB6;
             }
-            .btn-content{
-                flex-grow: 1;
+            .btn-content-wrapper-one{
                 height: 100%;
-                width: 100%;
-                color: #ffffff;
-                font-family: $Karla;
-                transition: color 2s ease, transform 2s ease;
-               
+                width: min-content;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                transform: translateX(95px);
+                transition: transform 0.3s ease;
+                gap: 100px;
+
+                .btn-content{
+                    color: #ffffff;
+                    font-family: $Karla;
+                    flex-shrink: 0;
+                    p{
+                        white-space: nowrap;
+                    }
+                }
+                &:hover .btn-content{
+                    color: #3DCFB6;
+                    animation: btn-spin 2s infinite linear;   
+                }
             }
-            &:hover .btn-content{
-                color: #3DCFB6;
-                transform: translateX(-100%);    
+            .btn-content-wrapper-two{
+                height: 100%;
+                width: min-content;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                transform: translateX(70px);
+                transition: transform 0.3s ease;
+                gap: 70px;
+
+                .btn-content{
+                    color: #ffffff;
+                    font-family: $Karla;
+                    flex-shrink: 0;
+                    p{
+                        white-space: nowrap;
+                    }
+                }
+                &:hover .btn-content{
+                    color: #3DCFB6;
+                    animation: btn-spin 2s infinite linear;   
+                }
             }
-            //@keyframes spin {
-            //    from {translate: 0;}
-            //    to {translate: -100%;}
-            //}
+        }
+        @keyframes btn-spin {
+            from {translate: 0;}
+            to {translate: -200%;}
         }  
     }
     
@@ -172,13 +203,62 @@ $Karla: 'Karla';
         height: 62px;
         width: 1990px;
         rotate: -2.5deg;
-        //background-color: aliceblue;
         background-color: #FFFFFF1F;
         backdrop-filter: blur(5.3px);
         -webkit-backdrop-filter: blur(5.3px);
-        //background: blur 5.3;
         opacity: 0.8;
         
+        overflow-x: hidden;
+        .carousel-wrapper{
+            height: 100%;
+            width: max-content;
+            animation: spin 9s infinite linear;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 56px;
+
+            .carousel-elements{
+                height: 38px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 56px;
+                
+                .c-content{ 
+                    flex-shrink: 0;
+                    height: 100%;
+                    width: auto;
+                    color: #3DCFB6;
+                    font-size: 32px;
+                    font-weight: 400;
+                    font-family: $Karla;
+                    letter-spacing: 0%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    p{
+                        white-space: nowrap;
+                    }
+                }
+                .point{ 
+                    flex-shrink: 0;
+                    height: 6.4px;
+                    width: 6.4px;
+                    background-color: #3DCFB6;
+                    border-radius: 50%;
+                }
+
+            }
+        }
+        @keyframes spin {
+            from {translate: 0;}
+            to {translate: -50%;}
+        }
+        
+    }
+    .carousel::-webkit-scrollbar{
+        display: none;
     }
 
     
