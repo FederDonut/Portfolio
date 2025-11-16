@@ -148,6 +148,24 @@ $Karla: 'Karla';
             background: transparent;
             border: 1px solid #3DCFB6;
             border-radius: 32px;
+
+            .arrow{
+                height: 100%;
+                width: 100%;
+                background-image: url(./../../../public/assets/img/Vector\ 8.png);
+                background-position: center;
+                background-size: 8px;
+                background-repeat: no-repeat;
+            
+                animation: bounce 2s infinite ease-in-out
+                
+
+            }
+            @keyframes bounce {
+                0% {transform:  translateY(0);}
+                50% {transform: translateY(20%)}
+                100% {transform:  translateY(0);}
+            }
         }
         .green-line{
             width: 1px;
