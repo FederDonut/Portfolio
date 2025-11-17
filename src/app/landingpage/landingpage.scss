@@ -121,7 +121,7 @@ $Karla: 'Karla';
     }
     
     .lateral-space{
-        position: fixed;
+        position: absolute;
         bottom: 0;
         width: 85%;
         height: 480px;
@@ -214,12 +214,12 @@ $Karla: 'Karla';
     }
 
     .carousel{
-        position: fixed;
+        position: absolute;
         bottom: 42px;
         left: -21px;
         z-index: 1 !important;
         height: 62px;
-        width: 1990px;
+        width: 100%;//1990
         rotate: -2.5deg;
         background-color: #FFFFFF1F;
         backdrop-filter: blur(5.3px);

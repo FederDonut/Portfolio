@@ -2,13 +2,15 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Landingpage } from './landingpage/landingpage';
+import { AboutMe } from './about-me/about-me';
 
 @Component({
   selector: 'app-root',
   imports: [
     CommonModule,
     RouterOutlet, 
-    Landingpage,
+    
+    AboutMe,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
