@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Landingpage } from './landingpage/landingpage';
 import { AboutMe } from './about-me/about-me';
+import { Technologies } from './technologies/technologies';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { AboutMe } from './about-me/about-me';
     RouterOutlet, 
     
     AboutMe,
+    Technologies,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

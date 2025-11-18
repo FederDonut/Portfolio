@@ -1,0 +1,33 @@
+$font: 'FiraCode';
+$Karla: 'Karla';
+
+.technologies{
+    height: 695px;
+    width: 100%;
+    //background: radial-gradient(circle 80% at 0% 50%, #08463B4D 30%, #1C1C1C 75%);
+    //background-color: black;
+    //display: flex;
+
+    .skill-set-wrapper{
+        height: 551px;
+        width: 520px;
+        //border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3{
+            color: #3DCFB6;
+            font-size: 24px;
+            font-family: $Karla;
+        }
+
+        .skill-set-content{
+            height: 503px;
+            width: 100%;
+            border: 1px solid #3DCFB6;
+            border-radius: 30px;
+        }
+    }
+
+}
