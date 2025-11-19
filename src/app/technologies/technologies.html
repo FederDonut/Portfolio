@@ -10,6 +10,7 @@
     <div class="skill-imgs-wrapper">
         @for (item of techStackImg; track item.titel; let index = $index) {
             <div class="imgWrapper">
+                <div class="img" [style.--bg-image]="'url('+item.source+')'"></div>
                 <p>{{index}} {{item.titel}}</p>
             </div>
         }

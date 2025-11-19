@@ -9,10 +9,10 @@ import { CommonModule } from '@angular/common';
 })
 export class Technologies {
 
-  imgPath: string = "./../../public/assets/img/techImgs/Tech_icons"
+  imgPath: string = "assets/img/techImgs/Tech_icons"
   
   techStackImg = [
-    { titel: 'HTML', source: this.imgPath+'HTMl.png'},
+    { titel: 'HTML', source: this.imgPath+'HTML.png'},
     { titel: 'CSS', source: this.imgPath+'CSS.png'},
     { titel: 'JS', source: this.imgPath+'JS.png'},
     { titel: 'Material Design', source: this.imgPath+'Material.png'},
