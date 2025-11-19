@@ -1,7 +1,19 @@
+
+
+
+    
 <section class="technologies">
     <div class="skill-set-wrapper">
         <h3>Technologies</h3>
         <div class="skill-set-content"></div>
     </div>
-    <div class="skill-imgs-wrapper"></div>
+    <div class="skill-imgs-wrapper">
+        @for (item of techStackImg; track item.titel; let index = $index) {
+            <div class="imgWrapper">
+                <p>{{index}} {{item.titel}}</p>
+            </div>
+        }
+    </div>
 </section>
+
+    
