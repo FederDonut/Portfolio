@@ -33,8 +33,54 @@ $Karla: 'Karla';
             .skill-set-content{
                 height: 503px;
                 width: 100%;
+                background-color: rgb(31, 46, 43);
+                opacity: 0.9;
                 border: 1px solid #3DCFB6;
                 border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+
+                .headline{
+                    height: 64px;
+                    width: 80%;
+                    h1{
+                        font-size: 64px;
+                        color: #3DCFB6;
+                        font-family: $font;
+                    }
+                }
+                .skill-content{
+                    height: 247px;
+                    width: 80%;
+                    font-size: 16px;
+                    font-family: $Karla;
+                    color: #FFFFFF;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                }
+                .btn-wrapper{
+                    height: 48px;
+                    width: 80%;
+                    display: flex;
+
+                    .lets-talk{
+                        color: #FFFFFF;
+                        height: 48px;
+                        width: 122px;
+                        border: 1px solid #FFFFFF;
+                        border-radius: 100px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                }
+               
             }
         }
         
@@ -57,13 +103,25 @@ $Karla: 'Karla';
                 justify-content: center;
                 gap: 8px;
 
+                .titels{
+                    //font-family: $font; muss noch angepasst werden 
+                    font-size: 18px;
+                    
+                }
+                .img{
+                    height: 64px;
+                    width: 64px;
+                    background-image: var(--bg-image);
+                    background-position:center ;
+                    background-size: cover;
+                    transition: transform 1s;
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        transition: 1s;
+                    }
+                }
             }
-            .img{
-                height: 64px;
-                width: 64px;
-                background-image: var(--bg-image);
-                background-position:center ;
-                background-size: cover;
-            }
+            
         }
     }
