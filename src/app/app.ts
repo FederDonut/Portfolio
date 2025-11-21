@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { Landingpage } from './landingpage/landingpage';
 import { AboutMe } from './about-me/about-me';
 import { Technologies } from './technologies/technologies';
+import { Projects } from './projects/projects';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { Technologies } from './technologies/technologies';
     
     AboutMe,
     Technologies,
+    Projects,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
