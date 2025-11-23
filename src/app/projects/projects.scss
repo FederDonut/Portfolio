@@ -6,98 +6,250 @@ $Karla: 'Karla';
 .projects{
     height: 581px;
     width: 100%;
-    background-color: rgb(28, 28, 28);
+    //min-width: 1940px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    gap: 41px;
     
+    
+
     .project-wrapper{
-        position: relative;
-        height: 95%;
-        width: 100%;
+        height: 565px;
+        width: 622px;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         gap: 41px;
-        //margin-left: 13%;
-        //margin-top: 8px;
+       
 
-        .top-wrapper{
-            height: 40%;
-            width: 100%;
-
-            h3{
-                color: #3DCFB6;
-                font-size: 24px;
-                font-family: $Karla;
-            }
-            h1{
-                color: #3DCFB6;
-                font-size: 64px;
-                font-family: $font;
-            }
-            p{
-                color: #FFFFFF;
-                font-size: 18px;
-                font-family: $Karla;
-            }
+        .headline-wrapper{
+            height: 112px;
+            width: 622px;
         }
-        .bottom-wrapper{
-            height: 60%;
+        .description{
+            height: 44px;
+            width: 456px;
+        }
+        .portfolio{
+            height: auto;
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            .portfolio{
-                height: auto;
-                width: 880px;
-                display: flex;
-                flex-direction: column;
-                
-                .portfolio-wrapper{
-                    height: 109px;
-                    width: 100%;
-                    border-top: 1px solid #3DCFB6;
-                    border-bottom: 1px solid #3DCFB6;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding-left: 5%;
-                    padding-right: 5%;
-                    &:hover{
-                        cursor: pointer;
-                        background-color: rgb(33, 82, 72);
-                    }
-                
-                    h2{
-                        color: #FFFFFF;
-                        font-size: 24px;
-                        font-family: $font;
-                    
-                    }
-                    .technologies{
-                        height: 22px;
-                        width: auto;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 4px;
-                    
-                        .separator{
-                            height: 100%;
-                            width: 2px;
-                            background-color: #3DCFB6;
-                        }
+            border-top: 1px solid #3DCFB6;
+            border-bottom: 1px solid #3DCFB6;
 
+            .seperator{
+                height: 1px;
+                width: 100%;
+                background-color: #3DCFB6;
+            }
+            .portfolio-projects{
+                height: 109px;
+                width: 100%;
+                
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                .technologies{
+                    height: 22px;
+                    width: auto;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 4px;
+
+
+                    .vertical-seperator{
+                        height: 100%;
+                        width: 1px;
+                        background-color: #3DCFB6;
                     }
                 }
-                .project-preview{
-                    height: 250px;
-                    width: 250px;
-                    border-radius: 5px;
-                    border: 1px solid white;
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(63, 178, 155);
                 }
             }
             
         }
-    } 
+    }
+
+    .project-preview{
+        
+        position: relative;
+        height: 530px;
+        width: 18%;
+        //border: 1px solid red;
+        display: flex;
+        align-items: flex-end;
+
+        .preview-img{
+            //display: none;
+            position: absolute;
+            height: 240px;
+            width: 380px;
+            margin-bottom: 60px;
+            border-radius: 10px;
+            background-size: cover;
+            z-index: 1;
+
+        }
+
+        .preview-shadow{
+            //display: none;
+            position: absolute;
+            height: 240px;
+            width: 400px;
+            margin-bottom: 40px;
+            left: 0px;
+            border-radius: 10px;
+            background: repeating-linear-gradient(-45deg,#3DCFB6 0px,#3DCFB6 1px,transparent 1px,transparent 8px)
+        }
+    }
     
 }
+
+//.projects{
+//    height: 581px;
+//    width: 100%;
+//    background-color: rgb(28, 28, 28);
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    
+//    .project-wrapper{
+//        position: relative;
+//        height: 95%;
+//        width: 880px;
+//        display: flex;
+//        flex-direction: column;
+//        gap: 41px;
+//        //margin-left: 13%;
+//        //margin-top: 8px;
+//
+//        .top-wrapper{
+//            height: 40%;
+//            width: auto;
+//            margin-left: 13%;
+//
+//            h3{
+//                color: #3DCFB6;
+//                font-size: 24px;
+//                font-family: $Karla;
+//            }
+//            h1{
+//                color: #3DCFB6;
+//                font-size: 64px;
+//                font-family: $font;
+//            }
+//            p{
+//                color: #FFFFFF;
+//                font-size: 18px;
+//                font-family: $Karla;
+//            }
+//            .portfolio{
+//                height: auto;
+//                width: 880px;
+//                display: flex;
+//                flex-direction: column;
+//
+//                .portfolio-project{
+//                    height: 109px;
+//                    width: 100%;
+//                    border-top: 1px solid #3DCFB6;
+//                    border-bottom: 1px solid #3DCFB6;
+//                    display: flex;
+//                    align-items: center;
+//                    justify-content: space-between;
+//                    padding-left: 5%;
+//                    padding-right: 5%;
+//                    &:hover{
+//                        cursor: pointer;
+//                        background-color: rgb(33, 82, 72);
+//                    }
+//                
+//                    h2{
+//                        color: #FFFFFF;
+//                        font-size: 24px;
+//                        font-family: $font;
+//                    
+//                    }
+//                    .technologies{
+//                        height: 22px;
+//                        width: auto;
+//                        display: flex;
+//                        flex-direction: row;
+//                        align-items: center;
+//                        gap: 4px;
+//                    
+//                        .separator{
+//                            height: 100%;
+//                            width: 2px;
+//                            background-color: #3DCFB6;
+//                        }
+//
+//                    }
+//                }
+//                
+//            }
+//        }
+        //.bottom-wrapper{
+        //    height: 60%;
+        //    width: 100%;
+        //    display: flex;
+        //    flex-direction: row;
+        //    .portfolio{
+        //        height: auto;
+        //        width: 880px;
+        //        display: flex;
+        //        flex-direction: column;
+        //        
+        //        .portfolio-wrapper{
+        //            height: 109px;
+        //            width: 100%;
+        //            border-top: 1px solid #3DCFB6;
+        //            border-bottom: 1px solid #3DCFB6;
+        //            display: flex;
+        //            align-items: center;
+        //            justify-content: space-between;
+        //            padding-left: 5%;
+        //            padding-right: 5%;
+        //            &:hover{
+        //                cursor: pointer;
+        //                background-color: rgb(33, 82, 72);
+        //            }
+        //        
+        //            h2{
+        //                color: #FFFFFF;
+        //                font-size: 24px;
+        //                font-family: $font;
+        //            
+        //            }
+        //            .technologies{
+        //                height: 22px;
+        //                width: auto;
+        //                display: flex;
+        //                flex-direction: row;
+        //                align-items: center;
+        //                gap: 4px;
+        //            
+        //                .separator{
+        //                    height: 100%;
+        //                    width: 2px;
+        //                    background-color: #3DCFB6;
+        //                }
+//
+        //            }
+        //        }
+        //        .project-preview{ // hier ansetzen
+        //            height: 250px;
+        //            width: 250px;
+        //            border-radius: 5px;
+        //            border: 1px solid white;
+        //        }
+        //    }
+        //    
+        //}
+//    } 
+//    
+//}

@@ -1,14 +1,115 @@
 
 <section class="projects">
     <div class="project-wrapper">
+        <div class="headline-wrapper">
+            <h3>Portfolio</h3>
+            <h1>Featured Projects</h1>
+        </div>
+        <div class="description">
+            <p>
+                Explore a selection of my work here 
+                - Interact with<br> projects to see my skills in action.
+            </p>    
+        </div>
+        <div class="portfolio">
+            <div 
+                (mouseover)="identifyProject('Join')"
+                (mouseout)="clearProjectName()" 
+                class="portfolio-projects"> 
+                <h2>Join</h2>
+                <div class="technologies">
+                    <p>Angular</p>
+                    <div class="vertical-seperator"></div>
+                    <p>TypeScript</p>
+                    <div class="vertical-seperator"></div>
+                    <p>HTML</p>
+                    <div class="vertical-seperator"></div>
+                    <p>CSS</p>
+                    <div class="vertical-seperator"></div>
+                    <p>Firebase</p>
+                </div>
+            </div>
+
+            <div class="seperator"></div>
+            
+            <div
+                (mouseover)="identifyProject('El-Pollo-Loco')"
+                (mouseout)="clearProjectName()"  
+                class="portfolio-projects">
+                <h2>EL Pollo Loco</h2>
+                <div class="technologies">
+                    <p>HTML</p>
+                    <div class="vertical-seperator"></div>
+                    <p>CSS</p>
+                    <div class="vertical-seperator"></div>
+                    <p>JavaScript</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="project-preview">
+        <div 
+            class="preview-shadow"
+            [ngStyle]="{'display': project === 'Join' || project === 'El-Pollo-Loco' ? 'block':'none',
+            }"></div>
+        <div 
+            class="preview-img"
+            [ngStyle]="{'display': project === 'Join' || project === 'El-Pollo-Loco' ? 'block':'none',
+                'background-image': getBackgroundImage()
+            }">
+            </div>   
+    </div>
+
+</section>
+
+
+
+
+<!--<section class="projects">
+    <div class="project-wrapper">
         <div class="top-wrapper">
             <h3>Portfolio</h3>
             <h1>Featured Projects</h1>
             <p>Explore a selection of my work here 
                 - Interact with<br> projects to see my skills in action.
             </p>
+        
+            <div class="portfolio">
+                <div class="portfolio-project">
+
+                    <h2>Join</h2>
+                    <div class="technologies">
+                        <p>Angular</p>
+                        <div class="separator"></div>
+                        <p>TypeScript</p>
+                        <div class="separator"></div>
+                        <p>HTML</p>
+                        <div class="separator"></div>
+                        <p>CSS</p>
+                        <div class="separator"></div>
+                        <p>Firebase</p>
+                    </div>
+                </div>
+                <div class="portfolio-project">
+
+                    <h2>EL Pollo Loco</h2>
+                    <div class="technologies">
+                        <p>HTML</p>
+                        <div class="separator"></div>
+                        <p>CSS</p>
+                        <div class="separator"></div>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
         </div>
-       <div class="bottom-wrapper">
+
+
+      <div class="bottom-wrapper">
 
             <div class="portfolio">  
                 <div class="portfolio-wrapper">
@@ -46,4 +147,4 @@
     </div>
    
 
-</section>
+</section>-->
