@@ -1,0 +1,99 @@
+
+
+$font: 'FiraCode';
+$Karla: 'Karla';
+
+
+.content-wrapper{
+    height: 452px;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    h3{
+        color: #3DCFB6;
+        font-size: 32px;
+        font-weight: 700;
+        font-family: $font;
+    }
+    .comment-wrapper{
+        
+        height: 362px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+
+        .carousel{
+            
+            height: 274px;
+            width: 100%;
+            overflow-x: auto;
+            display: flex;
+            //justify-content: center;
+            gap: 64px;
+            scroll-behavior: smooth;
+
+
+            .comment{
+                flex: 0 0 632px;
+                height: 100%;
+                width: 632px;
+                border: 1px solid #3DCFB6;
+                border-radius: 32px;
+                background-color: rgb(38, 82, 75);
+            }
+        }
+        .carousel::-webkit-scrollbar{
+            display: none;
+        }
+        //.carousel::scroll-button(right), .carousel::scroll-button(left){
+        //    content: url(/assets/img/arrow_back.png);
+        //    border: none;            
+        //    cursor: pointer;
+        //    height: 40px;
+        //    width: 40px;
+        //    display: flex;
+        //    justify-content: center;
+        //    align-items: center;
+        //    background-color: rgb(28, 28, 28);
+//
+        //}
+        //.carousel::scroll-button(left){
+        //    content: url(/assets/img/arrow_forward.png);
+        //}
+        .menu-wrapper{
+            height: 40px;
+            width: 184px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .scroll-btn{
+                 .carousel::scroll-button(left){
+                    cursor: pointer;
+                }
+                
+                
+
+            }
+            .left{
+               
+            }
+            .elipse{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #FFFFFF;
+            }
+
+        }
+    }
+
+}

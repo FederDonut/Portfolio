@@ -5,6 +5,7 @@ import { Landingpage } from './landingpage/landingpage';
 import { AboutMe } from './about-me/about-me';
 import { Technologies } from './technologies/technologies';
 import { Projects } from './projects/projects';
+import { OthersAboutMe } from './others-about-me/others-about-me';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { Projects } from './projects/projects';
     AboutMe,
     Technologies,
     Projects,
+    OthersAboutMe,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
