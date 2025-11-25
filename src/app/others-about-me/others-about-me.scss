@@ -35,8 +35,9 @@ $Karla: 'Karla';
             height: 274px;
             width: 100%;
             overflow-x: auto;
+            transition: transform 1s ease-in-out;
             display: flex;
-            //justify-content: center;
+            justify-content: center;
             gap: 64px;
             scroll-behavior: smooth;
 
@@ -48,6 +49,9 @@ $Karla: 'Karla';
                 border: 1px solid #3DCFB6;
                 border-radius: 32px;
                 background-color: rgb(38, 82, 75);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
         .carousel::-webkit-scrollbar{
@@ -76,23 +80,21 @@ $Karla: 'Karla';
             justify-content: space-evenly;
 
             .scroll-btn{
-                 .carousel::scroll-button(left){
+                &:hover{
                     cursor: pointer;
                 }
                 
-                
-
             }
-            .left{
-               
-            }
+           
             .elipse{
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
                 background-color: #FFFFFF;
             }
-
+            .active{
+                background-color: #3DCFB6 !important;
+            }
         }
     }
 

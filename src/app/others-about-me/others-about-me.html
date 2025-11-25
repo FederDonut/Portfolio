@@ -3,17 +3,20 @@
     <h3>What my colleagus say about me</h3>
     
     <div class="comment-wrapper">
-        <div class="carousel">
-            <div class="comment"></div>
-            <div class="comment"></div>
-            <div class="comment"></div>
+        <div class="carousel" [style.transform]="getTransformStyle()" >
+            <div *ngFor="let comment of comments; let i = index " class="comment">
+                <p>text</p>
+                {{i}}
+            </div>
+        
         </div>
         <div class="menu-wrapper">
-            <img class="scroll-btn left" src="/assets/img/arrow_back.png" alt="">
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <div class="elipse"></div>
-            <img class="scroll-btn right" src="/assets/img/arrow_forward.png" alt="">
+            <img (click)="slideLeft()" class="scroll-btn" src="/assets/img/arrow_back.png" alt="">
+            <div *ngFor="let comment of comments; let i = index" class="elipse"
+                    [class.active]="i === currentIndex"
+            ></div>
+            
+            <img (click)="slideRight()" class="scroll-btn" src="/assets/img/arrow_forward.png" alt="">
         </div>
     </div>
 </section>
