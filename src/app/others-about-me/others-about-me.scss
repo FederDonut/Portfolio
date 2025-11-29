@@ -20,84 +20,25 @@ $Karla: 'Karla';
         font-weight: 700;
         font-family: $font;
     }
-    .comment-wrapper{
-        
-        height: 362px;
+
+   
+
+    swiper-container{
+        height: 274px;
         width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-
-        .carousel{
+        
+    
+        swiper-slide{
+            height: 100%;
+            width: 85%;
+            color: white;
+            object-fit: cover;
+            display: block;
+            border: 1px solid white;
+        }
+        
             
-            height: 274px;
-            width: 100%;
-            overflow-x: auto;
-            transition: transform 1s ease-in-out;
-            display: flex;
-            justify-content: center;
-            gap: 64px;
-            scroll-behavior: smooth;
-
-
-            .comment{
-                flex: 0 0 632px;
-                height: 100%;
-                width: 632px;
-                flex-shrink: 0;
-                border: 1px solid #3DCFB6;
-                border-radius: 32px;
-                background-color: rgb(38, 82, 75);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        //.carousel::-webkit-scrollbar{
-        //    display: none;
-        //}
-        //.carousel::scroll-button(right), .carousel::scroll-button(left){
-        //    content: url(/assets/img/arrow_back.png);
-        //    border: none;            
-        //    cursor: pointer;
-        //    height: 40px;
-        //    width: 40px;
-        //    display: flex;
-        //    justify-content: center;
-        //    align-items: center;
-        //    background-color: rgb(28, 28, 28);
-//
-        //}
-        //.carousel::scroll-button(left){
-        //    content: url(/assets/img/arrow_forward.png);
-        //}
-        .menu-wrapper{
-            height: 40px;
-            width: 184px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-            .scroll-btn{
-                &:hover{
-                    cursor: pointer;
-                }
-                
-            }
-           
-            .elipse{
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: #FFFFFF;
-            }
-            .active{
-                background-color: #3DCFB6 !important;
-            }
-        }
     }
+    
 
 }

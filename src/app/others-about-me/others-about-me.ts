@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 
 @Component({
@@ -6,48 +7,14 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './others-about-me.html',
   styleUrl: './others-about-me.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], //Ignoriert unbekannte tags im HTML notwendig für swiper
 })
 export class OthersAboutMe {
 
-  comments =[1,2,3];
-  currentIndex: number = 1;
 
-  slideLeft(){
-    //console.log('left');
-    if(this.currentIndex > 0){
-      this.currentIndex--;
-      console.log(this.currentIndex)
-      this.slideEffectLeft();
-    }else{
-      this.currentIndex = this.comments.length-1;
-      console.log(this.currentIndex)
-    }
-  }
+  
 
-  slideRight(){
-    //console.log('right')
-    if(this.currentIndex < this.comments.length -1 ){
-      this.currentIndex++;
-      console.log(this.currentIndex)
+  
 
-    }else{
-      this.currentIndex = 0
-    }
-  }
-
-  slideEffectRight(){
-    const moveRight = this.currentIndex * 100;
-    return `transalteX(-${moveRight}%)`;
-  }
-
-  slideEffectLeft(){
-    const moveLeft = this.currentIndex *100;
-    return `translateX(+${moveLeft})`;
-  }
-
-  getTransformStyle(): string { // nicht wirklich funktionsfähig muss noch angepasst werden 
-    // Annahme: Jeder Kommentar ist 100% der Breite des Containers
-    const offset = this.currentIndex * 50;
-    return `translateX(-${offset}%)`; 
-  }
+  
 }
