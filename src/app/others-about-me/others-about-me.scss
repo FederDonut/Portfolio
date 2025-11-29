@@ -21,24 +21,80 @@ $Karla: 'Karla';
         font-family: $font;
     }
 
-   
-
-    swiper-container{
+    .slide-wrapper{
         height: 274px;
         width: 100%;
-        
-    
-        swiper-slide{
+        border: 1px solid white;
+        display: flex;
+        flex-direction: row;
+        gap: 45px;
+
+        .comment{
             height: 100%;
-            width: 85%;
-            color: white;
-            object-fit: cover;
-            display: block;
-            border: 1px solid white;
+            width: 75%;
+            background-color: rgb(38, 82, 75);
         }
-        
-            
     }
+   
+
+
+
+    //swiper-container{ //.colleagus-swiper{
+    //    height: 274px;
+    //    width: 100%;
+    //    
+    //    
+    //    
+    //    
+    //
+    //    swiper-slide{
+    //        height: 100%;
+    //        color: white;
+    //        //object-fit: cover;
+    //        
+    //        
+    //        .component{
+    //            height: 100%;
+    //            width: 100%;
+    //            
+    //            display: flex;
+    //            justify-content: center;
+    //            align-items: center;
+    //            .test{
+    //                height: 100%;
+    //                width: 1500px;
+    //                background-color: rgb(38, 82, 75);
+    //                border-radius: 12px;
+//
+    //            }
+//
+    //        }
+    //    }
+    //    
+    //        
+    //}
+    //.btn-wrapper{
+    //    width: 184px;
+    //    height: 40px;
+    //    display: flex;
+    //    flex-direction: row;
+    //    justify-content: space-between;
+    //    .swiper-btn-prev{
+    //        height: 100%;
+    //        width: 40px;
+    //        
+    //    }
+    //    .swiper-pagination-dots{
+    //        height: 100%;
+    //        width: auto;
+    //        
+    //    }
+    //    .swiper-btn-next{
+    //        height: 100%;
+    //        width: 40px;
+    //       
+    //    }
+    //}
     
 
 }
