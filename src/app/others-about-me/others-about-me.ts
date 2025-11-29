@@ -45,9 +45,9 @@ export class OthersAboutMe {
     return `translateX(+${moveLeft})`;
   }
 
-  getTransformStyle(): string {
+  getTransformStyle(): string { // nicht wirklich funktionsfähig muss noch angepasst werden 
     // Annahme: Jeder Kommentar ist 100% der Breite des Containers
-    const offset = this.currentIndex * 100;
-    return `translateX(-${offset}%)`;
+    const offset = this.currentIndex * 50;
+    return `translateX(-${offset}%)`; 
   }
 }

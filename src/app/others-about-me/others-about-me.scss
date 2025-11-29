@@ -24,6 +24,7 @@ $Karla: 'Karla';
         
         height: 362px;
         width: 100%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -46,6 +47,7 @@ $Karla: 'Karla';
                 flex: 0 0 632px;
                 height: 100%;
                 width: 632px;
+                flex-shrink: 0;
                 border: 1px solid #3DCFB6;
                 border-radius: 32px;
                 background-color: rgb(38, 82, 75);
@@ -54,9 +56,9 @@ $Karla: 'Karla';
                 justify-content: center;
             }
         }
-        .carousel::-webkit-scrollbar{
-            display: none;
-        }
+        //.carousel::-webkit-scrollbar{
+        //    display: none;
+        //}
         //.carousel::scroll-button(right), .carousel::scroll-button(left){
         //    content: url(/assets/img/arrow_back.png);
         //    border: none;            
