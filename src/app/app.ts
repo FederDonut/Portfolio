@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { Landingpage } from './landingpage/landingpage';
 import { AboutMe } from './about-me/about-me';
@@ -10,14 +10,12 @@ import { OthersAboutMe } from './others-about-me/others-about-me';
 @Component({
   selector: 'app-root',
   imports: [
-    CommonModule,
-    RouterOutlet, 
-    
+    RouterOutlet,
     AboutMe,
     Technologies,
     Projects,
-    OthersAboutMe,
-  ],
+    OthersAboutMe
+],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

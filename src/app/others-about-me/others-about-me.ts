@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-others-about-me',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './others-about-me.html',
   styleUrl: './others-about-me.scss',
 })

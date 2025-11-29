@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule, NgStyle } from '@angular/common';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-technologies',

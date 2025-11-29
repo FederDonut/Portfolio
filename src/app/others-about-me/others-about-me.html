@@ -1,23 +1,27 @@
 <section class="content-wrapper">
-    
-    <h3>What my colleagus say about me</h3>
-    
-    <div class="comment-wrapper">
-        <div class="carousel" [style.transform]="getTransformStyle()" >
-            <div *ngFor="let comment of comments; let i = index " class="comment">
-                <p>text</p>
-                {{i}}
-            </div>
-            
+
+  <h3>What my colleagus say about me</h3>
+
+  <div class="comment-wrapper">
+    <div class="carousel" [style.transform]="getTransformStyle()" >
+      @for (comment of comments; track comment; let i = $index) {
+        <div class="comment">
+          <p>text</p>
+          {{i}}
         </div>
-        
-        <div class="menu-wrapper">
-            <img (click)="slideLeft()" class="scroll-btn" src="/assets/img/arrow_back.png" alt="">
-            <div *ngFor="let comment of comments; let i = index" class="elipse"
-                    [class.active]="i === currentIndex"
-            ></div>
-            
-            <img (click)="slideRight()" class="scroll-btn" src="/assets/img/arrow_forward.png" alt="">
-        </div>
+      }
+
     </div>
+
+    <div class="menu-wrapper">
+      <img (click)="slideLeft()" class="scroll-btn" src="/assets/img/arrow_back.png" alt="">
+      @for (comment of comments; track comment; let i = $index) {
+        <div class="elipse"
+          [class.active]="i === currentIndex"
+        ></div>
+      }
+
+      <img (click)="slideRight()" class="scroll-btn" src="/assets/img/arrow_forward.png" alt="">
+    </div>
+  </div>
 </section>
