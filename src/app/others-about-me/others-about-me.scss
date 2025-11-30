@@ -19,82 +19,65 @@ $Karla: 'Karla';
         font-size: 32px;
         font-weight: 700;
         font-family: $font;
-    }
+    } 
 
-    .slide-wrapper{
+    swiper-container{ //.colleagus-swiper{
         height: 274px;
         width: 100%;
-        border: 1px solid white;
+        
+        swiper-slide{
+            height: 100%;
+            color: white;
+            
+            .component{
+                height: 100%;
+                width: 100%;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .test{
+                    height: 100%;
+                    width: 1500px;
+                    background-color: rgb(38, 82, 75);
+                    border-radius: 12px;
+                }
+            }
+        }       
+    }
+    .btn-wrapper{
+        width: 184px;
+        height: 40px;
         display: flex;
         flex-direction: row;
-        gap: 45px;
-
-        .comment{
+        justify-content: space-between;
+        .swiper-btn-prev{
             height: 100%;
-            width: 75%;
-            background-color: rgb(38, 82, 75);
+            width: 40px;
+            background-color: rgb(28, 28, 28);
+            border: none;
+            &:hover{
+                cursor: pointer;
+                transform: translateX(-5px);
+                transition: 1s;
+            }
         }
+        .swiper-pagination-dots{
+            height: 100%;
+            width: auto;
+            border: 1px solid white   
+        }
+        .swiper-btn-next{
+            height: 100%;
+            width: 40px;
+            background-color: rgb(28, 28, 28);
+            border: none;
+            &:hover{
+                cursor: pointer;
+                transform: translateX(5px);
+                transition: 1s;
+            }      
+        }
+        
     }
-   
-
-
-
-    //swiper-container{ //.colleagus-swiper{
-    //    height: 274px;
-    //    width: 100%;
-    //    
-    //    
-    //    
-    //    
-    //
-    //    swiper-slide{
-    //        height: 100%;
-    //        color: white;
-    //        //object-fit: cover;
-    //        
-    //        
-    //        .component{
-    //            height: 100%;
-    //            width: 100%;
-    //            
-    //            display: flex;
-    //            justify-content: center;
-    //            align-items: center;
-    //            .test{
-    //                height: 100%;
-    //                width: 1500px;
-    //                background-color: rgb(38, 82, 75);
-    //                border-radius: 12px;
-//
-    //            }
-//
-    //        }
-    //    }
-    //    
-    //        
-    //}
-    //.btn-wrapper{
-    //    width: 184px;
-    //    height: 40px;
-    //    display: flex;
-    //    flex-direction: row;
-    //    justify-content: space-between;
-    //    .swiper-btn-prev{
-    //        height: 100%;
-    //        width: 40px;
-    //        
-    //    }
-    //    .swiper-pagination-dots{
-    //        height: 100%;
-    //        width: auto;
-    //        
-    //    }
-    //    .swiper-btn-next{
-    //        height: 100%;
-    //        width: 40px;
-    //       
-    //    }
-    //}
-    
-
 }

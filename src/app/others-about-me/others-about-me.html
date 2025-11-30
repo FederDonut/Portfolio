@@ -1,14 +1,7 @@
 <section class="content-wrapper">
 
   <h3>What my colleagus say about me</h3>
-
-  <div class="slide-wrapper">
-    @for(comment of comments; track comment; let i = $index ){
-      <div class="comment"></div>
-    }
-
-  </div>
-  <!--<swiper-container 
+  <swiper-container 
     class="colleagus-swiper"
     slides-per-view="1.5"
     centered-slides="true"
@@ -25,14 +18,21 @@
       <swiper-slide ><div class="component"><div class="test">text</div></div></swiper-slide>
       <swiper-slide ><div class="component"><div class="test">text</div></div></swiper-slide>
       <swiper-slide ><div class="component"><div class="test">text</div></div></swiper-slide>
+      <swiper-slide ><div class="component"><div class="test">textcopy</div></div></swiper-slide>
+      <swiper-slide ><div class="component"><div class="test">textcopy</div></div></swiper-slide>
+      <swiper-slide ><div class="component"><div class="test">textcopy</div></div></swiper-slide>
   </swiper-container>
   <div class="btn-wrapper">
-    <button class="swiper-btn-prev">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    <button class="swiper-btn-prev" type="button" 
+    (mouseenter)="prevIcon = hoverPrevIconPath"
+    (mouseleave)="prevIcon = defaultPrevIconPath">
+      <img [src]="prevIcon" alt="backward">
     </button>
     <div class="swiper-pagination-dots"></div>
-    <button class="swiper-btn-next">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    <button class="swiper-btn-next" type="button"
+    (mouseenter)="nextIcon = hoverNextIconPath"
+    (mouseleave)="nextIcon = defaultNextIconPath">
+      <img [src]="nextIcon" alt="forward">
     </button>
-  </div>-->
+  </div>
 </section>
