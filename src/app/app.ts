@@ -6,6 +6,7 @@ import { AboutMe } from './about-me/about-me';
 import { Technologies } from './technologies/technologies';
 import { Projects } from './projects/projects';
 import { OthersAboutMe } from './others-about-me/others-about-me';
+import { Slider } from './shared/slider/slider';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { OthersAboutMe } from './others-about-me/others-about-me';
     AboutMe,
     Technologies,
     Projects,
-    OthersAboutMe
+    OthersAboutMe,
+    Slider
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

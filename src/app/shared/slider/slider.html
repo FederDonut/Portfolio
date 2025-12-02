@@ -1,0 +1,18 @@
+<section class="container">
+    <div class="slider-wrapper">
+        <div class="slider" #sliderRef>
+            @for (coment of comments; track comments; let i = $index) {
+                <div class="comment">
+                    <p>{{i}}</p>
+                </div>
+            }
+        </div>
+       
+        
+    </div>
+    <div class="slider-nav">
+        <div class="btn next" (click)="slideNext()"></div>
+        <div class="pagination"></div>
+        <div class="btn prev" (click)="slidePrev()"></div>
+    </div>
+</section>

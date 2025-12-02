@@ -1,7 +1,8 @@
-<section class="content-wrapper">
 
+<section class="content-wrapper">
+  
   <h3>What my colleagus say about me</h3>
-  <swiper-container 
+  <swiper-container #swiperContainer
     class="colleagus-swiper"
     slides-per-view="1.5"
     centered-slides="true"
@@ -23,16 +24,22 @@
       <swiper-slide ><div class="component"><div class="test">textcopy</div></div></swiper-slide>
   </swiper-container>
   <div class="btn-wrapper">
-    <button class="swiper-btn-prev" type="button" 
+    <button #prevBtn class="swiper-btn-prev" type="button" 
     (mouseenter)="prevIcon = hoverPrevIconPath"
     (mouseleave)="prevIcon = defaultPrevIconPath">
       <img [src]="prevIcon" alt="backward">
     </button>
-    <div class="swiper-pagination-dots"></div>
-    <button class="swiper-btn-next" type="button"
+    
+    <div class="swiper-pagination-dots">
+     
+    </div>
+
+    <button #nextBtn class="swiper-btn-next" type="button"
     (mouseenter)="nextIcon = hoverNextIconPath"
     (mouseleave)="nextIcon = defaultNextIconPath">
       <img [src]="nextIcon" alt="forward">
     </button>
   </div>
+ 
 </section>
+ 
