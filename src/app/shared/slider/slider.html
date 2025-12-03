@@ -1,9 +1,10 @@
 <section class="container">
     <div class="slider-wrapper">
         <div class="slider" #sliderRef>
-            @for (coment of comments; track comments; let i = $index) {
+            @for (commentId of mirrorComments; track mirrorComments; let i = $index) {
                 <div class="comment">
-                    <p>{{i}}</p>
+                    <!--<p>{{i}}</p>-->
+                    <p>{{commentId}}</p>
                 </div>
             }
         </div>
