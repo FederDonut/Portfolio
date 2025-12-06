@@ -16,17 +16,7 @@ export class Slider implements AfterViewInit, OnInit {
   mirrorComments:any = []; 
   firstCurrentSlideIndex:number = 1
   currentSlideIndex: number = 0
-
-  //Test
   currentCommentId: any = this.comments[0];
-
-  defaultPrevIconPath:string = '/assets/img/arrow_back.svg'
-  defaultNextIconPath:string = '/assets/img/arrow_forward.svg'
-  hoverPrevIconPath:string = '/assets/img/iconizer-arrow_back.svg'
-  hoverNextIconPath:string = '/assets/img/iconizer-arrow_forward.svg'
-
-  prevIcon = this.defaultPrevIconPath;
-  nextIcon = this.defaultNextIconPath;
 
   ngOnInit(){
     this.storeMirror();
@@ -40,16 +30,9 @@ export class Slider implements AfterViewInit, OnInit {
     const slideWidth = commentElement?.clientWidth || 0;
     const gap = 32;
     const slideSize = slideWidth + gap;
-    //const targetIndex = index +1;
     const scrollLeft = sliderEl.scrollLeft;
-    
-    // Berechne den Index im mirrorComments Array (0, 1, 2, 3, 4)
     const mirrorIndex = Math.round(scrollLeft / slideSize);
-
-    // Konvertiere zum Index des Original-Arrays (0, 1, 2)
     let newOriginalIndex = mirrorIndex - 1;
-
-    // Behandlung des Looping-Jumps (Index-Anpassung)
     if (newOriginalIndex < 0) {
         // Linker Spiegel-Slide -> wird als letzter echter Slide betrachtet
         newOriginalIndex = this.comments.length - 1; 
@@ -57,8 +40,6 @@ export class Slider implements AfterViewInit, OnInit {
         // Rechter Spiegel-Slide -> wird als erster echter Slide betrachtet
         newOriginalIndex = 0;
     }
-
-    // Setze die ID des Kommentars, die nun im Pagination-HTML verglichen wird
     this.currentCommentId = this.comments[newOriginalIndex];
     
   }

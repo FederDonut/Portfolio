@@ -8,11 +8,8 @@
 
     .slider-wrapper{
         position: relative;
-        height: 274px;
+        height: 284px;
         width: 100%;
-        //max-width: 48rem;
-       
-        //max-width: 48rem;
         margin: 0;
           
         .slider{
@@ -24,6 +21,7 @@
             //aspect-ratio: 16/9;
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: 32px;
             padding: 0 10%;
             &::-webkit-scrollbar{
@@ -33,16 +31,24 @@
 
                 flex: 1 0 80%;
                 scroll-snap-align: center;
-                height: 274px;
+                height: 254px;
                 width: 100px;
                 background-color: rgb(38, 82, 75);
-                border: 1px solid red;
+                border: 1px solid #3dcfb6;
                 border-radius: 12px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 object-fit: cover;
+                opacity: 0.5;
 
+            }
+            .spotlight{
+                height: 274px !important;
+                opacity: 1;
+                transition: 0.3s ease-in;
+                border: 1px solid #3dcfb6;
+                transform: scale(1);
             }
         }
     }
@@ -58,10 +64,7 @@
 
         .btn{
             height: 32px;
-            width: 32px;
-           
-            
-            
+            width: 32px;   
             &:hover{
                 cursor: pointer;
             }

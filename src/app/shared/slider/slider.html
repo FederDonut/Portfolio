@@ -2,14 +2,14 @@
     <div class="slider-wrapper">
         <div class="slider" #sliderRef (scroll)="updateActivePagination()">
             @for (commentId of mirrorComments; track mirrorComments; let i = $index) {
-                <div class="comment">
+                <div class="comment"
+                    [class.spotlight]="commentId === currentCommentId"
+                >
                     <!--<p>{{i}}</p>-->
                     <p>{{commentId}}</p>
                 </div>
             }
-        </div>
-       
-        
+        </div>    
     </div>
     <div class="slider-nav">
         <div class="btn prev" (click)="slidePrev()"></div>
@@ -23,6 +23,8 @@
                     ></div>     
             }
         </div>
-        <div class="btn next" (click)="slideNext()"></div>
+        <div class="btn next" (click)="slideNext()"
+        
+        ></div>
     </div>
 </section>
