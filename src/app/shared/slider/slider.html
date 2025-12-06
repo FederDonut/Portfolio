@@ -1,6 +1,6 @@
 <section class="container">
     <div class="slider-wrapper">
-        <div class="slider" #sliderRef>
+        <div class="slider" #sliderRef (scroll)="updateActivePagination()">
             @for (commentId of mirrorComments; track mirrorComments; let i = $index) {
                 <div class="comment">
                     <!--<p>{{i}}</p>-->
@@ -12,8 +12,17 @@
         
     </div>
     <div class="slider-nav">
-        <div class="btn next" (click)="slideNext()"></div>
-        <div class="pagination"></div>
         <div class="btn prev" (click)="slidePrev()"></div>
+        <div class="pagination">
+            @for(elipseId of comments; track comments; let i = $index){
+                
+                    <div class="elipse"
+                    id="{{i}}"
+                    [class.active]="elipseId === currentCommentId"
+                    
+                    ></div>     
+            }
+        </div>
+        <div class="btn next" (click)="slideNext()"></div>
     </div>
 </section>
