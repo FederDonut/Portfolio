@@ -1,5 +1,7 @@
 
 
+$font: 'FiraCode';
+$Karla: 'Karla';
 
 .content-wrapper{
     height: auto;
@@ -52,10 +54,96 @@
                 }
             }
         }
-        .user-input{
-            height: 550px;
-            width: 616px;
-            border: 1px solid white;
+        .right-content{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .user-input{
+                height: 550px;
+                width: 616px;
+                //border: 1px solid white;
+
+                .seperator{
+                    height: 1px;
+                    width: 100%;
+                    background-color: #3DCFB6;
+                }
+
+                .user-content{
+                    height: 131px;
+                    width: 616px;
+                    border-top: 1px solid #3DCFB6;
+                    //border-bottom: 1px solid #3DCFB6;
+                    color: #FFFFFF;
+                    //padding-top: 40px;
+                    //padding-bottom: 40px;
+                    padding-left: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    gap: 16px;
+
+                    h4{
+                        font-size: 24px;
+                        font-weight: 200;
+                        line-height: 120%;
+                        font-family: $font;
+                        color: #3DCFB6;
+                    }
+
+                    input{
+                        height: 32px;
+                        width: 75%;
+                        color: #FFFFFF;
+                        font-size: 22px;
+                        font-family: $Karla;
+                        border: none;
+                        background-color: #1C1C1C;
+                        //background: 
+                        //    linear-gradient(90deg, #3DCFB6,#3DCFB6)left bottom/100% 2px no-repeat,
+                        //    linear-gradient(90deg, #1C1C1C, #1C1C1C) left bottom/100% no-repeat;
+                        border-top-left-radius: 3px;
+                        border-top-right-radius: 3px;
+                        &:focus{
+                            outline: none;
+                        }
+
+                    }
+                    textarea{
+                        height: auto;
+                        width: 80%;
+                        field-sizing: content;
+                        border: none;
+                        resize: none;
+                        border: none;
+                        color: #FFFFFF;
+                        background-color: #1C1C1C;
+                        font-size: 22px;
+                        font-family: $Karla;
+                        padding: 0;
+                        margin-bottom: 8px;
+                       //background: 
+                       //    linear-gradient(90deg, #3DCFB6,#3DCFB6)left bottom/100% 2px no-repeat,
+                       //    linear-gradient(90deg, #1C1C1C, #1C1C1C) left bottom/100% no-repeat;
+//  
+                        &:focus{
+                            //outline: none;
+                            border-color: #3DCFB6;
+                            outline-color: #3DCFB6;
+                            outline-offset: 2px;
+                        }
+                    }
+                
+
+                }
+            
+            }
+            .submit-content{
+                height: 117px;
+                width: 616px;
+                border: 1px solid white;
+            }
         }
     }
 }
