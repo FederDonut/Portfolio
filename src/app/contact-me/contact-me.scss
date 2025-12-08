@@ -143,6 +143,81 @@ $Karla: 'Karla';
                 height: 117px;
                 width: 616px;
                 border: 1px solid white;
+                display: flex;
+                align-items: center;
+                
+                .check{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    //gap: 10px;
+                    height: 26px;
+                    width: 26px;
+
+                    .input-check{
+                        position: relative;
+                        display: inline-block;
+                        height: 26px;
+                        width: 26px;
+                        border: 4px solid #3DCFB6;
+                        background-color: transparent;
+                        border-radius: 2px;
+                        box-sizing: border-box;
+                        transition: box-shadow 0.2s ease-in-out, background-color 0.5s;
+                        &:checked + .input-check{
+                            border-color: #3DCFB6;
+                            
+                        }
+                        
+
+                    }
+                    .checkbox{
+                        position: absolute;
+                        appearance: none;
+                        opacity: 0;
+                        height: 26px;
+                        width: 26px;
+                        top: 0;
+                        left: 0;
+                        margin: 0;
+                        z-index: 10;
+                        &:hover{
+                            cursor: pointer;
+                            background-color: #3DCFB6;
+                        }
+                    }
+                    .checkbox:checked + .input-check:after{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-image: url(/assets/img/check-solid-full\ .svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                       
+                        .input-check{
+                            box-shadow: 0 0 10px 1px rgba(113, 182, 170, 0.7);
+                            background-color: #6da29978;
+                        }
+                       
+                        
+
+                    }
+                }
+                p{
+                    color: #FFFFFF;
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-style: $Karla;
+                        
+                }
             }
         }
     }
