@@ -73,13 +73,16 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                transform: translateX(95px);
+                transform: translateX(115px);
                 transition: transform 0.3s ease;
                 gap: 100px;
 
                 .btn-content{
                     color: #ffffff;
                     font-family: $Karla;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 120%;
                     flex-shrink: 0;
                     p{
                         white-space: nowrap;
@@ -96,13 +99,16 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                transform: translateX(70px);
+                transform: translateX(85px);
                 transition: transform 0.3s ease;
                 gap: 70px;
 
                 .btn-content{
                     color: #ffffff;
                     font-family: $Karla;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 120%;
                     flex-shrink: 0;
                     p{
                         white-space: nowrap;

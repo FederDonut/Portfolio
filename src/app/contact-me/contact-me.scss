@@ -39,6 +39,20 @@ $Karla: 'Karla';
                     flex-direction: column;
                     gap: 40px;
                     color: #3DCFB6;
+                    h4{
+                        font-size: 24px;
+                        font-family: $Karla;
+                        font-weight: 500;
+                        line-height: 100%;
+
+                    }
+                    h1{
+                        font-family: $font;
+                        font-size: 64px;
+                        font-weight: 700;
+                        line-height: 100%;
+                        letter-spacing: -3%;
+                    }
                 }
                 .description{
                     height: 121px;
@@ -141,10 +155,11 @@ $Karla: 'Karla';
             }
             .submit-content{
                 height: 117px;
-                width: 616px;
-                border: 1px solid white;
+                width: auto;//616px;
+                //border: 1px solid white;
                 display: flex;
                 align-items: center;
+                gap: 8px;
                 
                 .check{
                     position: relative;
@@ -215,9 +230,82 @@ $Karla: 'Karla';
                     color: #FFFFFF;
                     font-size: 15px;
                     font-weight: 400;
-                    font-style: $Karla;
+                    font-family: $Karla;
+
+                    a{
+                        color: #3DCFB6;
+                        text-decoration: none;
+                        font-size: 15px;
+                        font-family: $font;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: -3%;
+                        &:hover{
+                            color: #FFFFFF;
+                            text-decoration: underline;
+                            text-decoration-color: #3DCFB6;
+                            text-underline-offset: 8px;
+                        }
+                    }
                         
                 }
+            }
+            .btn-wrapper{
+                height: 48px;
+                width: 616px;
+                display: flex;
+                justify-content: center;
+            
+                button{
+                    height: 50px;
+                    width: 139px;
+                    border-radius: 100px;
+                    color: #FFFFFF80 ;
+                    overflow-x: hidden;
+                    border: 1px solid #FFFFFF50 ;
+                    background-color: #1C1C1C;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        cursor: pointer;
+                        border-color: #3DCFB6;
+                    }
+
+
+                    .btn-content-wrapper{
+                        height: 100%;
+                        width: min-content;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        transform: translateX(85px);
+                        transition: transform 0.3s ease;
+                        gap: 80px;
+
+                        .btn-content{
+                            height: 22px;
+                            width: 91px;
+                            white-space: nowrap;
+                            font-size: 18px;
+                            font-weight: 400;
+                            letter-spacing: 120%;
+                            font-family: $Karla;
+                            p{
+                                white-space: nowrap;
+                            }
+                            
+                        }
+                        &:hover .btn-content{
+                            color: #3DCFB6;
+                            animation: btn-spin 2.5s infinite linear;
+                        }
+                    }
+                }
+                @keyframes btn-spin {
+                    from {translate: 0;}
+                    to {translate: -220%;}
+                }  
             }
         }
     }
