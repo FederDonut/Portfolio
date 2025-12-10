@@ -65,6 +65,7 @@ $Karla: 'Karla';
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    gap: 32px;
 
                     .headline-wrapper{
                         height: 64px;
@@ -79,13 +80,32 @@ $Karla: 'Karla';
                         }
                     }
                     .personal-presentation{
-                        height: 372px;
+                        height: 88px;
                         width: 80%;
                         color: #FFFFFF;
                         font-family: $Karla;
-                        font-size: 18px;
+                        font-size: 16px;
                         font-weight: 400;
                         
+                    }
+                    .personal-matrix{
+                        height: 252px;
+                        width: 504px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+
+                        .matrix-wrapper{
+                            display: flex;
+                            gap: 12px;
+
+                            p{
+                                color: #FFFFFF;
+                                font-size: 16px;
+                                font-weight: 400;
+                                font-family: $Karla;
+                            }
+                        }
                     }
 
                    
