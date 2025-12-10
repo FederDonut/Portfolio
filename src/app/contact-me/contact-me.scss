@@ -22,7 +22,7 @@ $Karla: 'Karla';
         .content-info{
             height: auto;
             width: 568px;
-            border: 1px solid blue;
+            
 
             .info{
                 height: 337px;
@@ -30,7 +30,7 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
-                border: 1px solid yellow;
+
 
                 .headlines{
                     height: 176px;
@@ -53,16 +53,32 @@ $Karla: 'Karla';
                         line-height: 100%;
                         letter-spacing: -3%;
                     }
+                    
                 }
                 .description{
                     height: 121px;
                     width: 568px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
                     h3{
                         color: #3DCFB6;
+                        font-size: 24px;
+                        font-family: $font;
+                        font-weight: 700;
+                        line-height: 120%;
                     }
                     p{
                         color: #FFFFFF;
+                        font-size: 16px;
+                        font-family: $Karla;
+                        font-weight: 400;
+                        line-height: 120%;
+                        letter-spacing: 0;
+                        span{
+                            color:#3DCFB6 ;
 
+                        }
                     }
 
                 }
