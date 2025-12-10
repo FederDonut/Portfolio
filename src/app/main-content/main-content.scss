@@ -1,0 +1,17 @@
+
+
+.content-wrapper{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .landingpage{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(60deg, #1C1C1C 20%, #08463B);
+
+    }
+}

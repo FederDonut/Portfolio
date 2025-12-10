@@ -1,20 +1,22 @@
-body{
-    height: 100vh;
-    width: 100%;
-    max-width: 1940px;
-
-    
-}
 
 $font: 'FiraCode';
 $Karla: 'Karla';
 
+.navbar-wrapper{
+    width: 100vw;
+    height: 98px;
+    max-width: 1940px;
+    display: flex;
+    .navbar{
+        width: 100%;
+    }
+}
 .landingpage-content{
     height: 100vh;
     width: 100%;
     max-width: 1940px;
 
-    background: linear-gradient(60deg,#1C1C1C 20%,#08463B);
+    //background: linear-gradient(60deg,#1C1C1C 20%,#08463B);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +30,7 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 100px;
 
         h1{
             color: rgba(217, 217, 217, 1);
@@ -183,7 +186,7 @@ $Karla: 'Karla';
         //position: fixed;
         //bottom: 0;
         //left: 1312px;
-        height: 480px;
+        //height: 480px;
         display: flex;
         flex-direction: column;
         align-items: center;

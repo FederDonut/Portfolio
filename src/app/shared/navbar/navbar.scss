@@ -1,17 +1,17 @@
 $font: 'FiraCode';
 
 .navbar-wrapper{
-    position: absolute;
+    //position: absolute;
     top: 0;
     left: 0;
     height: 98px;
     width: 100%;
     max-width: 1940px;
-    background: linear-gradient(165deg,#1C1C1C 35% ,#08463B);
+    //background: linear-gradient(165deg,#1C1C1C 35% ,#08463B);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .menu{
         height: 26px;
