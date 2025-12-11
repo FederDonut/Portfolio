@@ -35,11 +35,30 @@
     </div>
     <div class="skill-imgs-wrapper">
         @for (item of techStackImg; track item.titel; let index = $index) {
-            <div class="imgWrapper">
-                <div class="img" [style.--bg-image]="'url('+item.source+')'"></div>
-                <p class="titels">{{item.titel}}</p>
-            </div>
+            @if(index === 10){
+                <div [id]="index" 
+                class="imgWrapper showOverlay" 
+                (mouseover)="checkIndex(index)"
+                (mouseout)="hideOverlay()">
+                     <div class="overlay">
+                        <app-tech-overlay *ngIf="showTechOverlay"></app-tech-overlay>
+                    </div>
+                    <div class="img" [style.--bg-image]="'url('+item.source+')'"></div>
+                    <p class="titels">{{item.titel}}</p>
+                    
+                </div>
+            }@else {
+                <div [id]="index" 
+                class="imgWrapper" 
+                (mouseover)="checkIndex(index)"
+                >
+                    <div class="img" [style.--bg-image]="'url('+item.source+')'"></div>
+                    <p class="titels">{{item.titel}}</p>
+                </div>
+            }
+           
         }
+       
     </div>
 </section>
 

@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { NgStyle } from '@angular/common';
+import { NgStyle, NgIf } from '@angular/common';
+import { TechOverlay } from '../overlays/tech-overlay/tech-overlay';
+
 
 @Component({
   selector: 'app-technologies',
-  imports: [],
+  imports: [
+    TechOverlay,
+    NgIf
+],
   templateUrl: './technologies.html',
   styleUrl: './technologies.scss',
 })
 export class Technologies {
 
   imgPath: string = "assets/img/techImgs/Tech_icons"
-  //fontColor = '#3DCFB6'
+  showTechOverlay : boolean = false;
+  
 
   techStackImg = [
     { titel: 'HTML', source: this.imgPath+'HTML.png'},
@@ -41,5 +47,21 @@ export class Technologies {
                 um in der Webumgebung effizient zu bleiben.`
                   }
   ]
+
+  checkIndex(index:number){
+    console.log(index);
+    if(index === 10){
+      this.showTechOverlay = true;
+      console.log(this.showTechOverlay)
+    }
+  }
+
+  hideOverlay(){
+    this.showTechOverlay = false;
+    console.log(this.showTechOverlay)
+  }
+
+
 }
+
 

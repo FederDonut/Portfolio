@@ -100,12 +100,13 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                //justify-content: center;
                 gap: 8px;
 
                 .titels{
                     //font-family: $font; muss noch angepasst werden 
                     font-size: 18px;
+                    text-align: center;
                     
                 }
                 .img{
@@ -122,6 +123,18 @@ $Karla: 'Karla';
                     }
                 }
             }
-            
+            .showOverlay{
+                position: relative;
+                margin-bottom: 50px;
+            }
+            .overlay{
+                position: absolute;
+               
+                left: -3%;
+                bottom: 45%;
+                
+                z-index: 1;
+                margin-bottom: 30px;
+            }
         }
     }
