@@ -3,7 +3,7 @@ $font: 'FiraCode';
 $Karla: 'Karla';
 
 .navbar-wrapper{
-    width: 100vw;
+    width: 85%;
     height: 98px;
     max-width: 1940px;
     display: flex;
@@ -62,10 +62,13 @@ $Karla: 'Karla';
             background: transparent;
             border: 1px solid #ffffff;
             border-radius: 100px;
+            padding-left: 12px;
             overflow-x: hidden; 
             display: flex;
-            justify-content: center;
-            align-items: center;          
+            justify-content: flex-start;
+            align-items: center; 
+           
+                  
             &:hover{
                 cursor: pointer;
                 border-color: #3DCFB6;
@@ -76,9 +79,7 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                transform: translateX(115px);
-                transition: transform 0.3s ease;
-                gap: 100px;
+                gap: 172px;
 
                 .btn-content{
                     color: #ffffff;
@@ -87,14 +88,21 @@ $Karla: 'Karla';
                     font-weight: 400;
                     line-height: 120%;
                     flex-shrink: 0;
+                    text-align: center;
+                    
                     p{
+                        
                         white-space: nowrap;
                     }
                 }
-                &:hover .btn-content{
-                    color: #3DCFB6;
-                    animation: btn-spin 2s infinite linear;   
+                &:hover {
+                    animation: btn-spin-one 3s infinite linear;
+                    p{
+                        color: #3DCFB6;
+                    }
                 }
+               
+               
             }
             .btn-content-wrapper-two{
                 height: 100%;
@@ -102,9 +110,8 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                transform: translateX(85px);
-                transition: transform 0.3s ease;
-                gap: 70px;
+                padding-left: 20px;
+                gap: 172px;
 
                 .btn-content{
                     color: #ffffff;
@@ -118,16 +125,23 @@ $Karla: 'Karla';
                     }
                 }
                 &:hover .btn-content{
-                    color: #3DCFB6;
-                    animation: btn-spin 2s infinite linear;   
+                    animation: btn-spin-two 3s infinite linear;
+                    p{
+                        color: #3DCFB6;
+                    }   
                 }
             }
         }
-        @keyframes btn-spin {
-            from {translate: 0;}
-            to {translate: -200%;}
-        }  
+        
     }
+    @keyframes btn-spin-one {
+        from {transform: translateX(0);}
+        to {transform: translateX(-304px);}
+    } 
+    @keyframes btn-spin-two {
+        from {transform: translateX(0);}
+        to {transform: translateX(-270px);}
+    }   
     
     .lateral-space{
         position: absolute;
