@@ -24,9 +24,17 @@ $Karla: 'Karla';
         flex-direction: column;
         justify-content: flex-start;
         gap: 41px;
-         margin-left: 10%;
+        margin-left: 10%;
        
+        .overlay{
+            //height: 100vh;
+            //width: 100vw;
 
+        }
+
+        .d-none{
+            display: none;
+        }
         .headline-wrapper{
             height: 112px;
             width: 622px;

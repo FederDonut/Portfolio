@@ -14,7 +14,8 @@
         <div class="portfolio">
             <div 
                 (mouseover)="identifyProject('Join')"
-                (mouseout)="clearProjectName()" 
+                (mouseout)="clearProjectName()"
+                (click)="openOverlay('Join')" 
                 class="portfolio-projects"> 
                 <h2>Join</h2>
                 <div class="technologies">
@@ -29,12 +30,14 @@
                     <p>Firebase</p>
                 </div>
             </div>
+            
 
             <div class="seperator"></div>
             
             <div
                 (mouseover)="identifyProject('El-Pollo-Loco')"
-                (mouseout)="clearProjectName()"  
+                (mouseout)="clearProjectName()"
+                (click)="openOverlay('El-Pollo-Loco')"  
                 class="portfolio-projects">
                 <h2>EL Pollo Loco</h2>
                 <div class="technologies">
@@ -47,6 +50,18 @@
                 
             </div>
         </div>
+
+        <div class="overlay">
+            @if (showProjectOverlay) {
+                <app-project-overlay 
+                (closeProjectOverlay)="showProjectOverlay = $event"
+                [showProjectOverlay]="showProjectOverlay"
+                >
+            </app-project-overlay>
+            }
+           
+        </div>
+
     </div>
     <div class="project-preview">
         <div 

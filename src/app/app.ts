@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from "./shared/footer/footer";
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    Footer
+    Footer,
+    OverlayModule
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

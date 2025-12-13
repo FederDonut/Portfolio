@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProjectOverlay } from "../overlays/project-overlay/project-overlay";
 
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule],
+  imports: [CommonModule, ProjectOverlay],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class Projects {
 
   project: string|null  = null;
+  showProjectOverlay: boolean = false;
+  projectName: string = "";
 
   getBackgroundImage(){
     if(this.project === 'Join'){
@@ -26,10 +29,20 @@ export class Projects {
 
   identifyProject(projectTitel: string){
     this.project = projectTitel;
-    console.log(this.project);
   }
 
   clearProjectName(){
     this.project = null;
+  }
+
+  openOverlay(projectTitel: string){
+    console.log(projectTitel);
+    this.showProjectOverlay = true
+    this.projectName = projectTitel;
+  }
+
+  test(){
+    console.log(this.showProjectOverlay)
+    console.log(this.projectName);
   }
 }
