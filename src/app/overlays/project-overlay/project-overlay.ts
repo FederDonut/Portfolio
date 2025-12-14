@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output,OnInit } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output,OnInit,OnChanges, SimpleChanges } from '@angular/core';
 import { OverlayService } from '../../overlay-service';
 import { CommonModule } from '@angular/common';
 
@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })
-export class ProjectOverlay implements OnInit {
+export class ProjectOverlay implements OnInit, OnChanges {
 
   @Input()projectName: string |undefined;
   @Output()closeProjectOverlay = new EventEmitter<boolean>();
+  @Output()nextProjectOverlay = new EventEmitter<void>();
 
   counter:number = 0;
   currentProject: any;
@@ -29,12 +30,33 @@ export class ProjectOverlay implements OnInit {
         console.log(this.counter)
       }
       this.currentProject = this.OverlayService.projects[this.counter]
-      console.log(this.currentProject.techstack);
+      console.log(this.currentProject);
 
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+      if (changes['projectName'] && this.projectName){
+        this.renderProject(this.projectName);
+      }
+  }
+
+  renderProject(name: string){
+   
+    this.currentProject = this.OverlayService.projects.find(
+        p => p.name === name
+    );
+   
   }
 
   closeOverlay(){
     this.closeProjectOverlay.emit(false);
     document.body.classList.remove('no-scroll');
+  }
+
+  nextProject(projectName:string){
+    console.log(projectName);
+    this.nextProjectOverlay.emit();
+    
+   
   }
 }

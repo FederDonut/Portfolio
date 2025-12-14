@@ -1,4 +1,4 @@
-<!--<p>project-overlay works!</p>-->
+
 <section class="overlay-wrapper">
     <section class="content">
         <div class="right-content">
@@ -8,7 +8,7 @@
             </div>
             <div class="description">
                 <h3>What is this Project about?</h3>
-                <p>{{OverlayService.projects[counter].description.EN}}</p>
+                <p>{{currentProject.description.EN}}</p>
                 <div class="tech-stack">
                   @for (item of currentProject.techstack; track item.name) {
                     <div class="tech-content">
@@ -39,7 +39,7 @@
            
             <img [src]="currentProject.photo" alt="">
             <div class="next-wrapper">
-                <div class="next">
+                <div class="next" (click)="nextProject(currentProject.name)">
                     <p>Next proyect</p>
                     <img src="/assets/img/iconizer-arrow_forward.svg" alt="">
                 </div>
