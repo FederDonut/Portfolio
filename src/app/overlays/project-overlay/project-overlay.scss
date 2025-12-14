@@ -147,6 +147,18 @@ $Karla: 'Karla';
                         height: 10px;
                         width: 10px;
                     }
+                    &:hover{
+                        border-color: #3DCFB6;
+                        p{
+                            color: #3DCFB6;
+                        }
+                        img{
+                            transform: translateX(5px) translateY(-3px);
+                            
+                            transition: 0.3s;
+                            
+                        }
+                    }
                 }
             }
         }
@@ -172,15 +184,23 @@ $Karla: 'Karla';
                     background-color: transparent;
                     border: 0;
 
-                    img{
+                    .close-img{
                         height: 18px;
                         width: 18px;
+                        background-image: url(/assets/img/close_small.svg);
+                        background-position: center;
+                        
                         &:hover{
-                        cursor: pointer;
-                        }
-                    }
+                            cursor: pointer;
+                            transform: scale(1.8);
+                            transition: 0.5s;
+                            color: #3DCFB6;
+                            background-image: url(/assets/img/iconizer-close_small.svg);
+                            background-position: center;
+                            background-size: cover;
 
-                    
+                        }
+                    } 
                 }
             }
         
@@ -214,6 +234,16 @@ $Karla: 'Karla';
                     img{
                         height: 20px;
                         width: 20px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        p{
+                            color: #FFFFFF;
+                        }
+                        img{
+                            transform: translateX(8px);
+                            transition: 0.5s;
+                        }
                     }
                 }
             }
