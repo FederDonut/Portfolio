@@ -1,3 +1,5 @@
+$font: 'FiraCode';
+$Karla: 'Karla';
 
 
 .overlay-wrapper{
@@ -10,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     
 
 
@@ -17,6 +20,207 @@
         height: 658px;
         width: 1248px;
         border-radius: 30px;
-        border: 1px solid red;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 1px solid #3DCFB6;
+        background: linear-gradient(60deg, #1C1C1C 20%, #08463B);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+        .right-content{
+            height: 474px;
+            width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+            .headlines{
+
+                height: 175px;
+                width: 480px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                h1{
+                    font-size: 128px;
+                    font-family: $Karla;
+                    font-weight: 700;
+                    letter-spacing: -2%;
+                    line-height: 100px;
+                    color: #3DCFB6;
+                }
+                h2{
+                    font-size: 64px;
+                    font-family: $font;
+                    font-weight: 700;
+                    line-height: 80%;
+                    letter-spacing: -3%;
+                    color: #FFFFFF;
+                    white-space: nowrap;
+                }
+            }
+            .description{
+                height: 171px;
+                width: 480px;
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                h3{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 120%;
+                    font-family: $font;
+                    color: #3DCFB6;
+                   
+                }
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: $Karla;
+                    color: #FFFFFF;
+                    line-height: 120%;
+
+                }
+                .tech-stack{
+                    height: 24px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 24px;
+
+                    .tech-content{
+                        height: 24px;
+                        width: auto;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 4px;
+
+                        p{
+                            color: #FFFFFF;
+                            font-size: 16px;
+                        }
+                        img{
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+
+
+                }
+            }
+            .forword{
+                height: 48px;
+                width: 304px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                button{
+                    height: 100%;
+                    width: 130px;
+                    border-radius: 100px;
+                    border: 1px solid #FFFFFF;
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    background-color: #1C1C1C;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    p{
+                        height: 22px;
+                        width: auto;
+                        color: #FFFFFF;
+                        font-size: 18px;
+                        font-family: $Karla;
+                        font-weight: 200;
+                        line-height: 120%;
+                        letter-spacing: 0%;
+                        white-space: nowrap;
+                    }
+                    img{
+                        height: 10px;
+                        width: 10px;
+                    }
+                }
+            }
+        }
+
+        .left-content{
+            height: 474px;
+            width: 520px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 60px;
+
+            .close-btn-wrapper{
+                height:48px;
+                width:100%;
+                display:flex;
+                justify-content: flex-end;
+                
+                
+                button{
+                    height: 48px;
+                    width: 48px;
+                    background-color: transparent;
+                    border: 0;
+
+                    img{
+                        height: 18px;
+                        width: 18px;
+                        &:hover{
+                        cursor: pointer;
+                        }
+                    }
+
+                    
+                }
+            }
+        
+            img{
+                height: 369px;
+                width: 100%;
+                border-radius: 30px;
+            }
+            .next-wrapper{
+                height: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                .next{
+                    height: 40px;
+                    width: 151px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 12px;
+
+                    p{
+                        color: #3DCFB6;
+                        font-size: 18px;
+                        font-family: $Karla;
+                        font-weight: 200;
+                        line-height: 120%;
+                        letter-spacing: 0%;
+                    }
+
+                    img{
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+            }
+                
+        }
+       
     }
+   
+
 }

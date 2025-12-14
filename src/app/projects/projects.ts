@@ -35,14 +35,14 @@ export class Projects {
     this.project = null;
   }
 
+  stopScrolling(){
+
+  }
   openOverlay(projectTitel: string){
-    console.log(projectTitel);
     this.showProjectOverlay = true
     this.projectName = projectTitel;
+    document.body.classList.add('no-scroll');
   }
 
-  test(){
-    console.log(this.showProjectOverlay)
-    console.log(this.projectName);
-  }
+  
 }

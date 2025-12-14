@@ -54,10 +54,9 @@
         <div class="overlay">
             @if (showProjectOverlay) {
                 <app-project-overlay 
-                (closeProjectOverlay)="showProjectOverlay = $event"
-                [showProjectOverlay]="showProjectOverlay"
-                >
-            </app-project-overlay>
+                    (closeProjectOverlay)="showProjectOverlay = $event"
+                    [projectName]="projectName">
+                </app-project-overlay>
             }
            
         </div>

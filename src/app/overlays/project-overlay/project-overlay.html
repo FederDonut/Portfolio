@@ -3,26 +3,49 @@
     <section class="content">
         <div class="right-content">
             <div class="headlines">
-                <h1>01</h1>
-                <h2>name</h2>
+                <h1>{{currentProject.number}}</h1>
+                <h2>{{currentProject.name}}</h2>
             </div>
             <div class="description">
                 <h3>What is this Project about?</h3>
-                <p>Lorem ipsum</p>
-                <div class="tech-stack"></div>
+                <p>{{OverlayService.projects[counter].description.EN}}</p>
+                <div class="tech-stack">
+                  @for (item of currentProject.techstack; track item.name) {
+                    <div class="tech-content">
+                        <img [src]="item.img" [alt]="item.name">
+                        <p>{{item.name}}</p>
+                    </div>
+                  }
+                </div>
             </div>
             <div class="forword">
-                <button>GitHub</button>
-                <button>Live Test</button>
+                <button>
+                    <p>GitHub</p>
+                    <img src="/assets/img/arrow_outward.svg" alt="">
+                </button>
+                <button>
+                    <p>Live Test</p>
+                    <img src="/assets/img/arrow_outward.svg" alt="">
+                </button>
             </div>
            
         </div>
         <div class="left-content">
-            <img src="#" alt="">
+            <div class="close-btn-wrapper">
+                <button  (click)="closeOverlay()">
+                    <img src="/assets/img/close_small.png" alt="">
+                </button>
+            </div>
+           
+            <img [src]="currentProject.photo" alt="">
+            <div class="next-wrapper">
+                <div class="next">
+                    <p>Next proyect</p>
+                    <img src="/assets/img/iconizer-arrow_forward.svg" alt="">
+                </div>
+            </div>
         </div>
-        <div class="next"></div>
-        <div class="close-overlay" (click)="closeOverlay()">
-            X
-        </div>
+        
+        
     </section>
 </section>
