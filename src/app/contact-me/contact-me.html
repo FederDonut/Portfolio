@@ -17,22 +17,26 @@
             </div>
         </div>
         <div class="right-content">
-            <form class="user-input">
+
+            <form class="user-input" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="user-content name">
                     <h4>What's your name?</h4>
-                    <input type="text" id="name" 
-                    placeholder="Your name goes here">
+                    <input [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                    placeholder="Your name goes here" required>
                 </div>
                  <div class="user-content mail">
                     <h4>What's your email?</h4>
-                    <input type="text" id="mail"
-                    placeholder="youremail@email.com">
+                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                    placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 </div>
                  <div class="user-content post">
                     <h4>How can I help you?</h4>
-                    <textarea type="text" id="post"
-                    placeholder="Hello Raphael, I am interested in...."
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message"
+                        placeholder="Hello Raphael, I am interested in...." required
                     ></textarea>
+                    @if(!message.valid && message.touched){
+                        <span>Please enter a message</span>
+                    }
                 </div>
                 <div class="seperator"></div>
                 <div class="submit-content">

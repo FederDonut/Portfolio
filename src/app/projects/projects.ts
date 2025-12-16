@@ -17,6 +17,7 @@ export class Projects {
   projectName: string = "";
 
   OverlayService = inject(OverlayService);
+  
   getBackgroundImage(){
     if(this.project === 'Join'){
       return 'url(/assets/img/Photos/Join-Photo.png)'
