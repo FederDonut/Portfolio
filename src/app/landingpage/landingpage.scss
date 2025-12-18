@@ -5,7 +5,7 @@ $Karla: 'Karla';
 .navbar-wrapper{
     width: 85%;
     height: 98px;
-    max-width: 1940px;
+    max-width: 1920px;
     display: flex;
     .navbar{
         width: 100%;
@@ -14,7 +14,7 @@ $Karla: 'Karla';
 .landingpage-content{
     height: 100vh;
     width: 100%;
-    max-width: 1940px;
+    max-width: 1920px;
 
     //background: linear-gradient(60deg,#1C1C1C 20%,#08463B);
     display: flex;
@@ -151,6 +151,7 @@ $Karla: 'Karla';
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        max-width: 1920px;
         //border: 1px solid white;
 
     }
@@ -243,6 +244,7 @@ $Karla: 'Karla';
         z-index: 1 !important;
         height: 62px;
         width: 100%;//1990
+        max-width: 1920px;
         rotate: -2.5deg;
         background-color: #FFFFFF1F;
         backdrop-filter: blur(5.3px);
@@ -253,7 +255,7 @@ $Karla: 'Karla';
         .carousel-wrapper{
             height: 100%;
             width: max-content;
-            animation: spin 9s infinite linear;
+            animation: spin 8s infinite linear;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -265,6 +267,7 @@ $Karla: 'Karla';
                 flex-direction: row;
                 align-items: center;
                 gap: 56px;
+                border: 1px solid blue;
                 
                 .c-content{ 
                     flex-shrink: 0;
@@ -293,8 +296,8 @@ $Karla: 'Karla';
             }
         }
         @keyframes spin {
-            from {translate: 0;}
-            to {translate: -50%;}
+            from {transform: translateX(0);}    //from {translate: 0;}
+            to {transform:translateX(-43%);}   //to {translate: -50%;}
         }
         
     }

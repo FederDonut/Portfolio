@@ -1,17 +1,46 @@
 
+%section-base {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .content-wrapper{
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //max-width: 1920px;
 
     .landingpage{
+        @extend %section-base;
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         background: linear-gradient(60deg, #1C1C1C 20%, #08463B);
+        
 
+    }
+    .about-me{
+        @extend %section-base;
+    }
+    .technologies{
+        @extend %section-base;
+        background-color: #1C1C1C
+    }
+    .projects{
+        @extend %section-base;
+        background-color: #1C1C1C;
+    }
+    .others-about-me{ //hier weitermachen !
+        @extend %section-base;
+        background-color: #1C1C1C;
+        
+    }
+    .contact-me{
+        @extend %section-base;
+        background-color: #1C1C1C;
     }
 }
