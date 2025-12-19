@@ -238,13 +238,13 @@ $Karla: 'Karla';
     }
 
     .carousel{
-        position: absolute;
-        bottom: 42px;
-        left: -21px;
+        position: relative;
+        bottom: -362px;
+        //left: -21px;
         z-index: 1 !important;
         height: 62px;
-        width: 100%;//1990
-        max-width: 1920px;
+        width: 99%;//1990
+        max-width: 1920px;//1920
         rotate: -2.5deg;
         background-color: #FFFFFF1F;
         backdrop-filter: blur(5.3px);
@@ -255,11 +255,14 @@ $Karla: 'Karla';
         .carousel-wrapper{
             height: 100%;
             width: max-content;
-            animation: spin 8s infinite linear;
+           //min-width: 100%;
+            flex-wrap: nowrap;
+            animation: spin 10s infinite linear;
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 56px;
+            gap: 0;
+            will-change: transform;
 
             .carousel-elements{
                 height: 38px;
@@ -267,7 +270,9 @@ $Karla: 'Karla';
                 flex-direction: row;
                 align-items: center;
                 gap: 56px;
-                border: 1px solid blue;
+                padding-right: 56px;
+                flex-shrink: 0;
+                
                 
                 .c-content{ 
                     flex-shrink: 0;
@@ -297,7 +302,8 @@ $Karla: 'Karla';
         }
         @keyframes spin {
             from {transform: translateX(0);}    //from {translate: 0;}
-            to {transform:translateX(-43%);}   //to {translate: -50%;}
+            to {transform:translateX(-1559.5px);}   //to {translate: -50%;}
+            // Dokumenation erstellen !!!!!!
         }
         
     }
