@@ -1,11 +1,19 @@
 $breakpoint-1220: 1220px;
 $breakpoint-600: 600px;
+$breakpoint-400: 400px;
+$breakpoint-360: 360px;
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
 }
 @mixin width600{
     @media (max-width: #{$breakpoint-600}){@content;}
+}
+@mixin width400{
+    @media (max-width: #{$breakpoint-400}){@content;}
+}
+@mixin width360{
+    @media (max-width: #{$breakpoint-360}){@content;}
 }
 
 $font: 'FiraCode';
@@ -33,11 +41,17 @@ $Karla: 'Karla';
             height: auto;
             align-items: center;
         }
+        
 
         .photo-wrapper{
             height: 100%;
             width: 568px;
             //border: 1px solid red;
+            @include width600{
+                width: 95%;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
 
             .photo{
                 height: 568px;
@@ -53,16 +67,25 @@ $Karla: 'Karla';
             //border: 1px solid red;
             display: flex;
             align-items: flex-end;
+            @include width600{
+                height: auto;
+                width: 95%;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
 
            
            
 
             .personal-description{
-                height: 588px;
+                height: 628px;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                @include width600{
+                    height: auto;
+                }
                 h3{
                     font-family: $Karla;
                     font-size: 24px;
@@ -72,7 +95,7 @@ $Karla: 'Karla';
                     margin-top: 20px;
                 }
                 .about-me{
-                    height: 540px;
+                    height: 600px;
                     width: 100%;
                     border: 1px solid #3DCFB6;
                     background-color: rgb(31, 46, 43);
@@ -82,6 +105,16 @@ $Karla: 'Karla';
                     align-items: center;
                     justify-content: center;
                     gap: 32px;
+                    @include width600{
+                        gap: 20px;
+                        
+                    }
+                    @include width400{
+                        justify-content: flex-start;
+                    }
+                    @include width360{
+                        height: 700px;
+                    }
 
                     .headline-wrapper{
                         height: 64px;
@@ -89,10 +122,22 @@ $Karla: 'Karla';
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
+                        @include width400{
+                            height: auto;
+                        }
+                        @include width360{
+                            margin-top: 8px;
+                        }
                         h1{
                             color: #3DCFB6;
                             font-size: 64px;
                             font-family: $font;
+                            @include width600{
+                                font-size: 56px;
+                            }
+                            @include width400{
+                                font-size: 38px;
+                            }
                         }
                     }
                     .personal-presentation{
@@ -102,6 +147,14 @@ $Karla: 'Karla';
                         font-family: $Karla;
                         font-size: 16px;
                         font-weight: 400;
+                        @include width600{
+                            font-size: 14px;
+                            font-weight: 200;
+                        }
+                        @include width400{
+                            height: auto;
+                            //margin-bottom: 20px;
+                        }
                         
                     }
                     .personal-matrix{
@@ -110,6 +163,12 @@ $Karla: 'Karla';
                         display: flex;
                         flex-direction: column;
                         gap: 24px;
+                        @include width600{
+                            width: 80%;
+                        }
+                        @include width400{
+                            height: auto;
+                        }
 
                         .matrix-wrapper{
                             display: flex;
@@ -120,6 +179,10 @@ $Karla: 'Karla';
                                 font-size: 16px;
                                 font-weight: 400;
                                 font-family: $Karla;
+                                @include width600{
+                                    font-size: 14px;
+                                    font-weight: 200;
+                                }
                             }
                         }
                     }
