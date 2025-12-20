@@ -1,3 +1,13 @@
+$breakpoint-1220: 1220px;
+$breakpoint-600: 600px;
+
+@mixin width1220{
+    @media (max-width: #{$breakpoint-1220}){@content;}
+}
+@mixin width600{
+    @media (max-width: #{$breakpoint-600}){@content;}
+}
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
@@ -18,6 +28,11 @@ $Karla: 'Karla';
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        @include width1220{
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+        }
 
         .photo-wrapper{
             height: 100%;

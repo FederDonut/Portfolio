@@ -1,3 +1,17 @@
+$breakpoint-731: 731px;
+$breakponint-485: 485px;
+$breakpoint-392: 392px;;
+
+@mixin width731{
+    @media (max-width: #{$breakpoint-731}){@content;}
+}
+@mixin width485{
+    @media (max-width: #{$breakponint-485}){@content;}
+}
+@mixin width392{
+    @media (max-width: #{$breakpoint-392}){@content}
+}
+
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -24,28 +38,50 @@ $Karla: 'Karla';
     
     .headline-content{
         height: 268px;
-        width: 755px;
+        width: clamp(320px,755px, 100%);
         z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 100px;
+        @include width392{
+            width: auto;
+        }
 
         h1{
             color: rgba(217, 217, 217, 1);
             font-family: $font;
-            font-size: 90px;
+            font-size: clamp(24px, 90px, 100px);
             font-weight: 700;
             font-style: bold;
             letter-spacing: -2%;
             line-height: 128px;
+            @include width731{
+                font-size: 60px;
+                font-weight: 400;
+            }
+            @include width485{
+                font-size: 48px;
+            }
+            @include width392{
+                font-size: 32px;
+                line-height: 95px;
+            }
+           
         }
         h3{
             font-family: $font;
             font-size: 40px;
             color: #ffffff;
             font-weight: 400;
+            @include width731{
+                font-size: 24px;
+                font-weight: 200;
+            }
+            @include width392{
+                font-size: 20px;
+            }
 
         }
         .nav-btn{
@@ -55,6 +91,10 @@ $Karla: 'Karla';
             align-items: center;
             justify-content: space-between;
             gap: 48px;
+            @include width392{
+                gap: 12px;
+                width: auto;
+            }
         }
         button{
             height: 48px;
@@ -132,6 +172,7 @@ $Karla: 'Karla';
                 }
             }
         }
+       
         
     }
     @keyframes btn-spin-one {
@@ -313,4 +354,23 @@ $Karla: 'Karla';
 
     
 
+}
+
+
+
+@media (max-width: 392px){
+    
+
+    .btn-one{
+        width: 145px !important;
+        padding-left: 6px !important;
+    }
+    .btn-two{
+        width: 138px !important;
+        .btn-content-wrapper-two{
+            padding-left: 6px !important;
+        }
+    }
+    
+   
 }

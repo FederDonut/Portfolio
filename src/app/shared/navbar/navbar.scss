@@ -13,6 +13,21 @@ $font: 'FiraCode';
     align-items: center;
     justify-content: space-between;
 
+    .mobil-menu{
+        display: none;
+       
+        button{
+            height: 48px;
+            width: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border-style: none;
+            cursor: pointer;
+        }
+    }
+
     .menu{
         height: 26px;
         width: auto;
@@ -124,4 +139,20 @@ $font: 'FiraCode';
         }
     }
 
+}
+@media (max-width: 670px){
+    .mobil-menu{
+        display: block !important;
+    }
+    .navbar-wrapper{
+        flex-direction: row-reverse;
+    }
+    .menu{
+        display: none !important;
+    }
+
+    .full-name{
+        display: none;
+        //width: auto;
+    }
 }
