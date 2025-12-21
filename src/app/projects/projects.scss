@@ -1,3 +1,21 @@
+$breakpoint-1220: 1220px;
+$breakpoint-950: 950px;
+$breakpoint-700: 700px;
+$breakpoint-500: 500px;
+
+@mixin width1220{
+    @media(max-width: #{$breakpoint-1220}){@content}
+};
+@mixin width950{
+    @media (max-width:#{$breakpoint-950}){@content}
+};
+@mixin width700{
+    @media (max-width:#{$breakpoint-700}){@content}
+};
+@mixin width500{
+    @media (max-width:#{$breakpoint-500}){@content}
+};
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
@@ -10,9 +28,11 @@ $Karla: 'Karla';
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    //gap: 41px;
-    //background-color: rgb(28, 28, 28);
-   
+    @include width1220{
+        width: 95%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 
     
     
@@ -26,6 +46,11 @@ $Karla: 'Karla';
         gap: 41px;
         //margin-left: 10%;
        
+        @include width700{
+            width: auto;
+            height: auto;
+            
+        }
         .d-none{
             display: none;
         }
@@ -33,6 +58,14 @@ $Karla: 'Karla';
             height: 112px;
             width: 622px;
             color: #3DCFB6;
+            @include width700{
+                width: auto;
+                margin-bottom: 30px;
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
             h3{
                 font-family: $Karla;
                 font-size: 24px;
@@ -43,7 +76,12 @@ $Karla: 'Karla';
                 font-size: 64px;
                 font-weight: 700;
                 white-space: nowrap;
+                @include width700{
+                    font-size: 56px;
+                    white-space: unset;
+                }
             }
+
 
         }
         .description{
@@ -53,6 +91,12 @@ $Karla: 'Karla';
             font-family: $Karla;
             font-size: 18px;
             font-weight: 400;
+            @include width500{
+                margin-top: 20px;
+                width: auto;
+                font-weight: 200;
+                font-size: 16px;
+            }
         }
         .portfolio{
             height: auto;
@@ -76,6 +120,12 @@ $Karla: 'Karla';
                 padding-left: 5%;
                 padding-right: 5%;
 
+                @include width500{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
                 h2{
                     font-family: $font;
                     font-weight: 700;
@@ -91,7 +141,9 @@ $Karla: 'Karla';
                     font-family: $Karla;
                     font-size: 18px;
                     font-weight: 400;
-
+                    @include width500{
+                        font-weight: 200;
+                    }
 
                     .vertical-seperator{
                         height: 100%;
@@ -117,6 +169,9 @@ $Karla: 'Karla';
         display: flex;
         align-items: flex-end;
 
+        @include width1220{
+            display: none;
+        }
         .preview-img{
             //display: none;
             position: absolute;
