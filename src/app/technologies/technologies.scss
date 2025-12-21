@@ -1,152 +1,234 @@
+$breakpoint-1220: 1220px;
+$breakpoint-650: 650px;
+$breakpoint-550: 550px;
+
+@mixin width1220{
+    @media (max-width: #{$breakpoint-1220}){@content} 
+};
+@mixin width650{
+    @media (max-width: #{$breakpoint-650}){@content}
+};
+@mixin width550{
+    @media (max-width: #{$breakpoint-550}){@content}
+}
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
 
 
 
-    .technologies{
-        height: 695px;
-        width: 100%;
-        //background: radial-gradient(circle at -90% 80%, #08463B4D 30%, #1C1C1C 55%);
-        //background-color: black;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        
-        .radial-gradient{
-            position: absolute;
-            margin-top: 50px;
-            left: -200px ;
-            border: 1px solid red;
-            height: 553px;
-            width: 1000px;
-            border-radius: 50%;
-            filter: blur(35px);
-            background: linear-gradient(to right, #08463b8c, #08463b61 50%, #08463b3b 80%, #08463b14);
-        };
-        
+.technologies{
+    height: 695px;
+    width: 100%;
+    //background: radial-gradient(circle at -90% 80%, #08463B4D 30%, #1C1C1C 55%);
+    //background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     
-        .skill-set-wrapper{
-            height: 551px;
-            width: 520px;
+    @include width1220{
+        height: auto;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .radial-gradient{
+        position: absolute;
+        margin-top: 50px;
+        left: -200px ;
+        border: 1px solid red;
+        height: 553px;
+        width: 1000px;
+        border-radius: 50%;
+        filter: blur(35px);
+        background: linear-gradient(to right, #08463b8c, #08463b61 50%, #08463b3b 80%, #08463b14);
+
+        @include width1220{
+            width: 400px
+        }
+    };
+    
+
+    .skill-set-wrapper{
+        height: 551px;
+        width: 520px;
+        //border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1;
+
+        @include width1220{
+            
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        @include width550{
+            width: 95%;
+            height: 600px;
+        }
+    
+        h3{
+            color: #3DCFB6;
+            font-size: 24px;
+            font-family: $Karla;
+        }
+    
+        .skill-set-content{
+            height: 503px;
+            width: 100%;
+            background-color: rgb(31, 46, 43);
+            opacity: 0.9;
+            border: 1px solid #3DCFB6;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+
+            @include width650{
+                gap: 32px;
+                height: 520px;
+            }
+
+            .headline{
+                height: 64px;
+                width: 80%;
+                h1{
+                    font-size: 64px;
+                    color: #3DCFB6;
+                    font-family: $font;
+
+                    @include width650{
+                        
+                        font-size: 56px;
+                    }
+                    @include width550{
+                        font-size: 38px;
+                    }
+                }
+                @include width650{
+                    height: auto;
+                }
+            }
+            .skill-content{
+                height: 247px;
+                width: 80%;
+                font-size: 16px;
+                font-family: $Karla;
+                color: #FFFFFF;
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+
+                @include width650{
+                    height: auto;
+                    font-weight: 200;
+                    font-size: 14px;
+                }
+                
+            }
+            .btn-wrapper{
+                height: 48px;
+                width: 80%;
+                display: flex;
+
+                .lets-talk{
+                    color: #FFFFFF;
+                    height: 48px;
+                    width: 122px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            }
+            
+        }
+    }
+    
+    .skill-imgs-wrapper{
+        height: 428px;
+        width: 632px;
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        @include width1220{
+            height: auto;
+            //width: 95%;
+            //flex-direction: column;
+            //align-content: center;
+            justify-content: center;
+            align-items: center;
+            padding-left: 8px;
+            padding-right: 8px;
+            //gap: 16px;
+            z-index: 1;
+        }
+        @include width650{
+            width: 95%;
+        }
+        @include width550{
+            gap: 16px;
+        }
+
+        .imgWrapper{
+            height: 116px;
+            width: 104px;
+            color: #FFFFFF;
             //border: 1px solid white;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            z-index: 1;
-        
-            h3{
-                color: #3DCFB6;
-                font-size: 24px;
-                font-family: $Karla;
+            align-items: center;
+            //justify-content: center;
+            gap: 8px;
+
+            .titels{
+                //font-family: $font; muss noch angepasst werden 
+                font-size: 18px;
+                text-align: center;
+                
             }
-        
-            .skill-set-content{
-                height: 503px;
-                width: 100%;
-                background-color: rgb(31, 46, 43);
-                opacity: 0.9;
-                border: 1px solid #3DCFB6;
-                border-radius: 30px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 40px;
-
-                .headline{
-                    height: 64px;
-                    width: 80%;
-                    h1{
-                        font-size: 64px;
-                        color: #3DCFB6;
-                        font-family: $font;
-                    }
+            .img{
+                height: 64px;
+                width: 64px;
+                background-image: var(--bg-image);
+                background-position:center ;
+                background-size: cover;
+                transition: transform 1s;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    transition: 1s;
                 }
-                .skill-content{
-                    height: 247px;
-                    width: 80%;
-                    font-size: 16px;
-                    font-family: $Karla;
-                    color: #FFFFFF;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 32px;
-                }
-                .btn-wrapper{
-                    height: 48px;
-                    width: 80%;
-                    display: flex;
-
-                    .lets-talk{
-                        color: #FFFFFF;
-                        height: 48px;
-                        width: 122px;
-                        border: 1px solid #FFFFFF;
-                        border-radius: 100px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    &:hover{
-                        cursor: pointer;
-                    }
-                }
-                }
-               
             }
         }
-        
-        .skill-imgs-wrapper{
-            height: 428px;
-            width: 632px;
+        .showOverlay{
+            position: relative;
+            margin-bottom: 50px;
+            @include width650{
+                margin-bottom: 0;
+            }
+        }
+        .overlay{
+            position: absolute;
             
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
+            left: -3%;
+            bottom: 45%;
+            
+            z-index: 1;
+            margin-bottom: 30px;
 
-            .imgWrapper{
-                height: 116px;
-                width: 104px;
-                color: #FFFFFF;
-                //border: 1px solid white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                //justify-content: center;
-                gap: 8px;
-
-                .titels{
-                    //font-family: $font; muss noch angepasst werden 
-                    font-size: 18px;
-                    text-align: center;
-                    
-                }
-                .img{
-                    height: 64px;
-                    width: 64px;
-                    background-image: var(--bg-image);
-                    background-position:center ;
-                    background-size: cover;
-                    transition: transform 1s;
-                    &:hover{
-                        cursor: pointer;
-                        transform: scale(1.1);
-                        transition: 1s;
-                    }
-                }
-            }
-            .showOverlay{
-                position: relative;
-                margin-bottom: 50px;
-            }
-            .overlay{
-                position: absolute;
-               
-                left: -3%;
-                bottom: 45%;
-                
-                z-index: 1;
-                margin-bottom: 30px;
+            @include width1220{
+                display: none;
             }
         }
     }
+}
