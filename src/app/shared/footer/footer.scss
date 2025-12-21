@@ -1,3 +1,8 @@
+$breakpoint-700: 700px;
+
+@mixin width700{
+    @media (max-width:#{$breakpoint-700}){@content}
+};
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -12,6 +17,11 @@ $Karla: 'Karla';
     padding-left: 96px;
     padding-right: 96px;
 
+    @include width700{
+        padding-left: 18px;
+        padding-right: 18px;
+        
+    }
     .content{
         height: 126px;
         width: 1248px;
@@ -96,6 +106,9 @@ $Karla: 'Karla';
                 font-family: $font;
                 font-weight: 400;
                 line-height: 120%;
+            }
+            @include width700{
+                display: none;
             }
 
         }
