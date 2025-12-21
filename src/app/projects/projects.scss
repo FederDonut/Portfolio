@@ -29,6 +29,7 @@ $Karla: 'Karla';
     flex-direction: row;
     justify-content: space-evenly;
     @include width1220{
+        height: auto;
         width: 95%;
         padding-left: 8px;
         padding-right: 8px;

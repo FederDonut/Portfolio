@@ -1,4 +1,8 @@
+$breakpoint-700: 700px;
 
+@mixin width700{
+    @media(max-width:#{$breakpoint-700}){@content}
+};
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -13,18 +17,30 @@ $Karla: 'Karla';
     align-items: center;
     justify-content: space-between;
 
+    @include width700{
+
+        height: auto;
+        width: 95%;
+        margin-top: 100px;
+        //padding-left: 8px;
+        //padding-right: 8px;
+    }
 
     h3{
         color: #3DCFB6;
         font-size: 32px;
         font-weight: 700;
         font-family: $font;
+        @include width700{
+            font-size: 24px;
+            text-align: center;
+        }
     }
     .quotes{
         position: relative;
         //display: block;
         top: 32px;
-        left: -32%;
+        left: -22%;//-32%
         min-height: 64px !important;
         height: 64px !important;
         width: 90px;
@@ -32,6 +48,12 @@ $Karla: 'Karla';
         background-image: url(/assets/img/quotestest.png);
         background-position: center;
         background-size: cover;
+        @include width700{
+            height: 48px !important;
+            width: 66px !important;
+            min-height: 0 !important;
+            left: -40.5%;
+        }
     }
     .slider-content{
         height: auto;
