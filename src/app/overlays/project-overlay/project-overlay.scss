@@ -1,3 +1,21 @@
+$breakpoint-1220: 1220px;
+$breakpoint-650: 650px;
+$breakpoint-550: 550px;
+$breakpoint-400: 400px;
+
+@mixin width1220{
+    @media (max-width: #{$breakpoint-1220}){@content;}
+}
+@mixin width650{
+    @media (max-width: #{$breakpoint-650}){@content;}
+}
+@mixin width550{
+    @media (max-width: #{$breakpoint-550}){@content;}
+}
+@mixin width400{
+    @media (max-width: #{$breakpoint-400}){@content;}
+}
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
@@ -14,6 +32,13 @@ $Karla: 'Karla';
     justify-content: center;
     overflow: hidden;
     
+    @include width1220{
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    @include width650{
+
+    }
 
 
     .content{
@@ -29,12 +54,36 @@ $Karla: 'Karla';
         align-items: center;
         gap: 40px;
 
+        @include width1220{
+            height: auto;
+            width: 600px;
+            flex-direction: column-reverse;
+            gap: 32px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        @include width650{
+            width: 100%;
+        }
+        
         .right-content{
             height: 474px;
             width: 480px;
             display: flex;
             flex-direction: column;
             gap: 40px;
+            @include width1220{
+                height: 560px;
+            }
+            @include width550{
+                width: 95%;
+                gap: 20px;
+            }
+            @include width400{
+                height: 480px;
+                margin-bottom: 70px;
+
+            }
 
             .headlines{
 
@@ -43,6 +92,15 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+                @include width1220{
+                    gap: 8px;
+                    width: auto;
+                }
+                @include width400{
+                    height: auto;
+                    gap: 20px;
+                }
+
 
                 h1{
                     font-size: 128px;
@@ -51,6 +109,16 @@ $Karla: 'Karla';
                     letter-spacing: -2%;
                     line-height: 100px;
                     color: #3DCFB6;
+                    @include width1220{
+                        font-size: 72px;
+                    }
+                    @include width550{
+                        font-size: 58px;
+                        height: 80px;
+                    }
+                    @include width400{
+                        height: 60px;
+                    }
                 }
                 h2{
                     font-size: 64px;
@@ -60,6 +128,13 @@ $Karla: 'Karla';
                     letter-spacing: -3%;
                     color: #FFFFFF;
                     white-space: nowrap;
+                    @include width1220{
+                        font-size: 56px;
+                    }
+                    @include width550{
+                        font-size: 42px ;
+                        text-wrap: auto;
+                    }
                 }
             }
             .description{
@@ -68,12 +143,19 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
+                @include width1220{
+                    gap: 20px;
+                    width: auto;
+                }
                 h3{
                     font-size: 24px;
                     font-weight: 700;
                     line-height: 120%;
                     font-family: $font;
                     color: #3DCFB6;
+                    @include width1220{
+                        font-size: 20px;
+                    }
                    
                 }
                 p{
@@ -82,6 +164,10 @@ $Karla: 'Karla';
                     font-family: $Karla;
                     color: #FFFFFF;
                     line-height: 120%;
+                    @include width1220{
+                        font-size: 16px;
+                        font-weight: 200;
+                    }
 
                 }
                 .tech-stack{
@@ -90,6 +176,12 @@ $Karla: 'Karla';
                     flex-direction: row;
                     align-items: center;
                     gap: 24px;
+
+                    @include width650{
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        height: auto;
+                    }
 
                     .tech-content{
                         height: 24px;
@@ -120,6 +212,15 @@ $Karla: 'Karla';
                 align-items: center;
                 justify-content: space-between;
 
+                @include width1220{
+                    width: 100%;
+                    justify-content: space-evenly;
+
+                }
+                @include width400{
+                    margin-top: 70px;
+                }
+
                 button{
                     height: 100%;
                     width: 130px;
@@ -132,6 +233,12 @@ $Karla: 'Karla';
                     align-items: center;
                     justify-content: center;
                     gap: 4px;
+                    @include width400{
+                        width: 100px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+
+                    }
                     p{
                         height: 22px;
                         width: auto;
@@ -170,6 +277,19 @@ $Karla: 'Karla';
             flex-direction: column;
             gap: 40px;
             margin-bottom: 60px;
+            @include width1220{
+                margin-bottom: 0;
+                padding-top: 30px;
+                gap: 20px;
+                align-items: center;
+            }
+            @include width650{
+                width: 100%;
+                height: auto;
+                padding-top: 0;
+                gap: 0;
+            }
+            
 
             .close-btn-wrapper{
                 height:48px;
@@ -208,12 +328,26 @@ $Karla: 'Karla';
                 height: 369px;
                 width: 100%;
                 border-radius: 30px;
+                @include width650{
+                    width: 342px;
+                    height: 216px;
+                }
+                @include width400{
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    width: 280px;
+                    height: 180px;
+                    
+                }
             }
             .next-wrapper{
                 height: 40px;
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
+                @include width400{
+                    height: 0;
+                }
                 .next{
                     height: 40px;
                     width: 151px;
@@ -221,7 +355,21 @@ $Karla: 'Karla';
                     flex-direction: row;
                     align-items: center;
                     gap: 12px;
-
+                    @include width1220{
+                        position: relative;
+                        top: 520px;
+                        left: -12%;
+                    }
+                    @include width650{
+                        top: 580px;
+                    }
+                    @include width400{
+                        top: 532px ;
+                        left: 5%;
+                        gap: 8px;
+                        margin-bottom: 10px;
+                    }
+                    
                     p{
                         color: #3DCFB6;
                         font-size: 18px;
