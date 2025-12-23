@@ -8,7 +8,6 @@ import { Navbar } from '../shared/navbar/navbar';
   imports: [
     Navbar,
     TranslatePipe,
-    TranslateDirective
 ],
   templateUrl: './landingpage.html',
   styleUrl: './landingpage.scss',

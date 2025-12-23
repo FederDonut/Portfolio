@@ -1,10 +1,16 @@
 import { Component, EventEmitter, inject, Input, Output,OnInit,OnChanges, SimpleChanges } from '@angular/core';
 import { OverlayService } from '../../overlay-service';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+
+
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    TranslatePipe,
+  ],
   templateUrl: './project-overlay.html',
   styleUrl: './project-overlay.scss',
 })

@@ -11,7 +11,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   imports: [
     CommonModule,
     Slider,
-    TranslateDirective,
+    //TranslateDirective,
     TranslatePipe
   ],
   templateUrl: './others-about-me.html',

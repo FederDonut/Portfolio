@@ -51,7 +51,7 @@
         "main-headline-1": "Let's work",
         "main-headline-2": "together",
         "problem": "Got a problem to solve?",
-        "description": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+        "description": "My aim is not only to implement projects through well-thought-out architecture and user-centred innovation, but also to enrich them in a sustainable way.",
         "link": "Need a Frontend developer?",
         "span": "Lets talk!",
         "mailForm":{
@@ -63,8 +63,17 @@
             "content-bsp": "Hello Raphael, I am intrested in ....",
             "input-content-1":"I've read the privacy-policy",
             "link": "privacy-policy",
-            "input-content-2": " and agree to the processing of my data as outlined" 
+            "input-content-2": " and agree to the processing of my data as outlined",
+            "btn-content": "Absenden"  
         }  
+    },
+    "project-overlay":{
+        "headline":"What is this Project about?",
+        "description":{
+            "Join":"Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+            "El Pollo Loco":"Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        },
+        "btn-content":"Next project"
     },
     "footer":{
         "location":"Germany"

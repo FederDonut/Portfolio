@@ -3,16 +3,13 @@
         <div class="content-info">
             <div class="info">
                 <div class="headlines">
-                    <h4>Contact me</h4>
-                    <h1>Let's work <br>together</h1>
+                    <h4>{{'contact-me.headline'|translate}}</h4>
+                    <h1>{{'contact-me.main-headline-1'|translate}}<br>{{'contact-me.main-headline-2'|translate}}</h1>
                 </div>
                 <div class="description">
-                    <h3>Got a problem to solve?</h3>
-                    <p> 
-                        Encourage people to contact you and describe what role you are interested in. 
-                        Show that you will add value to their projects through your work.  
-                    </p>
-                    <p>  Need a Frontend developer? <span>Lets talk!</span></p>
+                    <h3>{{'contact-me.problem'|translate}}</h3>
+                    <p>{{'contact-me.description'|translate}}</p>
+                    <p>{{'contact-me.link'|translate}} <span>{{'contact-me.span'|translate}}</span></p>
                 </div>
             </div>
         </div>
@@ -20,19 +17,19 @@
 
             <form class="user-input" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="user-content name">
-                    <h4>What's your name?</h4>
+                    <h4>{{'contact-me.mailForm.name'|translate}}</h4>
                     <input [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                    placeholder="Your name goes here" required>
+                    placeholder="{{'contact-me.mailForm.name-bsp'|translate}}" required>
                 </div>
                  <div class="user-content mail">
-                    <h4>What's your email?</h4>
+                    <h4>{{'contact-me.mailForm.mail'|translate}}</h4>
                     <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                    placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    placeholder="{{'contact-me.mailForm.mail-bsp'|translate}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                 </div>
                  <div class="user-content post">
-                    <h4>How can I help you?</h4>
+                    <h4>{{'contact-me.mailForm.content'|translate}}</h4>
                     <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message"
-                        placeholder="Hello Raphael, I am interested in...." required
+                        placeholder="{{'contact-me.mailForm.content-bsp'|translate}}" required
                     ></textarea>
                     @if(!message.valid && message.touched){
                         <span>Please enter a message</span>
@@ -44,14 +41,14 @@
                         <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
                         <span class="input-check"></span>   
                     </label>
-                    <p>I've read the <a href="/privacy-policy">privacy-policy</a> and agree to the processing of my data as outlined</p>
+                    <p>{{'contact-me.mailForm.input-content-1'|translate}}<a href="/privacy-policy">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
                        
                 </div>
                 <div class="btn-wrapper">
                     <button>
                         <div class="btn-content-wrapper">
-                            <div class="btn-content"><p>Say Hello ;)</p></div>
-                            <div aria-hidden="true" class="btn-content"><p>Say Hello ;)</p></div>
+                            <div class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>
+                            <div aria-hidden="true" class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>
                         </div>
                     </button>
                 </div>

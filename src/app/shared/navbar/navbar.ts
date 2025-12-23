@@ -8,8 +8,6 @@ import { TranslateService, TranslatePipe, TranslateDirective } from '@ngx-transl
   imports: [
     CommonModule,
     TranslatePipe,
-    TranslateDirective
-
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',

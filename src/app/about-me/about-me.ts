@@ -5,7 +5,6 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   selector: 'app-about-me',
   imports: [
     TranslatePipe,
-    TranslateDirective
   ],
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss',
