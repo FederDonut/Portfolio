@@ -1,0 +1,73 @@
+
+{
+    "navbar": {
+        "about-me": "About me",
+        "skills": "Skills",
+        "projects": "Projects"
+
+    },
+    "landingpage":{
+        "titel": "Frontend Developer",
+        "btn-1": "Check my Work",
+        "btn-2": "Contact me",
+        "carousel":{
+            "location": "Based in Ulm",
+            "open-to-work": "Open to work",
+            "remote-work": "Available for remote work",
+            "titel": "Frontend Developer"
+        }
+    },
+    "Who-I-Am":{
+        "headline": "Who I Am",
+        "headline-box": "About me",
+        "personal-description":"Hey there I'm Raphael! Motivated Frontend Developer with a solid foundation in modern web technologies and roven skills in Windows system administration. I am highly motivated and looking for new challenges.",
+        "location": "Based in Ulm (Donau). Open to on-site work or remote and willing to contribute to collaboration",
+        "mindset": "As a determined, disciplined and highly motivated young professional, I am completely open to learning new technologies. My ultimate goal is to continuously expand my skills and develop innovative, efficient solutions through my commitment.",
+        "approach": "My basic approach is pragmatic: I always break down a large problem into many small, manageable units. This enables me to analyse it clearly and develop solutions step by step."
+
+    },
+    "technologies":{
+        "comp-headline":"Technologies",
+        "headline": "Skill Set",
+        "description": "I have a solid foundation in front-end development with HTML, CSS, JavaScript, TypeScript, Angular, Firebase, and Material Design, complemented by knowledge of REST APIs, Git, and Scrum. I enjoy creating user-friendly, responsive interfaces and am eager to keep learning of new tools to stay efficient in the fast-evolving web environment.",
+        "another-skill": "You need",
+        "another-skill-2":"another skill ?",
+        "description-2" :"Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "btn-content": "Let's Talk"
+    },
+    "portfolio":{
+        "headline": "Featured Projects",
+        "description-1": "Explore a selection of my work here -",
+        "description-2": "Interact with projects to see my skills in action."
+
+    },
+    "others-about-me":{
+        "headline": "What my colleagus and employers say about me",
+        "content": "comming soon"
+        
+    },
+    "contact-me":{
+        "headline": "Contact me",
+        "main-headline-1": "Let's work",
+        "main-headline-2": "together",
+        "problem": "Got a problem to solve?",
+        "description": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+        "link": "Need a Frontend developer?",
+        "span": "Lets talk!",
+        "mailForm":{
+            "name": "What's your name?",
+            "name-bsp": "Your name goes here",
+            "mail": "What's your email?",
+            "mail-bsp": "youremail@email.com",
+            "content": "How can I help you?",
+            "content-bsp": "Hello Raphael, I am intrested in ....",
+            "input-content-1":"I've read the privacy-policy",
+            "link": "privacy-policy",
+            "input-content-2": " and agree to the processing of my data as outlined" 
+        }  
+    },
+    "footer":{
+        "location":"Germany"
+    }
+   
+}

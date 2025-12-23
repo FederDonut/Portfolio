@@ -122,6 +122,8 @@ $Karla: 'Karla';
                 gap: 172px;
 
                 .btn-content{
+                    height: 22px;
+                    width: 131.81px;
                     color: #ffffff;
                     font-family: $Karla;
                     font-size: 18px;
@@ -154,6 +156,8 @@ $Karla: 'Karla';
                 gap: 172px;
 
                 .btn-content{
+                    height: 22px;
+                    width: 98.25px;
                     color: #ffffff;
                     font-family: $Karla;
                     font-size: 18px;
@@ -313,6 +317,7 @@ $Karla: 'Karla';
                 gap: 56px;
                 padding-right: 56px;
                 flex-shrink: 0;
+                border: 1px solid blue;
                 
                 
                 .c-content{ 
@@ -343,7 +348,7 @@ $Karla: 'Karla';
         }
         @keyframes spin {
             from {transform: translateX(0);}    //from {translate: 0;}
-            to {transform:translateX(-1559.5px);}   //to {translate: -50%;}
+            to {transform:translateX(-2036.5px);}   // english = -1559.5px deutsch = -2036.5px
             // Dokumenation erstellen !!!!!!
         }
         

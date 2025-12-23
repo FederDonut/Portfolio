@@ -2,11 +2,17 @@ import { Component, inject } from '@angular/core';
 import { OverlayService } from '../overlay-service';
 import { CommonModule } from '@angular/common';
 import { ProjectOverlay } from "../overlays/project-overlay/project-overlay";
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, ProjectOverlay],
+  imports: [
+    CommonModule,
+    ProjectOverlay,
+    TranslatePipe,
+    TranslateDirective
+  ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

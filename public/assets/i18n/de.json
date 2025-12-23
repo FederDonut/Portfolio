@@ -1,0 +1,77 @@
+
+{
+    "navbar": {
+        "about-me": "Profil",
+        "skills": "Skills",
+        "projects": "Projekte"
+
+    },
+    "landingpage":{
+        "titel": "Frontend Entwickler",
+        "btn-1": "Meine Projekte",
+        "btn-2": "Kontakt",
+        "carousel":{
+            "location": "Aus Ulm/Baden-Württenberg",
+            "open-to-work": "Offen für neue Projekte",
+            "remote-work": "Verfügbar für Remote-Projekte",
+            "titel": "Frontend Entwickler"
+        }
+    },
+    "Who-I-Am":{
+        "headline": "Kurz zu mir",
+        "headline-box": "Über mich",
+        "personal-description":"Hi, ich bin Raphael! Frontend-Entwickler mit Leidenschaft für modernen Code und starkem Fundament aus der IT-Systemintegration. Ich verstehe sowohl die User-Interface-Seite als auch die Administration im Windows-Umfeld. Jetzt suche ich eine neue Herausforderung.",
+        "location": "Sitz in Ulm an der Donau – einsatzbereit vor Ort oder Remote. Ich freue mich auf eine konstruktive Zusammenarbeit und neue Impulse!",
+        "mindset": "Entschlossen, diszipliniert und immer bereit für das nächste Level: Ich liebe es, neue Technologien zu meistern und mein Wissen in die Entwicklung innovativer Lösungen zu stecken.",
+        "approach": "Mein Ansatz ist pragmatisch: Ich zerlege komplexe Probleme in kleine, überschaubare Einheiten. Diese klare Analyse ermöglicht es mir, Schritt für Schritt effiziente und nachhaltige Lösungen zu entwickeln."
+        
+    },
+    
+
+
+    "technologies":{
+        "comp-headline":"Technologien",
+        "headline": "Fähigkeiten",
+        "description": "Ich verfüge über solide Grundlagen in der Front-End-Entwicklung mit HTML, CSS, JavaScript, TypeScript, Angular, Firebase und Material Design, ergänzt durch Kenntnisse in REST-APIs, Git und Scrum. Ich entwickle gerne benutzerfreundliche, responsive Oberflächen und lerne ständig neue Tools, um in der Webumgebung effizient zu bleiben.",
+        "another-skill": "Sie brauchen noch ",
+        "another-skill-2":"eine weitere Fähigkeit?",
+        "description-2" :"Kontaktieren Sie mich geren, ich freue mich von Ihnen zu lesen.",
+        "btn-content": "Kontakt"
+    },
+    "portfolio":{
+        "headline": "Ausgewählte Projekte",
+        "description-1": "Entdecken Sie meine Projekte -",
+        "description-2": "interagieren Sie mit den Projekten, machen Sie sich ein Bild meiner Fähigkeiten."
+
+    },
+    "others-about-me":{
+        "headline": "Kollegen & Arbeitgeber Feedback...",
+        "content": "comming soon"
+        
+    },
+    "contact-me":{
+        "headline": "Contact me",
+        "main-headline-1": "Let's work",
+        "main-headline-2": "together",
+        "problem": "Got a problem to solve?",
+        "description": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+        "link": "Need a Frontend developer?",
+        "span": "Lets talk!",
+        "mailForm":{
+            "name": "What's your name?",
+            "name-bsp": "Your name goes here",
+            "mail": "What's your email?",
+            "mail-bsp": "youremail@email.com",
+            "content": "How can I help you?",
+            "content-bsp": "Hello Raphael, I am intrested in ....",
+            "input-content-1":"I've read the privacy-policy",
+            "link": "privacy-policy",
+            "input-content-2": " and agree to the processing of my data as outlined" 
+        }  
+    },
+    "footer":{
+        "location":"Germany"
+    }
+   
+}
+   

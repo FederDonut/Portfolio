@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { NgStyle, NgIf } from '@angular/common';
 import { TechOverlay } from '../overlays/tech-overlay/tech-overlay';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-technologies',
   imports: [
     TechOverlay,
-    NgIf
+    NgIf,
+    TranslatePipe,
+    TranslateDirective
 ],
   templateUrl: './technologies.html',
   styleUrl: './technologies.scss',
@@ -32,21 +35,7 @@ export class Technologies {
     { titel: 'Growth Mindset', source: this.imgPath+'GrowthMindset.png'},
   ]
 
-  skillIntrouduktion =[
-    { language: 'EN', 
-      content:   `I have a solid foundation in front-end development with HTML, CSS, JavaScript, TypeScript, Angular,
-                  Firebase, and Material Design, complemented by knowledge of REST APIs, Git, 
-                  and Scrum. I enjoy creating user-friendly, responsive interfaces and am
-                  eager to keep learning of new tools to stay efficient in the fast-evolving
-                  web environment."
-                  `},
-    { language: 'DE',
-      content:  `Ich verfüge über solide Grundlagen in der Front-End-Entwicklung mit HTML, CSS, JavaScript, TypeScript,
-                Angular, Firebase und Material Design, ergänzt durch Kenntnisse in REST-APIs, Git und Scrum. Ich entwickle 
-                gerne benutzerfreundliche, responsive Oberflächen und lerne ständig neue Tools,
-                um in der Webumgebung effizient zu bleiben.`
-                  }
-  ]
+ 
 
   checkIndex(index:number){
     console.log(index);

@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Slider } from '../shared/slider/slider';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 
 
@@ -9,7 +10,9 @@ import { Slider } from '../shared/slider/slider';
   selector: 'app-others-about-me',
   imports: [
     CommonModule,
-    Slider
+    Slider,
+    TranslateDirective,
+    TranslatePipe
   ],
   templateUrl: './others-about-me.html',
   styleUrl: './others-about-me.scss',
