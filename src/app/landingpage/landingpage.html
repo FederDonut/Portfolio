@@ -1,7 +1,7 @@
 
 
 <div class="navbar-wrapper">
-    <app-navbar class="navbar"></app-navbar>
+    <app-navbar (isEnglish)="gotLanguage($event)" class="navbar"></app-navbar>
 </div>
 <section class="landingpage-content">
    <div class="headline-content">
@@ -9,21 +9,21 @@
         <h1>Raphael Zwick</h1>
         <div class="nav-btn">
            
-          <button class="btn-one">
+          
+          <a href="#contact" class="btn-one link-as-btn">
             <div class="btn-content-wrapper-one">
-              <a href="#contact" class="btn-content"><p>{{'landingpage.btn-1'|translate}}</p></a>
-              
-              <a href="#content" araia-hidden="true" class="btn-content"><p>{{'landingpage.btn-1'|translate}}</p></a>
+              <div  class="btn-content"><p>{{'landingpage.btn-1'|translate}}</p></div>  
+              <div araia-hidden="true" class="btn-content"><p>{{'landingpage.btn-1'|translate}}</p></div>
             </div>
-          </button>
+          </a>
 
-          <button class="btn-two">
-            <div class="btn-content-wrapper-two">
+          <a href="#contact" class="btn-two link-as-btn">
+            <div class="btn-content-wrapper-two" [ngClass]="{'lang-padding': !english}">
               <div class="btn-content"><p>{{'landingpage.btn-2'|translate}}</p></div>
               <div aria-hidden="true" class="btn-content"><p>{{'landingpage.btn-2'|translate}}</p></div>
             </div>
             
-          </button>
+          </a>
             
         </div>
    </div>
@@ -46,7 +46,7 @@
     </div>
   </section>
   <section class="carousel">
-    <div class="carousel-wrapper">
+    <div class="carousel-wrapper" [ngStyle]="{'--distance': !english ? '-2036.5px' : '-1559.5px'}">
 
     
       <div class="carousel-elements">

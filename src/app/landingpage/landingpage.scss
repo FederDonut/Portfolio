@@ -96,7 +96,8 @@ $Karla: 'Karla';
                 width: auto;
             }
         }
-        button{
+        .link-as-btn{
+            text-decoration: none;
             height: 48px;
             width: 172px;
             background: transparent;
@@ -154,6 +155,10 @@ $Karla: 'Karla';
                 align-items: center;
                 padding-left: 20px;
                 gap: 172px;
+
+                &.lang-padding{
+                    padding-left: 30px;
+                }
 
                 .btn-content{
                     height: 22px;
@@ -317,7 +322,7 @@ $Karla: 'Karla';
                 gap: 56px;
                 padding-right: 56px;
                 flex-shrink: 0;
-                border: 1px solid blue;
+                //border: 1px solid blue;
                 
                 
                 .c-content{ 
@@ -348,7 +353,7 @@ $Karla: 'Karla';
         }
         @keyframes spin {
             from {transform: translateX(0);}    //from {translate: 0;}
-            to {transform:translateX(-2036.5px);}   // english = -1559.5px deutsch = -2036.5px
+            to {transform:translateX(var(--distance, -2036.5px));}   // english = -1559.5px deutsch = -2036.5px
             // Dokumenation erstellen !!!!!!
         }
         
