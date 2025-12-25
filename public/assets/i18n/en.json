@@ -57,10 +57,13 @@
         "mailForm":{
             "name": "What's your name?",
             "name-bsp": "Your name goes here",
+            "name-error": "Oops! it seems your name is missing",
             "mail": "What's your email?",
             "mail-bsp": "youremail@email.com",
+            "mail-error": "Hoppla! your email is required",
             "content": "How can I help you?",
             "content-bsp": "Hello Raphael, I am intrested in ....",
+             "content-error": "What do you need to develop?",
             "input-content-1":"I've read the privacy-policy",
             "link": "privacy-policy",
             "input-content-2": " and agree to the processing of my data as outlined",

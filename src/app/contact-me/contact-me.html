@@ -18,34 +18,50 @@
             <form class="user-input" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="user-content name">
                     <h4>{{'contact-me.mailForm.name'|translate}}</h4>
-                    <input [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                    placeholder="{{'contact-me.mailForm.name-bsp'|translate}}" required>
+                    <input class="your-name" #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                    [placeholder]="(!name.valid && name.touched) 
+                                ? ('contact-me.mailForm.name-error' | translate) 
+                                : ('contact-me.mailForm.name-bsp' | translate)"  
+                    required>
                 </div>
                  <div class="user-content mail">
                     <h4>{{'contact-me.mailForm.mail'|translate}}</h4>
-                    <input [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                    placeholder="{{'contact-me.mailForm.mail-bsp'|translate}}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <input class="your-mail" #mail="ngModel" [(ngModel)]="contactData.email"  type="email" id="email" name="email"
+                    [placeholder]="(!mail.valid && mail.touched) 
+                                ? ('contact-me.mailForm.mail-error' | translate) 
+                                : ('contact-me.mailForm.mail-bsp' | translate)" 
+                             
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    @if(!mail.valid && mail.touched){
+                        @if(mail.errors?.['pattern']){
+                            <span>Please check your Emial format  (example@email.com)</span>
+                        }
+                        
+                    }
                 </div>
                  <div class="user-content post">
                     <h4>{{'contact-me.mailForm.content'|translate}}</h4>
-                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message"
-                        placeholder="{{'contact-me.mailForm.content-bsp'|translate}}" required
-                    ></textarea>
-                    @if(!message.valid && message.touched){
-                        <span>Please enter a message</span>
-                    }
+                        <textarea class="your-message" #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message"
+                            [placeholder]="(!message.valid && message.touched) 
+                                ? ('contact-me.mailForm.content-error' | translate) 
+                                : ('contact-me.mailForm.content-bsp' | translate)" 
+                            required
+                        ></textarea>
                 </div>
                 <div class="seperator"></div>
                 <div class="submit-content">
                     <label class="check">
-                        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
-                        <span class="input-check"></span>   
+                        <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"  id="checkbox" class="checkbox" required >
+                        <span class="input-check"></span> 
                     </label>
                     <p>{{'contact-me.mailForm.input-content-1'|translate}}<a href="/privacy-policy">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
-                       
+
                 </div>
+                    @if(!contactForm.valid && contactForm.submitted){
+                        <span>Please check your Emial format  (example@email.com)</span>
+                    }    
                 <div class="btn-wrapper">
-                    <button>
+                    <button class="btn" type="submit" [class.is-enabled]="contactForm.valid" [disabled]="!contactForm.valid">
                         <div class="btn-content-wrapper">
                             <div class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>
                             <div aria-hidden="true" class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>

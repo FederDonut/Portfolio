@@ -186,6 +186,45 @@ $Karla: 'Karla';
                         }
                     }
 
+                    .your-name{
+                        &.ng-invalid.ng-touched{
+                            &::placeholder{
+                                color: #C36868;
+                            }
+                        }
+
+                        @include width400{
+                            font-size: 16px;
+                            font-weight: 200;
+                        }
+
+                    }
+                    .your-mail{
+                        &.ng-invalid.ng-touched{
+                            &::placeholder{
+                                color: #C36868;
+                            }
+                        }
+
+                        @include width400{
+                            font-size: 16px;
+                            font-weight: 200;
+                        }
+
+                    }
+                    .your-message{
+                        &.ng-invalid.ng-touched{
+                            &::placeholder{
+                                color: #C36868;
+                            }
+                        }
+
+                        @include width400{
+                            font-size: 16px;
+                            font-weight: 200;
+                        }
+
+                    }
                     input{
                         height: 32px;
                         width: 75%;
@@ -194,19 +233,29 @@ $Karla: 'Karla';
                         font-family: $Karla;
                         border: none;
                         background-color: #1C1C1C;
-                        //background: 
-                        //    linear-gradient(90deg, #3DCFB6,#3DCFB6)left bottom/100% 2px no-repeat,
-                        //    linear-gradient(90deg, #1C1C1C, #1C1C1C) left bottom/100% no-repeat;
                         border-top-left-radius: 3px;
                         border-top-right-radius: 3px;
                         &:focus{
                             outline: none;
                         }
+                        &::placeholder{
+                            //color: #FFFFFF;
+                        }
+                        &.ng-invalid.ng-touched .ng-pristine{
+                            color: #C36868;
+                        }
+
                         @include width400{
                             font-size: 16px;
                             font-weight: 200;
                         }
 
+                    }
+                    span{
+                        font-family: $Karla;
+                        font-size: 14px;
+                        font-weight: 200;
+                        color: #C36868;
                     }
                     textarea{
                         height: auto;
@@ -226,10 +275,7 @@ $Karla: 'Karla';
                         overflow-wrap: break-word;
                         word-wrap: break-word;
                         word-break: break-all;
-                       //background: 
-                       //    linear-gradient(90deg, #3DCFB6,#3DCFB6)left bottom/100% 2px no-repeat,
-                       //    linear-gradient(90deg, #1C1C1C, #1C1C1C) left bottom/100% no-repeat;
-//  
+                    
                         &:focus{
                             //outline: none;
                             border-color: #3DCFB6;
@@ -365,7 +411,7 @@ $Karla: 'Karla';
                 @include width650{
                     width: auto;
                 }
-                button{
+                .btn{
                     height: 50px;
                     width: 139px;
                     border-radius: 100px;
@@ -376,10 +422,7 @@ $Karla: 'Karla';
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    &:hover{
-                        cursor: pointer;
-                        border-color: #3DCFB6;
-                    }
+                    
 
 
                     .btn-content-wrapper{
@@ -405,12 +448,26 @@ $Karla: 'Karla';
                             }
                             
                         }
-                        &:hover .btn-content{
-                            color: #3DCFB6;
-                            animation: btn-spin 2.5s infinite linear;
+                    }
+                    &.is-enabled{
+                        color: #FFFFFF ;
+                        cursor: pointer;
+                        border-color: #FFFFFF;
+                        &:hover{
+
+                            border-color: #3DCFB6;
+                            .btn-content-wrapper{
+                                animation: btn-spin 2.5s infinite linear;
+                                .btn-content{
+                                    color: #3DCFB6;
+
+                                }
+                            }
+
                         }
                     }
                 }
+                
                 @keyframes btn-spin {
                     from {translate: 0;}
                     to {translate: -220%;}

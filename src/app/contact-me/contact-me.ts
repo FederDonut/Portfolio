@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-me',
@@ -22,7 +22,8 @@ export class ContactMe {
   contactData ={
     name: "",
     email: "",
-    message: ""
+    message: "",
+    privacy: ""
   }
 
   mailTest = true;
@@ -57,4 +58,6 @@ export class ContactMe {
     }
     
   }
+
+
 }
