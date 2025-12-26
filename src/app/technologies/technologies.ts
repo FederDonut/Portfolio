@@ -12,7 +12,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
     CommonModule,
     NgIf,
     TranslatePipe,
-],
+  ],
   templateUrl: './technologies.html',
   styleUrl: './technologies.scss',
 })

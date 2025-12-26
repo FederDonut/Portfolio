@@ -83,6 +83,47 @@
     },
     "footer":{
         "location":"Deutschland"
+    },
+    "impressum":{
+        "headlines":{
+            "imprint":"Impressum",
+            "explore":"Das Board erkunden",
+            "terms":"Nutzungsbedingungen",
+            "scope":"Umfang und Eigentum am Produkt",
+            "rights":"Eigentumsrecht",
+            "use":"Verwendung des Produkts",
+            "disclaimer":"Haftungsausschluss",
+            "indemnity":"Schadloshaltung"
+        },
+        "content":{
+            "terms":"Durch den Zugriff auf und die Nutzung von ",
+            "terms-1":" (Produkt) erkennen Sie die folgenden Bedingungen und Richtlinien an, die von Zeit zu Zeit aktualisiert werden können. Ich, der genannte Student, behalte mir das Recht vor, diese Bedingungen ohne vorherige Ankündigung zu ändern.",
+            
+            "scope":" wurde im Rahmen eines Gruppenprojekts im Webentwicklungs-Bootcamp der",
+            "scope-1":"entwickelt. Es dient ausschließlich zu Bildungszwecken und ist nicht für eine umfassende private oder geschäftliche Nutzung vorgesehen. Daher kann keine Gewähr für Verfügbarkeit, Zuverlässigkeit oder Genauigkeit übernommen werden.",
+            "scope-2":"Das Design von",
+            "scope-3":"ist Eigentum der ",
+            "scope-4":". Eine unautorisierte Nutzung, Reproduktion, Änderung oder Weitergabe ist strengstens untersagt.",
+
+            "rights":"Abgesehen vom Design, das Eigentum der",
+            "rights-1":", ist, behalte ich, der genannte Student, alle Eigentumsrechte an",
+            "rights-2":", einschließlich urheberrechtlich geschützter Materialien, Marken und sonstiger geschützter Informationen.",
+
+            "use":"darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit geltenden Gesetzen verwendet werden. Jegliche Nutzung von",
+            "use-1":"für illegale Aktivitäten oder zur Belästigung, Bedrohung oder Schädigung anderer Personen ist strengstens untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern verantwortlich.",
+
+            "disclaimer":" wird 'wie besehen' bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Garantie, einschließlich, aber nicht beschränkt auf Garantien der Marktgängigkeit, Eignung für einen bestimmten Zweck oder Nichtverletzung von Rechten Dritter. In keinem Fall haften ich, der genannte Student, oder die ",
+            "disclaimer-1":"für direkte, indirekte, zufällige, spezielle oder Folgeschäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Datenverlust oder andere immaterielle Verluste, die aus der Nutzung von",
+
+            "indemnity":"Sie erklären sich damit einverstanden, uns, den genannten Studenten, die",
+            "indemnity-1":"sowie deren Partner, Mitarbeiter und Vertreter von allen Ansprüchen, Schäden, Kosten oder Haftungen (einschließlich angemessener Rechtskosten) freizustellen, die aus Ihrer Nutzung von",
+            "indemnity-2":"oder einem Verstoß gegen dieses Impressum entstehen.",
+            "indemnity-3":"Für Fragen oder Mitteilungen kontaktieren Sie uns bitte unter",
+            "date":"Datum: ....."
+            
+        }
+            
+
     }
    
 }
