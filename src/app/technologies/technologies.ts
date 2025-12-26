@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NgStyle, NgIf } from '@angular/common';
 import { TechOverlay } from '../overlays/tech-overlay/tech-overlay';
 import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
@@ -8,9 +9,9 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   selector: 'app-technologies',
   imports: [
     TechOverlay,
+    CommonModule,
     NgIf,
     TranslatePipe,
-    TranslateDirective
 ],
   templateUrl: './technologies.html',
   styleUrl: './technologies.scss',

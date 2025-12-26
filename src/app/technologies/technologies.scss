@@ -129,29 +129,79 @@ $Karla: 'Karla';
                 }
                 
             }
-            .btn-wrapper{
+            .link-wrapper{
                 height: 48px;
-                width: 80%;
+                width: 100%;
                 display: flex;
-
-                .lets-talk{
-                    color: #FFFFFF;
+                align-items: center;
+                justify-content: flex-start;
+                padding-left: 10%;
+            
+                .link-as-btn{
+                    text-decoration: none;
                     height: 48px;
                     width: 122px;
-                    border: 1px solid #FFFFFF;
+                    background: transparent;
+                    border: 1px solid #ffffff;
                     border-radius: 100px;
+                    padding-left: 5%;
+                    overflow-x: hidden; 
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
-                &:hover{
-                    cursor: pointer;
+                    justify-content: flex-start;
+                    align-items: center; 
+
+                    &:hover{
+                        cursor: pointer;
+                        border-color: #3DCFB6;
+                    }
+
+                    .btn-content-wrapper{
+                    
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 172px;
+                        //border: 1px solid #FFFFFF;
+
+                        //&.lang-padding{
+                        //    padding-left: 30px;
+                        //}
+                    
+                        .btn-content{
+                            font-family: $Karla;
+                            color: #FFFFFF;
+                            font-weight: 200;
+                            font-size: 18px;
+                            line-height: 120%;
+                            flex-shrink: 0;
+                            p{
+                                white-space: nowrap;
+                            }
+
+                        }
+                        &:hover {
+                            animation: btn-spin-one 3s infinite linear;
+                            p{
+                                color: #3DCFB6;
+                            }
+                        }
+
+                    
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
-            }
+                }
             }
             
         }
     }
-    
+    @keyframes btn-spin-one {
+        from {transform: translateX(0);}
+        to {transform: translateX(-245px);}
+    } 
     .skill-imgs-wrapper{
         height: 428px;
         width: 632px;
@@ -194,6 +244,8 @@ $Karla: 'Karla';
                 //font-family: $font; muss noch angepasst werden 
                 font-size: 18px;
                 text-align: center;
+                font-family: $font;
+                font-weight: 200;
                 
             }
             .img{

@@ -238,9 +238,9 @@ $Karla: 'Karla';
                         &:focus{
                             outline: none;
                         }
-                        &::placeholder{
-                            //color: #FFFFFF;
-                        }
+                        //&::placeholder{
+                        //    //color: #FFFFFF;
+                        //}
                         &.ng-invalid.ng-touched .ng-pristine{
                             color: #C36868;
                         }
