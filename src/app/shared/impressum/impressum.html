@@ -2,25 +2,29 @@
     <section class="navbar-wrapper">
         <app-navbar class="navbar"></app-navbar>
     </section>
+    <section class="arrow" [routerLink]="['/']" role="link">
+        <img src="/assets/img/arrow_back.svg" alt="">
+    </section>
     <section class="content">
         <h1>Legal Notice</h1>
 
 
         <section class="inner-content-wrapper">
-            <h3>{{'impressum.headlines.imprint'|translate}}</h3>
-            <div class="inner-content">
-                <ul>
-                    <li>Raphael Zwick</li>
-                    <li> Bühlengasse 2</li>
-                    <li>88527 Unlingen</li>
-                </ul>
-                
+            <div class="flex-wrapper">
+                <h3>{{'impressum.headlines.imprint'|translate}}</h3>
+                <div class="inner-content">
+                    <ul>
+                        <li>Raphael Zwick</li>
+                        <li> Bühlengasse 2</li>
+                        <li>88527 Unlingen</li>
+                    </ul>
+
+                </div>
+                <div class="mail">
+                    <h3>{{'impressum.headlines.explore'|translate}}</h3>
+                    <span><p>Email: raphael.zwick8@gmail.com</p></span>
+                </div>
             </div>
-            <div class="mail">
-                <h3>{{'impressum.headlines.explore'|translate}}</h3>
-                <span><p>Email: raphael.zwick8@gmail.com</p></span>
-            </div>
-            
         </section>
         <section class="inner-content-wrapper">
             <h3>{{'impressum.headlines.terms'|translate}}</h3>
@@ -83,7 +87,7 @@
                     {{'impressum.content.indemnity-1'|translate}} <span>Portfolio</span>
                     {{'impressum.content.indemnity-2'|translate}} <br><br>
                     {{'impressum.content.indemnity-3'|translate}} <br><br>
-                    {{'impressum.content.date'|translate}}
+                    {{'impressum.content.date'|translate}} 27.12.2025
                 
                 </p>
             </div>

@@ -1,10 +1,26 @@
+$breakpoint-1080: 1080px;
+$breakpoint-710: 710px;
+//$breakpoint-650: 650px;
+
+
+@mixin width1080{
+    @media (max-width: #{$breakpoint-1080}){@content} 
+};
+@mixin width710{
+    @media (max-width: #{$breakpoint-710}){@content}
+};
+//@mixin width650{
+//    @media (max-width: #{$breakpoint-650}){@content}
+//};
+
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
 
 .content-wrapper{
     height: auto;
-    width: 100vw;
+    //width: 100vw;
     background: linear-gradient(45deg, #1c1c1c 0% 35%, #08463b);
     
 
@@ -18,7 +34,24 @@ $Karla: 'Karla';
         .navbar{
             background: linear-gradient(45deg, #1c1c1c 0% 35%, #08463b);
         }
+        @include width710{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
 
+    }
+    .arrow{
+        height: 40px;
+        width: 40px;
+        padding-left: 16px;
+        display: none;
+        margin-bottom: 30px;
+        @include width710{
+            display: block;
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
     .content{
         height: 1295px;
@@ -27,6 +60,15 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         gap: 24px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        @include width1080{
+            padding-left: 16px;
+            padding-right: 16px;
+            //width: 95%;
+        }
 
         h1{
             font-size: 64px;
@@ -35,14 +77,35 @@ $Karla: 'Karla';
             letter-spacing: 0;
             font-family: $font;
             color: #3DCFB6;
+            @include width710{
+                color: #FFFFFF;
+                font-size: 32px;
+            }
         }
 
         .inner-content-wrapper {
-            width: 1032px;
-            //max-width: 1032px;
+            width: 100%;//
+            max-width: 1032px;
             display: flex;
             flex-direction: column;
             gap: 16px;
+           
+
+            .flex-wrapper{
+                
+                width: 100%;
+                max-width: 1032px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                @include width1080{
+                    width: auto;
+                    min-width: fit-content;
+                    
+                }
+
+            }
+            
             h3{
                 font-size: 19px;
                 font-weight: 700;
@@ -67,6 +130,10 @@ $Karla: 'Karla';
                 font-weight: 400;
                 font-family: $Karla;
                 color: #3DCFB6;
+
+                span{
+                    color: #FFFFFF;
+                }
 
             }
             
