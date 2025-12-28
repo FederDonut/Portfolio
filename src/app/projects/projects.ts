@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { OverlayService } from '../overlay-service';
 import { CommonModule } from '@angular/common';
 import { ProjectOverlay } from "../overlays/project-overlay/project-overlay";
-import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import { TranslatePipe} from '@ngx-translate/core';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
     CommonModule,
     ProjectOverlay,
     TranslatePipe,
-    TranslateDirective
+    
   ],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',

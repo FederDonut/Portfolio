@@ -68,8 +68,10 @@ export class Navbar {
     this.english = isEnglishOverlay;
     if(this.english){
       this.translate.use('en');
+      this.emitLanguage();
     }else{
       this.translate.use('de');
+      this.emitLanguage();
     }
     
 
