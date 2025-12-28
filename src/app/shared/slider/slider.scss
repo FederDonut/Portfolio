@@ -1,5 +1,9 @@
+$breakpoint-870: 870px;
 $breakpoint-700: 700px;
 
+@mixin width870{
+    @media( max-width: #{$breakpoint-870}){@content}
+};
 @mixin width700{
     @media(max-width:#{$breakpoint-700}){@content}
 };
@@ -155,6 +159,8 @@ $breakpoint-700: 700px;
                 background-color: #3DCFB6 !important;
             }
         }
-        
+        @include width870{
+            z-index: 1;
+        }
     }
 }

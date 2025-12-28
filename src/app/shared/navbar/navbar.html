@@ -1,11 +1,22 @@
 
 
 <section class="navbar-wrapper">
+
     <section class="mobil-menu">
         <button>
-            <img src="assets/img/burger-menu.svg" alt="">
+            <img src="assets/img/burger-menu.svg" alt="" (click)="openNavbarOverlay()">
                 
         </button>
+    </section>
+    <section class="nav-overlay">
+        @if(showNavbarOverlay){
+            <app-navbar-overlay
+                [english]="english"
+                (closeOverlay)="closeNavbarOverlay()"
+                (changeLanguage)="overlayLanguageChange($event)"
+            ></app-navbar-overlay>
+        }
+       
     </section>
     <section class="menu">
         <div class="change-language-wrapper">

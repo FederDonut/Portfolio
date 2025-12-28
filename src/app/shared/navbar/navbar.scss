@@ -1,5 +1,11 @@
 $font: 'FiraCode';
 
+$breakpoint-710: 710px;
+
+@mixin width710{
+    @media(max-width: #{$breakpoint-710}){@content}
+};
+
 .navbar-wrapper{
     //position: absolute;
     top: 0;
@@ -28,6 +34,13 @@ $font: 'FiraCode';
         }
     }
 
+    .nav-overlay{
+        display: none;
+
+        @include width710{
+            display: block;
+        }
+    }
     .menu{
         height: 26px;
         width: auto;

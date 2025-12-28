@@ -1,10 +1,15 @@
+
 $breakpoint-731: 731px;
+$breakpoint-710: 710px;
 $breakponint-485: 485px;
 $breakpoint-392: 392px;;
 
 @mixin width731{
     @media (max-width: #{$breakpoint-731}){@content;}
 }
+@mixin width710{
+    @media(max-width: #{$breakpoint-710}){@content}
+};
 @mixin width485{
     @media (max-width: #{$breakponint-485}){@content;}
 }
@@ -271,14 +276,48 @@ $Karla: 'Karla';
                 &:hover{
                     color: #3DCFB6;
                 }
+                @include width710{
+                    display: none;
+                }
             }
         }
+        a{
+            width: 45px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 6px;
+            padding-left: 6px;
+            
 
-        
 
-        img{
-            height: 32px;
-            width: 32px;
+            .mail-responsiv{
+                height: 28px;
+                width: 32px;
+                display: none;
+                @include width710{
+                    display: block;
+                }
+            }
+
+            img{
+                height: 32px;
+                width: 32px;
+            }
+            .nav-hover{
+                
+                height: 6.4px;
+                width: 6.4px;
+                background-color: #3DCFB6;
+                border-radius: 50%;
+                padding-right: 6px;
+            }
+            .d-none{
+                display: none;
+            }
+            &:hover .d-none{
+                display: block;
+            }
         }
         .white-line{
             height: 186px;
