@@ -4,6 +4,8 @@ $breakpoint-710: 710px;
 $breakponint-485: 485px;
 $breakpoint-392: 392px;;
 
+$breakpoint-IphoneSe: 667px;
+
 @mixin width731{
     @media (max-width: #{$breakpoint-731}){@content;}
 }
@@ -15,7 +17,11 @@ $breakpoint-392: 392px;;
 }
 @mixin width392{
     @media (max-width: #{$breakpoint-392}){@content}
-}
+};
+
+@mixin height667{
+    @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
 
 
 $font: 'FiraCode';
@@ -208,6 +214,9 @@ $Karla: 'Karla';
         align-items: flex-end;
         max-width: 1920px;
         //border: 1px solid white;
+        @include height667(){
+            height: 150px;
+        }
 
     }
     .left-lateral{
@@ -220,6 +229,9 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         gap: 24px;
+         @include height667(){
+            padding-top: 150px;
+        }
 
         .scroll-down{
             height: 48px;
@@ -250,6 +262,9 @@ $Karla: 'Karla';
             width: 1px;
             height: 240px;
             background-color:  #3DCFB6;
+            @include height667(){
+                height: 100px;
+            }
         }
     }
     .right-lateral{
@@ -323,6 +338,9 @@ $Karla: 'Karla';
             height: 186px;
             width: 1px;
             background-color: #ffffff;
+            @include height667(){
+                height: 80px;
+            }
         }
     }
 
@@ -341,6 +359,9 @@ $Karla: 'Karla';
         opacity: 0.8;
         
         overflow-x: hidden;
+        @include height667(){
+            bottom: -60px;
+        }
         .carousel-wrapper{
             height: 100%;
             width: max-content;

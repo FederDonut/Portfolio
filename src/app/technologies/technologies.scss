@@ -78,6 +78,7 @@ $Karla: 'Karla';
         .skill-set-content{
             height: 503px;
             width: 100%;
+            padding-top: 20px;
             background-color: rgb(31, 46, 43);
             opacity: 0.9;
             border: 1px solid #3DCFB6;
@@ -136,6 +137,8 @@ $Karla: 'Karla';
                 align-items: center;
                 justify-content: flex-start;
                 padding-left: 10%;
+
+                
             
                 .link-as-btn{
                     text-decoration: none;
@@ -163,12 +166,11 @@ $Karla: 'Karla';
                         flex-direction: row;
                         align-items: center;
                         gap: 172px;
-                        //border: 1px solid #FFFFFF;
+                        
+                        @include width550{
+                            padding-left: 6%;
+                        }
 
-                        //&.lang-padding{
-                        //    padding-left: 30px;
-                        //}
-                    
                         .btn-content{
                             font-family: $Karla;
                             color: #FFFFFF;

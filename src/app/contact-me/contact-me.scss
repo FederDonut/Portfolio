@@ -457,7 +457,7 @@ $Karla: 'Karla';
 
                             border-color: #3DCFB6;
                             .btn-content-wrapper{
-                                animation: btn-spin 2.5s infinite linear;
+                                animation: btn-spin 2s infinite linear;
                                 .btn-content{
                                     color: #3DCFB6;
 
@@ -470,7 +470,7 @@ $Karla: 'Karla';
                 
                 @keyframes btn-spin {
                     from {translate: 0;}
-                    to {translate: -220%;}
+                    to {translate: -170px;}
                 }  
             }
         }
