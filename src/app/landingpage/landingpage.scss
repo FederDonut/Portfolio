@@ -4,14 +4,18 @@ $breakpoint-710: 710px;
 $breakponint-485: 485px;
 $breakpoint-392: 392px;;
 
+
 $breakpoint-IphoneSe: 667px;
 $breakpoint-GalaxyS8: 740px;
 $breakpoint-IphoneXR: 896px;
 $breakpoint-Iphone12: 844px;
 $breakpoint-Iphone14: 932px;
+$breakpoint-GalaxyA51: 914px;
 $breakpoint-IpadMini: 1024px;
 $breakpoint-IpadAir: 1180px;
+$breakpoint-AsusZenbook: 1280px;
 $breakpoint-IpadPro: 1366px;
+$breakpoint-smartphoneQuer: 500px;
 
 @mixin width731{
     @media (max-width: #{$breakpoint-731}){@content;}
@@ -32,16 +36,17 @@ $breakpoint-IpadPro: 1366px;
 @mixin height740{
     @media (max-height: #{$breakpoint-GalaxyS8}){@content}
 };
-
 @mixin height896{
     @media (max-height: #{$breakpoint-IphoneXR}){@content}
 };
-
 @mixin height844{
     @media (max-height: #{$breakpoint-Iphone12}){@content}
 };
 @mixin height932{
     @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+@mixin height914{
+    @media (max-height: #{$breakpoint-GalaxyA51}){@content}
 };
 @mixin height1024{
     @media (max-height: #{$breakpoint-IpadMini}){@content}
@@ -49,8 +54,14 @@ $breakpoint-IpadPro: 1366px;
 @mixin height1180{
     @media (max-height: #{$breakpoint-IpadAir}){@content}
 };
+@mixin height1280{
+    @media (max-height: #{$breakpoint-AsusZenbook}){@content}
+};
 @mixin height1366{
     @media (max-height: #{$breakpoint-IpadPro}){@content}
+};
+@mixin heightQuer{
+    @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
 };
 
 
@@ -113,6 +124,9 @@ $Karla: 'Karla';
                 font-size: 32px;
                 line-height: 95px;
             }
+            @include heightQuer{
+                font-size: 38px;
+            }
            
         }
         h3{
@@ -126,6 +140,9 @@ $Karla: 'Karla';
             }
             @include width392{
                 font-size: 20px;
+            }
+            @include heightQuer{
+                font-size: 25px;
             }
 
         }
@@ -205,7 +222,12 @@ $Karla: 'Karla';
 
                 &.lang-padding{
                     padding-left: 30px;
+                    @include height914{
+                        padding-left: 16px ;
+                    }
                 }
+                
+                
 
                
                 .btn-content{
@@ -225,10 +247,8 @@ $Karla: 'Karla';
                     //    display: flex;
                     //    justify-content: center;
                     //}
-                    //@include height896{
-                    //    display: flex;
-                    //    justify-content: center;
-                    //}
+                  
+                   
                     @include height932{
                         display: flex;
                         justify-content: center;
@@ -437,6 +457,9 @@ $Karla: 'Karla';
         @include height1366{
             bottom: -400px;
         }
+        @include height1280{
+            bottom: -360px;
+        }
         @include height1180{
             bottom: -311px;
         }
@@ -457,6 +480,9 @@ $Karla: 'Karla';
         }
         @include height667(){
             bottom: -60px;
+        }
+        @include heightQuer{
+            bottom: 100px;
         }
         
        

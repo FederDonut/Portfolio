@@ -1,6 +1,10 @@
+$breakpoint-1220: 1220px;
 $breakpoint-870: 870px;
 $breakpoint-700: 700px;
 
+@mixin width1220{
+    @media (max-width: #{$breakpoint-1220}){@content}
+};
 @mixin width870{
     @media( max-width: #{$breakpoint-870}){@content}
 };
@@ -49,6 +53,9 @@ $breakpoint-700: 700px;
             padding: 0 10%;
             &::-webkit-scrollbar{
                 display: none;
+            }
+            @include width1220{
+                width: 95%;
             }
             @include width700{
                 height: auto;

@@ -9,6 +9,8 @@ $breakpoint-IphoneXR: 896px;
 $breakpoint-Iphone12: 844px;
 $breakpoint-Iphone14: 932px;
 $breakpoint-IpadAir: 1180px;
+$breakpoint-smartphoneQuer: 500px;
+
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
@@ -42,6 +44,9 @@ $breakpoint-IpadAir: 1180px;
     @media (max-height: #{$breakpoint-IpadAir}){@content}
 };
 
+@mixin heightQuer{
+    @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
+};
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -95,12 +100,19 @@ $Karla: 'Karla';
                 padding-left: 8px;
                 padding-right: 8px;
             }
+            @include heightQuer{
+                
+                //width: 350px;
+            }
 
             .photo{
                 height: 568px;
                 width: 100%;
                 border-radius: 30px;
                 border: 1px solid green;
+                @include heightQuer{
+                    //height: 450px;
+                }
 
                 .background-lines{
                     position: relative;
@@ -114,6 +126,9 @@ $Karla: 'Karla';
                     background: repeating-linear-gradient(45deg, #3DCFB6 0px, #3DCFB6 1px, transparent 1px, transparent 26px);
                     @include width710{
                         display: none;
+                    }
+                    @include heightQuer{
+                        //display: none;
                     }
                 }
                 .photo-content{
