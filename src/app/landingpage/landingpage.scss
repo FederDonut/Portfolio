@@ -5,6 +5,13 @@ $breakponint-485: 485px;
 $breakpoint-392: 392px;;
 
 $breakpoint-IphoneSe: 667px;
+$breakpoint-GalaxyS8: 740px;
+$breakpoint-IphoneXR: 896px;
+$breakpoint-Iphone12: 844px;
+$breakpoint-Iphone14: 932px;
+$breakpoint-IpadMini: 1024px;
+$breakpoint-IpadAir: 1180px;
+$breakpoint-IpadPro: 1366px;
 
 @mixin width731{
     @media (max-width: #{$breakpoint-731}){@content;}
@@ -22,6 +29,30 @@ $breakpoint-IphoneSe: 667px;
 @mixin height667{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
 };
+@mixin height740{
+    @media (max-height: #{$breakpoint-GalaxyS8}){@content}
+};
+
+@mixin height896{
+    @media (max-height: #{$breakpoint-IphoneXR}){@content}
+};
+
+@mixin height844{
+    @media (max-height: #{$breakpoint-Iphone12}){@content}
+};
+@mixin height932{
+    @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+@mixin height1024{
+    @media (max-height: #{$breakpoint-IpadMini}){@content}
+};
+@mixin height1180{
+    @media (max-height: #{$breakpoint-IpadAir}){@content}
+};
+@mixin height1366{
+    @media (max-height: #{$breakpoint-IpadPro}){@content}
+};
+
 
 
 $font: 'FiraCode';
@@ -59,6 +90,9 @@ $Karla: 'Karla';
         @include width392{
             width: auto;
         }
+        //@include height932{
+        //    margin-bottom: 130px;
+        //}
 
         h1{
             color: rgba(217, 217, 217, 1);
@@ -133,6 +167,8 @@ $Karla: 'Karla';
                 align-items: center;
                 gap: 172px;
 
+               
+
                 .btn-content{
                     height: 22px;
                     width: 131.81px;
@@ -164,13 +200,14 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                padding-left: 20px;
+                padding-left: 16px;
                 gap: 172px;
 
                 &.lang-padding{
                     padding-left: 30px;
                 }
 
+               
                 .btn-content{
                     height: 22px;
                     width: 98.25px;
@@ -183,6 +220,19 @@ $Karla: 'Karla';
                     p{
                         white-space: nowrap;
                     }
+                    
+                    //@include height667{
+                    //    display: flex;
+                    //    justify-content: center;
+                    //}
+                    //@include height896{
+                    //    display: flex;
+                    //    justify-content: center;
+                    //}
+                    @include height932{
+                        display: flex;
+                        justify-content: center;
+                    } 
                 }
                 &:hover .btn-content{
                     animation: btn-spin-two 3s infinite linear;
@@ -229,7 +279,10 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         gap: 24px;
-         @include height667(){
+        @include height740{
+            padding-top: 110px;
+        }
+        @include height667(){
             padding-top: 150px;
         }
 
@@ -262,6 +315,10 @@ $Karla: 'Karla';
             width: 1px;
             height: 240px;
             background-color:  #3DCFB6;
+            
+            @include height740{
+                height: 140px;
+            }
             @include height667(){
                 height: 100px;
             }
@@ -276,6 +333,10 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         gap: 24px;
+
+        @include height667{
+            gap: 16px;
+        }
 
         .mail-wrapper{
             writing-mode: vertical-lr;
@@ -292,6 +353,9 @@ $Karla: 'Karla';
                     color: #3DCFB6;
                 }
                 @include width710{
+                    display: none;
+                }
+                @include height1024{
                     display: none;
                 }
             }
@@ -311,6 +375,9 @@ $Karla: 'Karla';
                 width: 32px;
                 display: none;
                 @include width710{
+                    display: block;
+                }
+                @include height1024{
                     display: block;
                 }
             }
@@ -338,9 +405,17 @@ $Karla: 'Karla';
             height: 186px;
             width: 1px;
             background-color: #ffffff;
+            
+            @include height896{
+                height: 150px;
+            }
+            @include height740{
+                height: 100px;
+            }
             @include height667(){
                 height: 80px;
             }
+          
         }
     }
 
@@ -350,7 +425,7 @@ $Karla: 'Karla';
         //left: -21px;
         z-index: 1 !important;
         height: 62px;
-        width: 99%;//1990
+        width: 101%;//1990
         max-width: 1920px;//1920
         rotate: -2.5deg;
         background-color: #FFFFFF1F;
@@ -359,9 +434,32 @@ $Karla: 'Karla';
         opacity: 0.8;
         
         overflow-x: hidden;
+        @include height1366{
+            bottom: -400px;
+        }
+        @include height1180{
+            bottom: -311px;
+        }
+        @include height1024{
+            bottom: -235px;
+        }
+        @include height932{
+            bottom: -193.5px;
+        }
+        @include height896{
+            bottom: -177px;   
+        }
+        @include height844{
+            bottom: -150.5px; 
+        }
+        @include height740{
+            bottom: -100px;
+        }
         @include height667(){
             bottom: -60px;
         }
+        
+       
         .carousel-wrapper{
             height: 100%;
             width: max-content;

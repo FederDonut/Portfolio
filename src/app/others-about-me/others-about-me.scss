@@ -1,9 +1,12 @@
 
 $breakpoint-700: 700px;
-
+$breakpoint-950: 950px;
 
 @mixin width700{
     @media(max-width:#{$breakpoint-700}){@content}
+};
+@mixin width950{
+    @media(max-width:#{$breakpoint-950}){@content}
 };
 
 $font: 'FiraCode';
@@ -19,14 +22,12 @@ $Karla: 'Karla';
     align-items: center;
     justify-content: space-between;
 
-    @include width700{
-
+    @include width950{
         height: auto;
         width: 95%;
-        //margin-top: 100px;
-        //padding-left: 8px;
-        //padding-right: 8px;
+        margin-top: 80px;
     }
+    
 
     h3{
         color: #3DCFB6;

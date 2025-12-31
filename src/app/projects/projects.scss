@@ -64,6 +64,7 @@ $Karla: 'Karla';
             width: 622px;
             color: #3DCFB6;
             @include width950{
+                //margin-top: 80px;
                 height: auto;
             }
             @include width700{

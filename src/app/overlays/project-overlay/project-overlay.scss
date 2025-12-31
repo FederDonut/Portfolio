@@ -3,6 +3,8 @@ $breakpoint-650: 650px;
 $breakpoint-550: 550px;
 $breakpoint-400: 400px;
 
+$breakpoint-IphoneSe: 667px;
+
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
 }
@@ -16,6 +18,9 @@ $breakpoint-400: 400px;
     @media (max-width: #{$breakpoint-400}){@content;}
 }
 
+@mixin IphoneSE{
+    @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
 $font: 'FiraCode';
 $Karla: 'Karla';
 
@@ -36,9 +41,7 @@ $Karla: 'Karla';
         padding-left: 18px;
         padding-right: 18px;
     }
-    @include width650{
-
-    }
+    
 
 
     .content{
@@ -62,9 +65,15 @@ $Karla: 'Karla';
             padding-left: 5px;
             padding-right: 5px;
         }
+        @include IphoneSE{
+            height: 667px;
+            gap: 0;
+
+        }
         @include width650{
             width: 100%;
         }
+
         
         .right-content{
             height: 474px;
@@ -83,6 +92,10 @@ $Karla: 'Karla';
                 height: 480px;
                 margin-bottom: 70px;
 
+            }
+            @include IphoneSE{
+                margin-bottom: 0;
+                gap: 0;
             }
 
             .headlines{
@@ -119,6 +132,9 @@ $Karla: 'Karla';
                     @include width400{
                         height: 60px;
                     }
+                    @include IphoneSE{
+                        font-size: 48px;
+                    }
                 }
                 h2{
                     font-size: 64px;
@@ -135,6 +151,9 @@ $Karla: 'Karla';
                         font-size: 42px ;
                         text-wrap: auto;
                     }
+                    @include IphoneSE{
+                        font-size: 38px;
+                    }
                 }
             }
             .description{
@@ -146,6 +165,10 @@ $Karla: 'Karla';
                 @include width1220{
                     gap: 20px;
                     width: auto;
+                }
+                @include IphoneSE{
+                    margin-top: 20px;
+                    gap: 12px;
                 }
                 h3{
                     font-size: 24px;
@@ -181,6 +204,9 @@ $Karla: 'Karla';
                         flex-wrap: wrap;
                         gap: 8px;
                         height: auto;
+                    }
+                    @include IphoneSE{
+                        display: none;
                     }
 
                     .tech-content{
@@ -219,6 +245,9 @@ $Karla: 'Karla';
                 }
                 @include width400{
                     margin-top: 70px;
+                }
+                @include IphoneSE{
+                    margin-top: 0;
                 }
 
                 button{
@@ -368,6 +397,9 @@ $Karla: 'Karla';
                         left: 5%;
                         gap: 8px;
                         margin-bottom: 10px;
+                    }
+                    @include IphoneSE{
+                        top: 380px;
                     }
                     
                     p{

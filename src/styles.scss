@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+$breakpoint-IphoneSe: 667px;
+$breakpoint-IphoneXR: 896px;
+$breakpoint-Iphone12: 844px;
+
+@mixin height667{
+    @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
+
+@mixin height896{
+    @media (max-height: #{$breakpoint-IphoneXR}){@content}
+};
+
+@mixin height844{
+    @media (max-height: #{$breakpoint-Iphone12}){@content}
+};
+
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -6,7 +23,16 @@
     
 }
 
-
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+    @include height896{
+        overflow-x: hidden
+    }
+    @include height844{
+        overflow-x: hidden
+    }
+}
 
 @font-face {
     font-display: swap;

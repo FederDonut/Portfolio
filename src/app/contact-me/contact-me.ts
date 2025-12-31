@@ -26,10 +26,10 @@ export class ContactMe {
     privacy: ""
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://raphael-zwick.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

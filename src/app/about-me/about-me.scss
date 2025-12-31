@@ -4,6 +4,12 @@ $breakpoint-600: 600px;
 $breakpoint-400: 400px;
 $breakpoint-360: 360px;
 
+$breakpoint-IphoneSe: 667px;
+$breakpoint-IphoneXR: 896px;
+$breakpoint-Iphone12: 844px;
+$breakpoint-Iphone14: 932px;
+$breakpoint-IpadAir: 1180px;
+
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
 }
@@ -19,6 +25,23 @@ $breakpoint-360: 360px;
 @mixin width360{
     @media (max-width: #{$breakpoint-360}){@content;}
 }
+@mixin IphoneSE{
+    @media (max-height: #{$breakpoint-IphoneSe}){@content;}
+}
+@mixin IphoneXR{
+    @media (max-height: #{$breakpoint-IphoneXR}){@content;}
+}
+
+@mixin Iphone12{
+    @media (max-height: #{$breakpoint-Iphone12}){@content}
+};
+@mixin Iphone14{
+    @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+@mixin IpadAir{
+    @media (max-height: #{$breakpoint-IpadAir}){@content}
+};
+
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -44,6 +67,22 @@ $Karla: 'Karla';
             flex-direction: column;
             height: auto;
             align-items: center;
+        }
+        //@include IphoneSE{
+        //    margin-top: 100px;
+        //    margin-bottom: 100px;
+        //} 
+        //@include IphoneXR{
+        //    margin-top: 100px;
+        //    margin-bottom: 100px;
+        //}
+        //@include Iphone14{
+        //    margin-top: 100px;
+        //    margin-bottom: 100px;
+        //}
+        @include IpadAir{
+            margin-top: 100px;
+            margin-bottom: 100px;
         }
         
 
@@ -139,7 +178,8 @@ $Karla: 'Karla';
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: center;
+                    padding-top: 16px;
+                    //justify-content: center;
                     gap: 32px;
                     @include width600{
                         gap: 20px;
@@ -151,6 +191,10 @@ $Karla: 'Karla';
                     @include width360{
                         height: 700px;
                     }
+                    @include IphoneXR{
+                        //padding-top: 16px;
+                        justify-content: normal;
+                    }
 
                     .headline-wrapper{
                         height: 64px;
@@ -161,18 +205,32 @@ $Karla: 'Karla';
                         @include width400{
                             height: auto;
                         }
-                        @include width360{
-                            margin-top: 8px;
+                        //@include width360{
+                        //    margin-top: 8px;
+                        //}
+                        //@include IphoneSE{
+                        //    padding-top: 16px;
+                        //}
+                        @include IphoneXR{
+                           padding-top: 16px;
+                            
                         }
+
                         h1{
                             color: #3DCFB6;
                             font-size: 64px;
                             font-family: $font;
+                            @include width710{
+                                font-size: 56px;
+                            }
                             @include width600{
                                 font-size: 56px;
                             }
                             @include width400{
                                 font-size: 38px;
+                            }
+                            @include IphoneXR{
+                                font-size: 40px;
                             }
                         }
                     }

@@ -1,4 +1,20 @@
 
+$breakpoint-IphoneSe: 667px;
+$breakpoint-IphoneXR: 896px;
+$breakpoint-Iphone12: 844px;
+
+@mixin height667{
+    @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
+
+@mixin height896{
+    @media (max-height: #{$breakpoint-IphoneXR}){@content}
+};
+
+@mixin height844{
+    @media (max-height: #{$breakpoint-Iphone12}){@content}
+};
+
 %section-base {
     width: 100%;
     display: flex;
@@ -16,6 +32,13 @@
     align-items: center;
     //max-width: 1920px;
 
+    @include height896{
+        overflow-x: hidden
+    }
+    @include height844{
+        overflow-x: hidden
+    }
+   
     .landingpage{
         @extend %section-base;
         height: 100vh;
