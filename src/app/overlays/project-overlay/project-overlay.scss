@@ -4,6 +4,7 @@ $breakpoint-550: 550px;
 $breakpoint-400: 400px;
 
 $breakpoint-IphoneSe: 667px;
+$breakpoint-IphoneXr: 896px;
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
@@ -20,6 +21,9 @@ $breakpoint-IphoneSe: 667px;
 
 @mixin IphoneSE{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
+@mixin IphoneXr{
+    @media (max-height: #{$breakpoint-IphoneXr}){@content}
 };
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -64,6 +68,11 @@ $Karla: 'Karla';
             gap: 32px;
             padding-left: 5px;
             padding-right: 5px;
+        }
+       
+        @include IphoneXr{
+            height: 800px;
+            gap: 8px;
         }
         @include IphoneSE{
             height: 667px;
@@ -112,6 +121,9 @@ $Karla: 'Karla';
                 @include width400{
                     height: auto;
                     gap: 20px;
+                }
+                @include IphoneXr{
+                    height: auto;
                 }
 
 
@@ -249,8 +261,11 @@ $Karla: 'Karla';
                 @include IphoneSE{
                     margin-top: 0;
                 }
+                @include IphoneXr{
+                    margin-top: 20px;
+                }
 
-                button{
+                a{
                     height: 100%;
                     width: 130px;
                     border-radius: 100px;
@@ -262,6 +277,7 @@ $Karla: 'Karla';
                     align-items: center;
                     justify-content: center;
                     gap: 4px;
+                    text-decoration: none;
                     @include width400{
                         width: 100px;
                         padding-left: 12px;
@@ -284,6 +300,7 @@ $Karla: 'Karla';
                         width: 10px;
                     }
                     &:hover{
+                        text-decoration: none;
                         border-color: #3DCFB6;
                         p{
                             color: #3DCFB6;
@@ -400,6 +417,9 @@ $Karla: 'Karla';
                     }
                     @include IphoneSE{
                         top: 380px;
+                    }
+                    @include IphoneXr{
+                        top: 480px;
                     }
                     
                     p{

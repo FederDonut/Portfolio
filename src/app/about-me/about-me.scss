@@ -73,18 +73,7 @@ $Karla: 'Karla';
             height: auto;
             align-items: center;
         }
-        //@include IphoneSE{
-        //    margin-top: 100px;
-        //    margin-bottom: 100px;
-        //} 
-        //@include IphoneXR{
-        //    margin-top: 100px;
-        //    margin-bottom: 100px;
-        //}
-        //@include Iphone14{
-        //    margin-top: 100px;
-        //    margin-bottom: 100px;
-        //}
+        
         @include IpadAir{
             margin-top: 100px;
             margin-bottom: 100px;
@@ -137,7 +126,7 @@ $Karla: 'Karla';
 
                     height: 100%;
                     width: 100%;
-                    background-image: url(/assets/img/Photos/raphael.png);
+                    background-image: url(/assets/img/Photos/raphael2.png);
                     background-position: center;
                     background-size: cover;
                     border-radius: 30px;

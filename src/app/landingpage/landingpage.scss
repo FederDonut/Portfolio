@@ -283,16 +283,13 @@ $Karla: 'Karla';
         justify-content: space-between;
         align-items: flex-end;
         max-width: 1920px;
-        //border: 1px solid white;
-        @include height667(){
-            height: 150px;
+        @include height932{
+            bottom: -20%;
+            height: 250px;
         }
 
     }
     .left-lateral{
-        //position: fixed;
-        //bottom: 0;
-        //left: 96px;
         width: 30px;
         height: 312px;
         display: flex;
@@ -300,10 +297,19 @@ $Karla: 'Karla';
         align-items: center;
         gap: 24px;
         @include height740{
-            padding-top: 110px;
+            //padding-top: 110px;
+        }
+       
+        @include height896{
+            //padding-top: 100px;
+        }
+        @include height932{
+            //padding-top: 100px;
+            height: 340px;
         }
         @include height667(){
-            padding-top: 150px;
+            //padding-top: 20px;
+            height: 248px;
         }
 
         .scroll-down{
@@ -336,19 +342,24 @@ $Karla: 'Karla';
             height: 240px;
             background-color:  #3DCFB6;
             
-            @include height740{
-                height: 140px;
-            }
-            @include height667(){
-                height: 100px;
+            //@include height740{
+            //    //height: 140px;
+            //}
+            //@include height667(){
+            //    //height: 100px;
+            //    //height: 160px;
+            //}
+            //@include height896{
+            //    //height: 280px;
+//
+            //}
+            @include height932{
+                height: inherit;
             }
         }
     }
     .right-lateral{
-        //position: fixed;
-        //bottom: 0;
-        //left: 1312px;
-        //height: 480px;
+        //height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -378,6 +389,9 @@ $Karla: 'Karla';
                 @include height1024{
                     display: none;
                 }
+                @include height1180{
+                    display: none;
+                }
             }
         }
         a{
@@ -398,6 +412,9 @@ $Karla: 'Karla';
                     display: block;
                 }
                 @include height1024{
+                    display: block;
+                }
+                @include height1180{
                     display: block;
                 }
             }
@@ -427,13 +444,16 @@ $Karla: 'Karla';
             background-color: #ffffff;
             
             @include height896{
-                height: 150px;
+                height: 180px;
             }
             @include height740{
-                height: 100px;
+                height: 120px;
             }
             @include height667(){
                 height: 80px;
+            }
+            @include height932(){
+                height: 120px;
             }
           
         }
@@ -455,10 +475,11 @@ $Karla: 'Karla';
         
         overflow-x: hidden;
         @include height1366{
-            bottom: -400px;
+            bottom: -29%;
         }
         @include height1280{
-            bottom: -360px;
+            //bottom: -360px;
+            bottom: -30%
         }
         @include height1180{
             bottom: -311px;
@@ -467,19 +488,22 @@ $Karla: 'Karla';
             bottom: -235px;
         }
         @include height932{
-            bottom: -193.5px;
+            
+            bottom: -35.5%;
         }
         @include height896{
-            bottom: -177px;   
+            
+            bottom: -35%;   
         }
         @include height844{
-            bottom: -150.5px; 
+           
+            bottom: -32%; 
         }
         @include height740{
-            bottom: -100px;
+            bottom: -27%;
         }
         @include height667(){
-            bottom: -60px;
+            bottom: -22%
         }
         @include heightQuer{
             bottom: 100px;

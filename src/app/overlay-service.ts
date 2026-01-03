@@ -21,6 +21,8 @@ export class OverlayService {
       ],
       photo: "/assets/img/Photos/Join-Photo-overlay.png",
       number: "01",
+      github: "https://github.com/FederDonut/JOIN",
+      livetest: "http://join.raphael-zwick.com/index.html"
     },
     {
       name: "El Pollo Loco",
@@ -35,6 +37,8 @@ export class OverlayService {
       ],
       photo: "/assets/img/Photos/Pollo-Loco-overlay.png",
       number: "02",
+      github: "https://github.com/FederDonut/El-Pollo-Loco",
+      livetest: "http://el-pollo-loco.raphael-zwick.com/index.html"
     },
   ]
 

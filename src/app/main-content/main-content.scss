@@ -2,6 +2,7 @@
 $breakpoint-IphoneSe: 667px;
 $breakpoint-IphoneXR: 896px;
 $breakpoint-Iphone12: 844px;
+$breakpoint-Iphone14: 932px;
 
 @mixin height667{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
@@ -13,6 +14,9 @@ $breakpoint-Iphone12: 844px;
 
 @mixin height844{
     @media (max-height: #{$breakpoint-Iphone12}){@content}
+};
+@mixin height932{
+    @media (max-height: #{$breakpoint-Iphone14}){@content}
 };
 
 %section-base {
@@ -41,10 +45,15 @@ $breakpoint-Iphone12: 844px;
    
     .landingpage{
         @extend %section-base;
-        height: 100vh;
+        height: 100dvh;
         background: linear-gradient(60deg, #1C1C1C 20%, #08463B);
         
-
+        //@include height667{
+        //    height: 120vh;
+        //}
+        @include height932{
+            height: 120dvh
+        }
     }
     .about-me{
         @extend %section-base;

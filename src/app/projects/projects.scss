@@ -1,9 +1,13 @@
+$breakpoint-1540: 1540px;
 $breakpoint-1220: 1220px;
 $breakpoint-950: 950px;
 $breakpoint-700: 700px;
 $breakpoint-500: 500px;
 $breakpoint-420: 420px;
 
+@mixin width1540{
+    @media(max-width: #{$breakpoint-1540}){@content}
+};
 @mixin width1220{
     @media(max-width: #{$breakpoint-1220}){@content}
 };
@@ -51,6 +55,16 @@ $Karla: 'Karla';
         gap: 41px;
         //margin-left: 10%;
        
+       
+       
+        @include width1540{
+            padding-left: 18px;
+            margin-right: 350px;
+        }
+        @include width1220{
+            padding-left: 0;
+            margin-right: 0;
+        }
         @include width700{
             width: auto;
             height: auto;
@@ -187,7 +201,7 @@ $Karla: 'Karla';
         display: flex;
         align-items: flex-end;
 
-        @include width1220{
+        @include width1540{
             display: none;
         }
         .preview-img{
@@ -199,6 +213,7 @@ $Karla: 'Karla';
             border-radius: 10px;
             background-size: cover;
             z-index: 1;
+            
 
         }
 
