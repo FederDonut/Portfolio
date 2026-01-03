@@ -6,6 +6,7 @@ $breakpoint-392: 392px;;
 
 
 $breakpoint-IphoneSe: 667px;
+$breakpoint-Iphone11: 684px;
 $breakpoint-GalaxyS8: 740px;
 $breakpoint-IphoneXR: 896px;
 $breakpoint-Iphone12: 844px;
@@ -32,6 +33,9 @@ $breakpoint-smartphoneQuer: 500px;
 
 @mixin height667{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
+@mixin height684{
+    @media (max-height: #{$breakpoint-Iphone11}){@content}
 };
 @mixin height740{
     @media (max-height: #{$breakpoint-GalaxyS8}){@content}
@@ -79,7 +83,7 @@ $Karla: 'Karla';
     }
 }
 .landingpage-content{
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     max-width: 1920px;
 
@@ -101,9 +105,13 @@ $Karla: 'Karla';
         @include width392{
             width: auto;
         }
-        //@include height932{
-        //    margin-bottom: 130px;
-        //}
+        @include height844{
+            margin-bottom: 150px;
+        }
+        @include height684{
+            margin-bottom: 180px;
+        }
+        
 
         h1{
             color: rgba(217, 217, 217, 1);
@@ -284,7 +292,7 @@ $Karla: 'Karla';
         align-items: flex-end;
         max-width: 1920px;
         @include height932{
-            bottom: -20%;
+            //bottom: -20%;
             height: 250px;
         }
 
@@ -296,20 +304,18 @@ $Karla: 'Karla';
         flex-direction: column;
         align-items: center;
         gap: 24px;
-        @include height740{
-            //padding-top: 110px;
-        }
        
-        @include height896{
-            //padding-top: 100px;
-        }
         @include height932{
-            //padding-top: 100px;
-            height: 340px;
+            //height: 340px;
+            height: 35dvh;
+        }
+        @include height684{
+            //height: 280px;
+            height: 35dvh;
         }
         @include height667(){
-            //padding-top: 20px;
-            height: 248px;
+            //height: 248px;
+            height: 35dvh;
         }
 
         .scroll-down{
@@ -342,17 +348,6 @@ $Karla: 'Karla';
             height: 240px;
             background-color:  #3DCFB6;
             
-            //@include height740{
-            //    //height: 140px;
-            //}
-            //@include height667(){
-            //    //height: 100px;
-            //    //height: 160px;
-            //}
-            //@include height896{
-            //    //height: 280px;
-//
-            //}
             @include height932{
                 height: inherit;
             }
@@ -443,17 +438,18 @@ $Karla: 'Karla';
             width: 1px;
             background-color: #ffffff;
             
-            @include height896{
-                height: 180px;
-            }
-            @include height740{
-                height: 120px;
-            }
-            @include height667(){
-                height: 80px;
-            }
+            //@include height896{
+            //    height: 180px;
+            //}
+            //@include height740{
+            //    height: 120px;
+            //}
+            //@include height684{
+            //    height: 70px;
+            //}
             @include height932(){
-                height: 120px;
+                //height: 120px;
+                height: 15dvh;
             }
           
         }
@@ -476,34 +472,39 @@ $Karla: 'Karla';
         overflow-x: hidden;
         @include height1366{
             bottom: -29%;
+            //bottom: 1dvh;
         }
         @include height1280{
             //bottom: -360px;
             bottom: -30%
         }
         @include height1180{
-            bottom: -311px;
+            bottom: -26%;
+            //bottom: -311px;
         }
         @include height1024{
-            bottom: -235px;
+            bottom: -24%;
+            //bottom: -235px;
         }
         @include height932{
-            
-            bottom: -35.5%;
+            bottom: -24%;
+            //bottom: -35.5%;
         }
         @include height896{
-            
-            bottom: -35%;   
+            bottom: -22%;
+            //bottom: -35%;   
         }
         @include height844{
-           
-            bottom: -32%; 
+           bottom: -14%;
+            //bottom: -32%; 
         }
         @include height740{
-            bottom: -27%;
+            //bottom: -27%;
+            bottom: -9%;
         }
         @include height667(){
-            bottom: -22%
+           //bottom: -22%
+           bottom: 0;
         }
         @include heightQuer{
             bottom: 100px;
