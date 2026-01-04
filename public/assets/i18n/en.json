@@ -43,6 +43,7 @@
     },
     "others-about-me":{
         "headline": "What my colleagus and employers say about me",
+        "source": "View full letter.",
         "content": {
             "one":{
                 "autor": "Manuela Immendörfer",
@@ -77,7 +78,7 @@
             "content-bsp": "Hello Raphael, I am intrested in ....",
             "content-error": "What do you need to develop?",
             "input-content-1":"I've read the privacy-policy",
-            "link": "privacy-policy",
+            "link": " privacy-policy",
             "input-content-2": " and agree to the processing of my data as outlined",
             "input-error":"Please accept the privacy policy",
             "btn-content": "Say Hello ;)"  
