@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '@ngx-translate/core';
 import { MailOverlay } from '../overlays/mail-overlay/mail-overlay';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact-me',
@@ -12,8 +13,9 @@ import { MailOverlay } from '../overlays/mail-overlay/mail-overlay';
     MailOverlay,
     CommonModule,
     FormsModule,
-    TranslatePipe
-  ],
+    TranslatePipe,
+    RouterLink
+],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })
