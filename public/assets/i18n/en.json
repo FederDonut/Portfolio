@@ -63,12 +63,16 @@
             "mail-error": "Hoppla! your email is required",
             "content": "How can I help you?",
             "content-bsp": "Hello Raphael, I am intrested in ....",
-             "content-error": "What do you need to develop?",
+            "content-error": "What do you need to develop?",
             "input-content-1":"I've read the privacy-policy",
             "link": "privacy-policy",
             "input-content-2": " and agree to the processing of my data as outlined",
-            "btn-content": "send"  
+            "input-error":"Please accept the privacy policy",
+            "btn-content": "Say Hello ;)"  
         }  
+    },
+    "mail-overlay":{
+        "headline":"Got it! Thanks for your message."
     },
     "project-overlay":{
         "headline":"What is this Project about?",

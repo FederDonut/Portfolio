@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslatePipe } from '@ngx-translate/core';
+import { MailOverlay } from '../overlays/mail-overlay/mail-overlay';
 
 @Component({
   selector: 'app-contact-me',
   standalone: true,
   imports: [
+    MailOverlay,
     CommonModule,
     FormsModule,
     TranslatePipe
@@ -27,6 +29,16 @@ export class ContactMe {
   }
 
   mailTest = false;
+  showMailOverlay: boolean = false;
+
+  showOverlay(){
+    if(!this.showMailOverlay){
+      this.showMailOverlay = true;
+      document.body.classList.add('no-scroll');
+      console.log('overlay-mail')
+    }
+
+  }
 
   post = {
     endPoint: 'https://raphael-zwick.com/sendMail.php',
@@ -40,7 +52,37 @@ export class ContactMe {
   };
 
   onSubmit(ngForm: NgForm){
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if(ngForm.valid){
+      this.sendMail(ngForm)
+      this.showOverlay()
+    }else{
+      this.showOverlay()
+      Object.values(ngForm.controls).forEach(control =>{
+        control.markAsTouched();
+      });
+      console.log("Validierung fehlgeschlagen- fehler sollten jetzt sichbar sein ")
+    }
+    //if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    //  this.http.post(this.post.endPoint, this.post.body(this.contactData))
+    //  .subscribe({
+    //    next: (response) => {
+//
+    //      ngForm.resetForm();
+    //    },
+    //    error: (error) => {
+    //      console.error(error);
+    //    },
+    //    complete: () => console.info('send post complete'),
+    //  });
+    //} else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+//
+    //  ngForm.resetForm();
+    //}
+    
+  }
+
+  sendMail( ngForm :NgForm){
+  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
       .subscribe({
         next: (response) => {
@@ -52,12 +94,14 @@ export class ContactMe {
         },
         complete: () => console.info('send post complete'),
       });
+      //this.showOverlay()
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
     }
-    
-  }
+}
 
+ 
 
 }
+

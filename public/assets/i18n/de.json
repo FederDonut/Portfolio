@@ -70,8 +70,12 @@
             "input-content-1":"Mit der ",
             "link": "Datenschutzerklärung ",
             "input-content-2": "bin ich einverstanden.",
+            "input-error":"Bitte die Datenschutzerklärung akzeptieren",
             "btn-content": "Absenden" 
         }  
+    },
+     "mail-overlay":{
+        "headline":"Danke für ihre Nachricht. Sie hören bald von mir."
     },
     "project-overlay":{
         "headline":"Über das Projekt",

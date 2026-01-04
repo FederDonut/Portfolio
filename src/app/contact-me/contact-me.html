@@ -1,4 +1,12 @@
 <section class="content-wrapper">
+    <section class="overlay ">
+        @if(showMailOverlay){
+             <app-mail-overlay
+                (closeMailOverlay)="showMailOverlay = $event" 
+            >
+            </app-mail-overlay>
+        }  
+    </section>
     <section class="inner-wrapper">
         <div class="content-info">
             <div class="info">
@@ -50,18 +58,22 @@
                 </div>
                 <div class="seperator"></div>
                 <div class="submit-content">
-                    <label class="check">
-                        <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"  id="checkbox" class="checkbox" required >
-                        <span class="input-check"></span> 
-                    </label>
-                    <p>{{'contact-me.mailForm.input-content-1'|translate}}<a href="/privacy-policy">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
-
+                    <div class="submit-wrapper">
+                        <label class="check">
+                            <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"  id="checkbox" class="checkbox" required >
+                            <span class="input-check"></span> 
+                        </label>
+                        <p>{{'contact-me.mailForm.input-content-1'|translate}}<a href="/privacy-policy">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
+                    </div>
+                    @if (!privacy.valid && privacy.touched){
+                        <p>{{'contact-me.mailForm.input-error'|translate}}</p>
+                    }
                 </div>
-                    @if(!contactForm.valid && contactForm.submitted){
-                        <span>Please check your Emial format  (example@email.com)</span>
-                    }    
+                    
+                    
                 <div class="btn-wrapper">
-                    <button class="btn" type="submit" [class.is-enabled]="contactForm.valid" [disabled]="!contactForm.valid">
+                    <button class="btn" type="submit" [class.is-enabled]="contactForm.valid" [class.is-disabled]="!contactForm.valid">
+
                         <div class="btn-content-wrapper">
                             <div class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>
                             <div aria-hidden="true" class="btn-content"><p>{{'contact-me.mailForm.btn-content'|translate}}</p></div>

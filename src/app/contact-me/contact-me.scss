@@ -27,6 +27,8 @@ $Karla: 'Karla';
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
+
+    
     .inner-wrapper{
         height: auto;
         width: 1248px;
@@ -293,108 +295,120 @@ $Karla: 'Karla';
                 width: auto;//616px;
                 //border: 1px solid white;
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
                 gap: 8px;
-                
-                .check{
-                    position: relative;
+                margin-top: 40px;
+                p{
+                    font-family: $Karla;
+                    font-size: 14px;
+                    color: #C36868;
+                }
+                .submit-wrapper{
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    //gap: 10px;
-                    height: 26px;
-                    width: 26px;
-                    @include width400{
-
-                    }
-                    .input-check{
+                    gap: 16px;
+                    width: auto;
+                    .check{
                         position: relative;
-                        display: inline-block;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        //gap: 10px;
                         height: 26px;
                         width: 26px;
-                        border: 4px solid #3DCFB6;
-                        background-color: transparent;
-                        border-radius: 2px;
-                        box-sizing: border-box;
-                        transition: box-shadow 0.2s ease-in-out, background-color 0.5s;
-                        &:checked + .input-check{
-                            border-color: #3DCFB6;
-                            
-                        }
                         @include width400{
-                            border: 1px solid #3DCFB6;
-                            height: 18px;
-                            width: 18px;
-                        }
-                        
 
-                    }
-                    .checkbox{
-                        position: absolute;
-                        appearance: none;
-                        opacity: 0;
-                        height: 26px;
-                        width: 26px;
-                        top: 0;
-                        left: 0;
-                        margin: 0;
-                        z-index: 10;
+                        }
+                        .input-check{
+                            position: relative;
+                            display: inline-block;
+                            height: 26px;
+                            width: 26px;
+                            border: 4px solid #3DCFB6;
+                            background-color: transparent;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                            transition: box-shadow 0.2s ease-in-out, background-color 0.5s;
+                            &:checked + .input-check{
+                                border-color: #3DCFB6;
+
+                            }
+                            @include width400{
+                                border: 1px solid #3DCFB6;
+                                height: 18px;
+                                width: 18px;
+                            }
+
+
+                        }
+                        .checkbox{
+                            position: absolute;
+                            appearance: none;
+                            opacity: 0;
+                            height: 26px;
+                            width: 26px;
+                            top: 0;
+                            left: 0;
+                            margin: 0;
+                            z-index: 10;
+                            &:hover{
+                                cursor: pointer;
+                                background-color: #3DCFB6;
+                            }
+                        }
+                        .checkbox:checked + .input-check:after{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            width: 100%;
+                            background-image: url(/assets/img/check-solid-full\ .svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
                         &:hover{
                             cursor: pointer;
-                            background-color: #3DCFB6;
-                        }
-                    }
-                    .checkbox:checked + .input-check:after{
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 100%;
-                        background-image: url(/assets/img/check-solid-full\ .svg);
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                       
-                        .input-check{
-                            box-shadow: 0 0 10px 1px rgba(113, 182, 170, 0.7);
-                            background-color: #6da29978;
-                        }
-                       
+                        
+                            .input-check{
+                                box-shadow: 0 0 10px 1px rgba(113, 182, 170, 0.7);
+                                background-color: #6da29978;
+                            }
                         
 
-                    }
-                }
-                p{
-                    color: #FFFFFF;
-                    font-size: 15px;
-                    font-weight: 400;
-                    font-family: $Karla;
 
-                    a{
-                        color: #3DCFB6;
-                        text-decoration: none;
+                        }
+                    }
+                    p{
+                        color: #FFFFFF;
                         font-size: 15px;
-                        font-family: $font;
                         font-weight: 400;
-                        line-height: 120%;
-                        letter-spacing: -3%;
-                        &:hover{
-                            color: #FFFFFF;
-                            text-decoration: underline;
-                            text-decoration-color: #3DCFB6;
-                            text-underline-offset: 8px;
+                        font-family: $Karla;
+
+                        a{
+                            color: #3DCFB6;
+                            text-decoration: none;
+                            font-size: 15px;
+                            font-family: $font;
+                            font-weight: 400;
+                            line-height: 120%;
+                            letter-spacing: -3%;
+                            &:hover{
+                                color: #FFFFFF;
+                                text-decoration: underline;
+                                text-decoration-color: #3DCFB6;
+                                text-underline-offset: 8px;
+                            }
                         }
+                        @include width400{
+                            font-size: 16px;
+                            font-weight: 200;
+
+                        }
+
                     }
-                    @include width400{
-                        font-size: 16px;
-                        font-weight: 200;
-                        
-                    }
-                        
                 }
             }
             .btn-wrapper{
