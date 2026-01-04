@@ -46,7 +46,21 @@
     },
     "others-about-me":{
         "headline": "Kollegen & Arbeitgeber Feedback...",
-        "content": "comming soon"
+         "source": "Vollständiges Schreiben",
+        "content": {
+            "one":{
+                "autor": "Manuela Immendörfer",
+                "text" : "Wir haben Herrn Zwick als absolut zuverlässigen und gewissenhaften Mitarbeiter geschätzt, der alle ihm übertragenen Aufgaben mit äußersrt großem Fleiß und durchdachtem Handeln erledigte. "
+            },
+            "two": {
+                "autor": "Infos comming soon",
+                "text": " Infos comming soon"
+            },
+            "three": {
+                "autor": "Infos comming soon",
+                "text": " Infos comming soon"
+            }
+        }
         
     },
     "contact-me":{

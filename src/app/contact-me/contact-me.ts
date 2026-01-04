@@ -35,7 +35,7 @@ export class ContactMe {
     if(!this.showMailOverlay){
       this.showMailOverlay = true;
       document.body.classList.add('no-scroll');
-      console.log('overlay-mail')
+      
     }
 
   }
@@ -56,28 +56,10 @@ export class ContactMe {
       this.sendMail(ngForm)
       this.showOverlay()
     }else{
-      this.showOverlay()
       Object.values(ngForm.controls).forEach(control =>{
         control.markAsTouched();
       });
-      console.log("Validierung fehlgeschlagen- fehler sollten jetzt sichbar sein ")
     }
-    //if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    //  this.http.post(this.post.endPoint, this.post.body(this.contactData))
-    //  .subscribe({
-    //    next: (response) => {
-//
-    //      ngForm.resetForm();
-    //    },
-    //    error: (error) => {
-    //      console.error(error);
-    //    },
-    //    complete: () => console.info('send post complete'),
-    //  });
-    //} else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-//
-    //  ngForm.resetForm();
-    //}
     
   }
 

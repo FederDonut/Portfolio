@@ -5,8 +5,17 @@
                 <div class="comment"
                     [class.spotlight]="commentId === currentCommentId"
                 >
-                    <!--<p>{{i}}</p>-->
-                    <p>{{commentId}}</p>
+                    <div class="content-up">
+                         <p>{{'others-about-me.content.one.text'|translate}}<a href="">{{'others-about-me.source'|translate}}</a></p>
+                         
+                    </div>
+                    <div class="content-down">
+                        <div class="separator"></div>
+                        <p>{{'others-about-me.content.one.autor'|translate}}</p>
+                        <!--<p>{{commentId}}</p>-->
+                    </div>
+                       
+                        
                 </div>
             }
         </div>    

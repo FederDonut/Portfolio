@@ -43,8 +43,20 @@
     },
     "others-about-me":{
         "headline": "What my colleagus and employers say about me",
-        "content": "comming soon"
-        
+        "content": {
+            "one":{
+                "autor": "Manuela Immendörfer",
+                "text" : "We valued Mr. Zwick as a thoroughly reliable and conscientious employee who approached all assigned tasks with great diligence and professional care. "
+            },
+            "two": {
+                "autor": "Infos comming soon",
+                "text": " Infos comming soon"
+            },
+            "three": {
+                "autor": "Infos comming soon",
+                "text": " Infos comming soon"
+            }
+        }
     },
     "contact-me":{
         "headline": "Contact me",
@@ -125,6 +137,5 @@
         }
             
 
-    }
-   
+    }  
 }

@@ -1,9 +1,14 @@
 import { Component, ElementRef, ViewChild, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-slider',
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    TranslatePipe
+
+  ],
   templateUrl: './slider.html',
   styleUrl: './slider.scss',
 })

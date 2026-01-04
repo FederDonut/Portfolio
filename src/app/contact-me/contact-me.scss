@@ -28,11 +28,9 @@ $Karla: 'Karla';
     display: flex;
     justify-content: center;
 
-    
     .inner-wrapper{
         height: auto;
         width: 1248px;
-        //border: 1px solid red;
         display: flex;
         gap: 10%;
 
@@ -41,10 +39,7 @@ $Karla: 'Karla';
             align-items: center;
             gap: 64px;
         }
-        @include width650{
-            
-        }
-
+        
         .content-info{
             height: auto;
             width: 568px;
@@ -149,7 +144,6 @@ $Karla: 'Karla';
             .user-input{
                 height: 550px;
                 width: 616px;
-                //border: 1px solid white;
                 @include width650{
                     width: auto;
                 }
@@ -293,7 +287,6 @@ $Karla: 'Karla';
             .submit-content{
                 height: 117px;
                 width: auto;//616px;
-                //border: 1px solid white;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;

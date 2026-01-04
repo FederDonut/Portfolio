@@ -12,6 +12,8 @@ $breakpoint-700: 700px;
     @media(max-width:#{$breakpoint-700}){@content}
 };
 
+$font: 'FiraCode';
+$Karla: 'Karla';
 
 .container{
     height: 362px;
@@ -72,13 +74,54 @@ $breakpoint-700: 700px;
                 border: 1px solid #3dcfb6;
                 border-radius: 12px;
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                justify-content: space-around;
                 align-items: center;
                 object-fit: cover;
                 opacity: 0.5;
                 @include width700{
                     width: 100%;
                     flex: 1 0 95%;
+                }
+                .content-up{
+                    padding-left: 22px;
+                    padding-right: 22px;
+                    p{
+                        font-size: 18px;
+                        font-family: $Karla;
+                        color: #FFFFFF;
+                        font-weight: 200;
+                        a{
+                            text-decoration: none;
+                            color: #3DCFB6;
+                            &:hover{
+                                cursor: pointer;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+                .content-down{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 18px;
+                    padding-left: 22px;
+                    padding-right: 22px;
+                    .separator{
+                        height: 1px;
+                        width: 45%;
+                        background-color: #FFFFFF;
+                    }
+                    p{
+                        font-size: 18px;
+                        font-family: $Karla;
+                        color: #FFFFFF;
+                        font-weight: 200;
+                    }
+                    
                 }
 
             }
