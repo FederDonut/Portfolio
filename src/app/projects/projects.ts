@@ -52,10 +52,8 @@ export class Projects {
 
   changeProjektOverlay(){
     const currentIndex = this.OverlayService.projects.findIndex(p=>p.name === this.projectName)
-    console.log(currentIndex);
     const nextIndex = (currentIndex + 1) % this.OverlayService.projects.length
     this.projectName = this.OverlayService.projects[nextIndex].name
-    console.log(this.projectName)
   }
   
 }

@@ -37,9 +37,7 @@ export class ContactMe {
     if(!this.showMailOverlay){
       this.showMailOverlay = true;
       document.body.classList.add('no-scroll');
-      
     }
-
   }
 
   post = {
@@ -78,7 +76,6 @@ export class ContactMe {
         },
         complete: () => console.info('send post complete'),
       });
-      //this.showOverlay()
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();

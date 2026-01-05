@@ -60,10 +60,6 @@ export class Slider implements AfterViewInit, OnInit {
     const content = this.comments;
     const mirrorLeft = [content[content.length-1]];
     const mirrorRight = [content[0]]
-    console.log(mirrorLeft);
-    console.log(content);
-    console.log(mirrorRight)
-
     this.mirrorComments = [...mirrorLeft,...content,...mirrorRight];
 
   }
@@ -89,7 +85,6 @@ export class Slider implements AfterViewInit, OnInit {
             this.updateActivePagination()
         }, 300); 
     }
-    //this.changePagination(currentIndex) 
   }
 
   startPosition(index:number, behavior: 'auto'|'smooth'){

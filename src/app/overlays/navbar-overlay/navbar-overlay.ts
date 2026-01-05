@@ -14,11 +14,6 @@ import { TranslateService, TranslatePipe,} from '@ngx-translate/core';
 })
 export class NavbarOverlay {
 
-  
-
-  
-
-  
   @Input()english:boolean = true;
   @Output()changeLanguage = new EventEmitter<boolean>();
   @Output()closeOverlay = new EventEmitter<void>();
@@ -29,23 +24,16 @@ export class NavbarOverlay {
 
   emitLanguageChange(){
     this.changeLanguage.emit(this.english)
-    
   }
 
   switchLanguage(){
     if(!this.english){
       this.english = true
       this.emitLanguageChange();
-      //console.log('english')
-      //console.log(this.english)
     }else{
-      
       this.english = false;
       this.emitLanguageChange();
-      //console.log('deutsch')
-      //console.log(this.english)
     }
-    
   }
 
   close(){

@@ -250,13 +250,6 @@ $Karla: 'Karla';
                     p{
                         white-space: nowrap;
                     }
-                    
-                    //@include height667{
-                    //    display: flex;
-                    //    justify-content: center;
-                    //}
-                  
-                   
                     @include height932{
                         display: flex;
                         justify-content: center;
@@ -437,18 +430,7 @@ $Karla: 'Karla';
             height: 186px;
             width: 1px;
             background-color: #ffffff;
-            
-            //@include height896{
-            //    height: 180px;
-            //}
-            //@include height740{
-            //    height: 120px;
-            //}
-            //@include height684{
-            //    height: 70px;
-            //}
             @include height932(){
-                //height: 120px;
                 height: 15dvh;
             }
           
@@ -471,38 +453,29 @@ $Karla: 'Karla';
         overflow-x: hidden;
         @include height1366{
             bottom: -29%;
-            //bottom: 1dvh;
         }
         @include height1280{
-            //bottom: -360px;
             bottom: -30%
         }
         @include height1180{
             bottom: -26%;
-            //bottom: -311px;
         }
         @include height1024{
             bottom: -24%;
-            //bottom: -235px;
         }
         @include height932{
-            bottom: -24%;
-            //bottom: -35.5%;
+            bottom: -24%;//-24%
         }
         @include height896{
             bottom: -22%;
-            //bottom: -35%;   
         }
         @include height844{
-           bottom: -14%;
-            //bottom: -32%; 
+           bottom: -14%; 
         }
         @include height740{
-            //bottom: -27%;
             bottom: -9%;
         }
-        @include height667(){
-           //bottom: -22%
+        @include height667{
            bottom: 0;
         }
         @include heightQuer{
@@ -513,7 +486,6 @@ $Karla: 'Karla';
         .carousel-wrapper{
             height: 100%;
             width: max-content;
-           //min-width: 100%;
             flex-wrap: nowrap;
             animation: spin 10s infinite linear;
             display: flex;
@@ -573,7 +545,6 @@ $Karla: 'Karla';
     
 
 }
-
 
 
 @media (max-width: 392px){
