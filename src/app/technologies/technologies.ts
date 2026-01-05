@@ -42,13 +42,11 @@ export class Technologies {
     console.log(index);
     if(index === 10){
       this.showTechOverlay = true;
-      console.log(this.showTechOverlay)
     }
   }
 
   hideOverlay(){
     this.showTechOverlay = false;
-    console.log(this.showTechOverlay)
   }
 
 
