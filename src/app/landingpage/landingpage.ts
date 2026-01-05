@@ -22,12 +22,8 @@ export class Landingpage {
   gotLanguage(isEnglish:any){
     if(isEnglish){
       this.english = isEnglish;
-      console.log('englisch')
     }else{
       this.english = isEnglish;
-      console.log('deutsch')
     }
-  
-    //console.log(english);
   }
 }

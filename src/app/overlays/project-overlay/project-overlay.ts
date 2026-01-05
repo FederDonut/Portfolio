@@ -29,14 +29,11 @@ export class ProjectOverlay implements OnInit, OnChanges {
       console.log('overlay'+ this.projectName +'open ')
       if(this.projectName==="Join"){
         this.counter = 0;
-        console.log(this.counter)
       }
       if(this.projectName ==="El-Pollo-Loco"){
         this.counter = 1;
-        console.log(this.counter)
       }
       this.currentProject = this.OverlayService.projects[this.counter]
-      console.log(this.currentProject);
 
   }
 
@@ -60,9 +57,6 @@ export class ProjectOverlay implements OnInit, OnChanges {
   }
 
   nextProject(projectName:string){
-    console.log(projectName);
     this.nextProjectOverlay.emit();
-    
-   
   }
 }
