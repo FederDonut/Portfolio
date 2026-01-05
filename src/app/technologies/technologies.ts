@@ -39,7 +39,6 @@ export class Technologies {
  
 
   checkIndex(index:number){
-    console.log(index);
     if(index === 10){
       this.showTechOverlay = true;
     }

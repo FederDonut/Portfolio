@@ -26,7 +26,6 @@ export class ProjectOverlay implements OnInit, OnChanges {
   OverlayService = inject(OverlayService);
 
   ngOnInit(): void {
-      console.log('overlay'+ this.projectName +'open ')
       if(this.projectName==="Join"){
         this.counter = 0;
       }
