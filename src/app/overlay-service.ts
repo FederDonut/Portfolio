@@ -16,7 +16,7 @@ export class OverlayService {
       { name: "CSS", img: "assets/img/techImgs/greenImgs/CSS.png" },
       { name: "HTML", img: "assets/img/techImgs/greenImgs/HTML.png" },
       { name: "Firebase", img: "assets/img/techImgs/greenImgs/Firebase.png" },
-      { name: "Angular", img: "/assets/img/techImgs/greenImgs/Angular.png" },
+      //{ name: "Angular", img: "/assets/img/techImgs/greenImgs/Angular.png" },
       { name: "TypeScript", img: "assets/img/techImgs/greenImgs/TS.png" }
       ],
       photo: "/assets/img/Photos/Join-Photo-overlay.png",

@@ -1,9 +1,14 @@
 $font: 'FiraCode';
 
 $breakpoint-710: 710px;
+$breakpoint-smartphoneQuer: 431px;
+
 
 @mixin width710{
     @media(max-width: #{$breakpoint-710}){@content}
+};
+@mixin heightQuer{
+    @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
 };
 
 .navbar-wrapper{
@@ -18,6 +23,9 @@ $breakpoint-710: 710px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    @include heightQuer{
+        flex-direction: row-reverse;
+    }
 
     .mobil-menu{
         display: none;
@@ -32,12 +40,18 @@ $breakpoint-710: 710px;
             border-style: none;
             cursor: pointer;
         }
+        @include heightQuer{
+            display: block;
+        }
     }
 
     .nav-overlay{
         display: none;
 
         @include width710{
+            display: block;
+        }
+        @include heightQuer{
             display: block;
         }
     }
@@ -47,6 +61,10 @@ $breakpoint-710: 710px;
         display: flex;
         flex-direction: row;
         gap: 24px;
+
+        @include heightQuer{
+            display: none;
+        }
 
         .change-language-wrapper{
             height: 28px;
@@ -144,6 +162,10 @@ $breakpoint-710: 710px;
             font-weight: 400;
             gap: 0;
 
+            @include heightQuer{
+                display: none;
+            }
+
             span{
                 display: flex;
                 flex-direction: column;
@@ -167,6 +189,6 @@ $breakpoint-710: 710px;
 
     .full-name{
         display: none;
-        //width: auto;
+        
     }
 }

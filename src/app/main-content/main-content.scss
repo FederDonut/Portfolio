@@ -1,4 +1,4 @@
-
+$breakpoint-smartphoneQuer: 430px;
 $breakpoint-IphoneSe: 667px;
 $breakpoint-IphoneXR: 896px;
 $breakpoint-Iphone12: 844px;
@@ -17,6 +17,9 @@ $breakpoint-Iphone14: 932px;
 };
 @mixin height932{
     @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+@mixin heightQuer{
+    @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
 };
 
 %section-base {
@@ -48,11 +51,12 @@ $breakpoint-Iphone14: 932px;
         height: 100dvh;
         background: linear-gradient(60deg, #1C1C1C 20%, #08463B);
         
-        //@include height667{
-        //    height: 120vh;
-        //}
+        
         @include height932{
-            height: 100dvh//120dvh
+            height: 100dvh
+        }
+        @include heightQuer{
+            height: 135dvh;
         }
     }
     .about-me{
@@ -69,6 +73,7 @@ $breakpoint-Iphone14: 932px;
     .others-about-me{ //hier weitermachen !
         @extend %section-base;
         background-color: #1C1C1C;
+        height: auto
         
     }
     .contact-me{

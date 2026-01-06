@@ -156,6 +156,12 @@ $Karla: 'Karla';
                     &:hover{
                         cursor: pointer;
                         border-color: #3DCFB6;
+                        .btn-content-wrapper{
+                            animation: btn-spin-one 3s infinite linear;
+                            p{
+                               color: #3DCFB6;
+                            }
+                        }
                     }
 
                     .btn-content-wrapper{
@@ -178,23 +184,15 @@ $Karla: 'Karla';
                             font-size: 18px;
                             line-height: 120%;
                             flex-shrink: 0;
+                            width: 74px;
                             p{
                                 white-space: nowrap;
+                                transition: color 0.3s ease;
                             }
 
                         }
-                        &:hover {
-                            animation: btn-spin-one 3s infinite linear;
-                            p{
-                                color: #3DCFB6;
-                            }
-                        }
-
-                    
-                    &:hover{
-                        cursor: pointer;
                     }
-                }
+                
                 }
             }
             

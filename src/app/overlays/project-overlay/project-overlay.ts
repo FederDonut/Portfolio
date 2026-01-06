@@ -53,6 +53,7 @@ export class ProjectOverlay implements OnInit, OnChanges {
   closeOverlay(){
     this.closeProjectOverlay.emit(false);
     document.body.classList.remove('no-scroll');
+    document.documentElement.style.removeProperty('overflow');
   }
 
   nextProject(projectName:string){

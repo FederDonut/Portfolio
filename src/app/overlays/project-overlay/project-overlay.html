@@ -1,53 +1,68 @@
 
 <section class="overlay-wrapper">
-    <section class="content">
-        <div class="right-content">
-            <div class="headlines">
-                <h1>{{currentProject.number}}</h1>
-                <h2>{{currentProject.name}}</h2>
-            </div>
-            <div class="description">
-                <h3>{{'project-overlay.headline'|translate}}</h3>
-                <p>{{'project-overlay.description.'+ currentProject.name|translate}}</p>
-                <!--<p>{{currentProject.description.EN}}</p>-->
-                <div class="tech-stack">
-                  @for (item of currentProject.techstack; track item.name) {
-                    <div class="tech-content">
-                        <img [src]="item.img" [alt]="item.name">
-                        <p>{{item.name}}</p>
-                    </div>
-                  }
-                </div>
-            </div>
-            <div class="forword">
-                <a href={{currentProject.github}} rel="noopener noreferrer" target="_blank">
-                    <p>GitHub</p>
-                    <img src="/assets/img/arrow_outward.svg" alt="">
-                </a>
-               
-                <a href={{currentProject.livetest}} rel="noopener noreferrer" target="_blank">
-                    <p>Live Test</p>
-                    <img src="/assets/img/arrow_outward.svg" alt="">
-                </a>
-            </div>
-           
-        </div>
-        <div class="left-content">
-            <div class="close-btn-wrapper">
-                <button  (click)="closeOverlay()">
-                    <div class="close-img"></div>
-                </button>
-            </div>
-           
-            <img [src]="currentProject.photo" alt="">
-            <div class="next-wrapper">
+    
+    <!--<section class="support-wrapper">
+        <div class="next-wrapper">
                 <div class="next" (click)="nextProject(currentProject.name)">
                     <p>{{'project-overlay.btn-content'|translate}}</p>
                     <img src="/assets/img/iconizer-arrow_forward.svg" alt="">
                 </div>
             </div>
-        </div>
+    </section>-->
+
+    <section class="content">
+        <!--<section class="support-content"></section>-->
+            <div class="right-content">
+                <div class="headlines">
+                    <h1>{{currentProject.number}}</h1>
+                    <h2>{{currentProject.name}}</h2>
+                </div>
+                <div class="description">
+                    <h3>{{'project-overlay.headline'|translate}}</h3>
+                    <p>{{'project-overlay.description.'+ currentProject.name|translate}}</p>
+                    <!--<p>{{currentProject.description.EN}}</p>-->
+                    <div class="tech-stack">
+                      @for (item of currentProject.techstack; track item.name) {
+                        <div class="tech-content">
+                            <img [src]="item.img" [alt]="item.name">
+                            <p>{{item.name}}</p>
+                        </div>
+                      }
+                    </div>
+                </div>
+                <div class="forword">
+                    <a href={{currentProject.github}} rel="noopener noreferrer" target="_blank">
+                        <p>GitHub</p>
+                        <img src="/assets/img/arrow_outward.svg" alt="">
+                    </a>
+                
+                    <a href={{currentProject.livetest}} rel="noopener noreferrer" target="_blank">
+                        <p>Live Test</p>
+                        <img src="/assets/img/arrow_outward.svg" alt="">
+                    </a>
+                </div>
+                 
+            </div>
+
+
+
+            <div class="left-content">
+                <div class="close-btn-wrapper">
+                    <button  (click)="closeOverlay()">
+                        <div class="close-img"></div>
+                    </button>
+                </div>
+            
+                <img [src]="currentProject.photo" alt="">
+                <div class="next-wrapper">
+                    <div class="next" (click)="nextProject(currentProject.name)">
+                        <p>{{'project-overlay.btn-content'|translate}}</p>
+                        <img src="/assets/img/iconizer-arrow_forward.svg" alt="">
+                    </div>
+                </div>
+            </div>
         
         
     </section>
+    
 </section>

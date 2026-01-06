@@ -1,10 +1,21 @@
+
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
 $breakpoint-400: 400px;
+$breakpoint-374: 374px;
 
+$breakpoint-heightQuer: 430px;
 $breakpoint-IphoneSe: 667px;
+$breakpoint-GalaxyS8: 740px;
+
 $breakpoint-IphoneXr: 896px;
+$breakpoint-Iphone14: 932px;
+$breakpoint-IpadMini: 1024px;
+$breakpoint-1279: 1180px;
+$breakpoint-IpadMiniQuer: 768px;
+
+
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
@@ -18,13 +29,38 @@ $breakpoint-IphoneXr: 896px;
 @mixin width400{
     @media (max-width: #{$breakpoint-400}){@content;}
 }
+@mixin width374{
+    @media (max-width: #{$breakpoint-374}){@content;}
+}
 
+@mixin heightQuer{
+    @media (max-height: #{$breakpoint-heightQuer}){@content}
+};
 @mixin IphoneSE{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
+};
+@mixin GalaxyS8{
+    @media (max-height: #{$breakpoint-GalaxyS8}){@content}
 };
 @mixin IphoneXr{
     @media (max-height: #{$breakpoint-IphoneXr}){@content}
 };
+@mixin Iphone14{
+    @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+
+@mixin IpadMini{
+    @media  (max-height: #{$breakpoint-IpadMini}){@content}
+};
+@mixin ZenbookFold{
+    @media  (max-height: #{$breakpoint-1279}){@content;}
+}
+@mixin IpadMiniQuer{
+    @media (max-height: #{$breakpoint-IpadMiniQuer}){@content}
+};
+
+
+
 $font: 'FiraCode';
 $Karla: 'Karla';
 
@@ -34,18 +70,19 @@ $Karla: 'Karla';
     top: 0;
     left: 0;
     z-index: 5;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+   
     
     @include width1220{
         padding-left: 18px;
         padding-right: 18px;
     }
-    
+   
 
 
     .content{
@@ -61,6 +98,8 @@ $Karla: 'Karla';
         align-items: center;
         gap: 40px;
 
+       
+
         @include width1220{
             height: auto;
             width: 600px;
@@ -69,19 +108,28 @@ $Karla: 'Karla';
             padding-left: 5px;
             padding-right: 5px;
         }
-       
-        @include IphoneXr{
-            height: 800px;
-            gap: 8px;
-        }
-        @include IphoneSE{
-            height: 667px;
-            gap: 0;
-
-        }
         @include width650{
             width: 100%;
         }
+        @include IpadMini{
+            overflow-y: scroll;    
+            height: 800px;
+           
+        }
+        @include IpadMiniQuer{
+            height: 720px;
+            //overflow-y: scroll;
+        }
+    
+        @include IphoneSE{
+            height: 667px;
+            gap: 5%;
+
+        }
+        @include heightQuer{
+            height: 350px;    
+        }
+        
 
         
         .right-content{
@@ -95,16 +143,23 @@ $Karla: 'Karla';
             }
             @include width550{
                 width: 95%;
-                gap: 20px;
+                //gap: 10%;
             }
             @include width400{
                 height: 480px;
                 margin-bottom: 70px;
 
             }
+            @include IpadMini{
+                margin-bottom: 100px;
+            }
             @include IphoneSE{
-                margin-bottom: 0;
+                margin-bottom: 80px;
                 gap: 0;
+                //margin-bottom: 100px;
+            }
+            @include heightQuer{
+                margin-bottom: 100px;
             }
 
             .headlines{
@@ -120,12 +175,18 @@ $Karla: 'Karla';
                 }
                 @include width400{
                     height: auto;
-                    gap: 20px;
+                    //gap: 20px;
+                }
+               
+                @include Iphone14{
+                    height: auto;
                 }
                 @include IphoneXr{
                     height: auto;
                 }
-
+                //@include ZenbookFold{
+                //    height: 175px;
+                //}
 
                 h1{
                     font-size: 128px;
@@ -136,6 +197,7 @@ $Karla: 'Karla';
                     color: #3DCFB6;
                     @include width1220{
                         font-size: 72px;
+                       
                     }
                     @include width550{
                         font-size: 58px;
@@ -144,9 +206,20 @@ $Karla: 'Karla';
                     @include width400{
                         height: 60px;
                     }
+                    @include Iphone14{
+                        line-height: normal;
+                        height: 55px;
+                    }
                     @include IphoneSE{
                         font-size: 48px;
                     }
+                    @include IpadMiniQuer{
+                        line-height: 80%;
+                    }
+                    //@include ZenbookFold(){
+                    //    height: auto;
+                    //    line-height: 100px;
+                    //}
                 }
                 h2{
                     font-size: 64px;
@@ -163,8 +236,11 @@ $Karla: 'Karla';
                         font-size: 42px ;
                         text-wrap: auto;
                     }
-                    @include IphoneSE{
+                    @include Iphone14{
                         font-size: 38px;
+                    }
+                    @include ZenbookFold{
+                        font-size: 64px;
                     }
                 }
             }
@@ -220,6 +296,11 @@ $Karla: 'Karla';
                     @include IphoneSE{
                         display: none;
                     }
+                    @include heightQuer{
+                        display: flex;
+                        margin-top: 8px;
+                        //flex-direction: row;
+                    }
 
                     .tech-content{
                         height: 24px;
@@ -242,6 +323,7 @@ $Karla: 'Karla';
 
                 }
             }
+
             .forword{
                 height: 48px;
                 width: 304px;
@@ -258,12 +340,17 @@ $Karla: 'Karla';
                 @include width400{
                     margin-top: 70px;
                 }
+                @include Iphone14{
+                    margin-top: 0;
+                }
+               
+                @include GalaxyS8{
+                    margin-top: 30px;
+                }
                 @include IphoneSE{
                     margin-top: 0;
                 }
-                @include IphoneXr{
-                    margin-top: 20px;
-                }
+        
 
                 a{
                     height: 100%;
@@ -311,10 +398,14 @@ $Karla: 'Karla';
                             transition: 0.3s;
                             
                         }
-                    }
+                    }  
                 }
+                  //
+                //weiterer a tag 
             }
+           
         }
+       
 
         .left-content{
             height: 474px;
@@ -333,7 +424,7 @@ $Karla: 'Karla';
                 width: 100%;
                 height: auto;
                 padding-top: 0;
-                gap: 0;
+                //gap: 0;
             }
             
 
@@ -375,15 +466,22 @@ $Karla: 'Karla';
                 width: 100%;
                 border-radius: 30px;
                 @include width650{
-                    width: 342px;
+                    width: 95%;
                     height: 216px;
                 }
                 @include width400{
                     padding-left: 5px;
                     padding-right: 5px;
-                    width: 280px;
-                    height: 180px;
+                    width: 100%;
+                    //height: 180px;    
+                }
+                @include width374{
                     
+                    height: 180px;
+                }
+
+                @include heightQuer{
+                    height: 320px;
                 }
             }
             .next-wrapper{
@@ -392,6 +490,9 @@ $Karla: 'Karla';
                 display: flex;
                 justify-content: flex-end;
                 @include width400{
+                    height: 0;
+                }
+                @include Iphone14{
                     height: 0;
                 }
                 .next{
@@ -404,22 +505,32 @@ $Karla: 'Karla';
                     @include width1220{
                         position: relative;
                         top: 520px;
-                        left: -12%;
+                        left: -6%;
                     }
                     @include width650{
-                        top: 580px;
+                        //top: 580px;
                     }
                     @include width400{
                         top: 532px ;
-                        left: 5%;
+                        left: 3%;
                         gap: 8px;
                         margin-bottom: 10px;
+                    }
+                    @include Iphone14{
+                        top: 460px;
+                    }
+                    @include IphoneXr{
+                        top: 455px;
+                    }
+                    @include GalaxyS8{
+                        top: 480px;
                     }
                     @include IphoneSE{
                         top: 380px;
                     }
-                    @include IphoneXr{
-                        top: 480px;
+                    //////////////////////////////////////////
+                    @include heightQuer{
+                        top: 400px;
                     }
                     
                     p{
@@ -453,4 +564,9 @@ $Karla: 'Karla';
     }
    
 
+}
+@media (max-width: 1220px){
+    .content{
+        height: 654px !important;
+    }
 }

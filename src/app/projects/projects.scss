@@ -1,4 +1,6 @@
 $breakpoint-1540: 1540px;
+$breakpoint-1400: 1400px;
+
 $breakpoint-1220: 1220px;
 $breakpoint-950: 950px;
 $breakpoint-700: 700px;
@@ -7,6 +9,9 @@ $breakpoint-420: 420px;
 
 @mixin width1540{
     @media(max-width: #{$breakpoint-1540}){@content}
+};
+@mixin width1400{
+    @media(max-width: #{$breakpoint-1400}){@content}
 };
 @mixin width1220{
     @media(max-width: #{$breakpoint-1220}){@content}
@@ -37,12 +42,27 @@ $Karla: 'Karla';
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 100px;
+
+    @include width1540{
+        justify-content: flex-start;
+        padding-left: 6%;
+        gap: 2%;
+        
+    }
+    @include width1400{
+        //margin-left: 350px;
+        margin-left: 20%;
+    }
+
     @include width1220{
+        display: flex;
+        justify-content: center;
         height: auto;
         width: 95%;
         padding-left: 8px;
         padding-right: 8px;
         margin-top: 0;
+        margin-left: 0;
     }
 
     .project-wrapper{
@@ -52,9 +72,9 @@ $Karla: 'Karla';
         flex-direction: column;
         gap: 41px; 
        
-        @include width1540{
-            padding-left: 18px;
-            margin-right: 350px;
+        @include width1400{
+            //padding-left: 18px;
+            //margin-right: 350px;
         }
         @include width1220{
             padding-left: 0;
@@ -189,7 +209,7 @@ $Karla: 'Karla';
         display: flex;
         align-items: flex-end;
 
-        @include width1540{
+        @include width1400{
             display: none;
         }
         .preview-img{
