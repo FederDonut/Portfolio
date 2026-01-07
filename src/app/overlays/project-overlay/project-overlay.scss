@@ -3,7 +3,7 @@ $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
 $breakpoint-400: 400px;
-$breakpoint-374: 374px;
+$breakpoint-370: 370px;
 
 $breakpoint-heightQuer: 430px;
 $breakpoint-IphoneSe: 667px;
@@ -29,8 +29,8 @@ $breakpoint-IpadMiniQuer: 768px;
 @mixin width400{
     @media (max-width: #{$breakpoint-400}){@content;}
 }
-@mixin width374{
-    @media (max-width: #{$breakpoint-374}){@content;}
+@mixin width370{
+    @media (max-width: #{$breakpoint-370}){@content;}
 }
 
 @mixin heightQuer{
@@ -78,15 +78,16 @@ $Karla: 'Karla';
     overflow: hidden;
    
     
-    @include width1220{
-        padding-left: 18px;
-        padding-right: 18px;
-    }
+    //@include width1220{
+    //    padding-left: 18px;
+    //    padding-right: 18px;
+    //}
    
 
 
     .content{
-        height: 658px;
+        max-height: min(90dvh, 656px);
+        //height: 658px;
         width: 1248px;
         border-radius: 30px;
         padding-left: 50px;
@@ -101,34 +102,19 @@ $Karla: 'Karla';
        
 
         @include width1220{
-            height: auto;
-            width: 600px;
+            height: 844px;
+            width: 366px;
             flex-direction: column-reverse;
+            align-items: center;
             gap: 32px;
             padding-left: 5px;
             padding-right: 5px;
         }
-        @include width650{
+        @include width370{
             width: 100%;
+            overflow-y: scroll;
         }
-        @include IpadMini{
-            overflow-y: scroll;    
-            height: 800px;
-           
-        }
-        @include IpadMiniQuer{
-            height: 720px;
-            //overflow-y: scroll;
-        }
-    
-        @include IphoneSE{
-            height: 667px;
-            gap: 5%;
-
-        }
-        @include heightQuer{
-            height: 350px;    
-        }
+        
         
 
         
@@ -139,28 +125,17 @@ $Karla: 'Karla';
             flex-direction: column;
             gap: 40px;
             @include width1220{
+                
                 height: 560px;
+                width: 366px;
+                align-items: center;
             }
-            @include width550{
-                width: 95%;
+            @include width370{
+                width: 100%;
+                max-width: 342px;
                 //gap: 10%;
             }
-            @include width400{
-                height: 480px;
-                margin-bottom: 70px;
-
-            }
-            @include IpadMini{
-                margin-bottom: 100px;
-            }
-            @include IphoneSE{
-                margin-bottom: 80px;
-                gap: 0;
-                //margin-bottom: 100px;
-            }
-            @include heightQuer{
-                margin-bottom: 100px;
-            }
+           
 
             .headlines{
 
@@ -170,23 +145,17 @@ $Karla: 'Karla';
                 flex-direction: column;
                 gap: 24px;
                 @include width1220{
+                    height: 125px;
                     gap: 8px;
-                    width: auto;
+                    width: 342px;
+                    //align-items: center;
                 }
-                @include width400{
+                @include width370{
                     height: auto;
-                    //gap: 20px;
+                    width: 100%;
+                   
                 }
                
-                @include Iphone14{
-                    height: auto;
-                }
-                @include IphoneXr{
-                    height: auto;
-                }
-                //@include ZenbookFold{
-                //    height: 175px;
-                //}
 
                 h1{
                     font-size: 128px;
@@ -197,29 +166,10 @@ $Karla: 'Karla';
                     color: #3DCFB6;
                     @include width1220{
                         font-size: 72px;
+                        line-height: 100%;
                        
                     }
-                    @include width550{
-                        font-size: 58px;
-                        height: 80px;
-                    }
-                    @include width400{
-                        height: 60px;
-                    }
-                    @include Iphone14{
-                        line-height: normal;
-                        height: 55px;
-                    }
-                    @include IphoneSE{
-                        font-size: 48px;
-                    }
-                    @include IpadMiniQuer{
-                        line-height: 80%;
-                    }
-                    //@include ZenbookFold(){
-                    //    height: auto;
-                    //    line-height: 100px;
-                    //}
+                   
                 }
                 h2{
                     font-size: 64px;
@@ -232,16 +182,7 @@ $Karla: 'Karla';
                     @include width1220{
                         font-size: 56px;
                     }
-                    @include width550{
-                        font-size: 42px ;
-                        text-wrap: auto;
-                    }
-                    @include Iphone14{
-                        font-size: 38px;
-                    }
-                    @include ZenbookFold{
-                        font-size: 64px;
-                    }
+                  
                 }
             }
             .description{
@@ -251,12 +192,13 @@ $Karla: 'Karla';
                 flex-direction: column;
                 gap: 32px;
                 @include width1220{
+                    height: 169px;
                     gap: 20px;
-                    width: auto;
+                    width: 342px;
                 }
-                @include IphoneSE{
-                    margin-top: 20px;
-                    gap: 12px;
+                @include width370(){
+                    width: 100%;
+                   
                 }
                 h3{
                     font-size: 24px;
@@ -288,19 +230,14 @@ $Karla: 'Karla';
                     align-items: center;
                     gap: 24px;
 
-                    @include width650{
+                    @include width1220{
+                        height: 52px;
+                        width: 342px;
                         flex-wrap: wrap;
-                        gap: 8px;
+                        gap: 16px;
                         height: auto;
                     }
-                    @include IphoneSE{
-                        display: none;
-                    }
-                    @include heightQuer{
-                        display: flex;
-                        margin-top: 8px;
-                        //flex-direction: row;
-                    }
+                    
 
                     .tech-content{
                         height: 24px;
@@ -333,23 +270,13 @@ $Karla: 'Karla';
                 justify-content: space-between;
 
                 @include width1220{
-                    width: 100%;
+                    width: 342px;
+                    height: 48;
+                    gap: 32px;
                     justify-content: space-evenly;
 
                 }
-                @include width400{
-                    margin-top: 70px;
-                }
-                @include Iphone14{
-                    margin-top: 0;
-                }
-               
-                @include GalaxyS8{
-                    margin-top: 30px;
-                }
-                @include IphoneSE{
-                    margin-top: 0;
-                }
+                
         
 
                 a{
@@ -365,12 +292,7 @@ $Karla: 'Karla';
                     justify-content: center;
                     gap: 4px;
                     text-decoration: none;
-                    @include width400{
-                        width: 100px;
-                        padding-left: 12px;
-                        padding-right: 12px;
-
-                    }
+                    
                     p{
                         height: 22px;
                         width: auto;
@@ -415,15 +337,19 @@ $Karla: 'Karla';
             gap: 40px;
             margin-bottom: 60px;
             @include width1220{
+                //width: 342px;
+                width: 95%;
+                height: 312px;
                 margin-bottom: 0;
-                padding-top: 30px;
+                padding-top: 15px;
                 gap: 20px;
                 align-items: center;
             }
-            @include width650{
+            @include width370{
                 width: 100%;
+                max-width: 342px;
                 height: auto;
-                padding-top: 0;
+                //padding-top: 0;
                 //gap: 0;
             }
             
@@ -465,36 +391,23 @@ $Karla: 'Karla';
                 height: 369px;
                 width: 100%;
                 border-radius: 30px;
-                @include width650{
-                    width: 95%;
+                @include width1220{
+                    //width: 342px;
+                    width: 100%;
                     height: 216px;
                 }
-                @include width400{
-                    padding-left: 5px;
-                    padding-right: 5px;
-                    width: 100%;
-                    //height: 180px;    
-                }
-                @include width374{
-                    
-                    height: 180px;
-                }
-
-                @include heightQuer{
-                    height: 320px;
-                }
+              
             }
             .next-wrapper{
                 height: 40px;
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
-                @include width400{
+                @include width1220{
                     height: 0;
+                    
                 }
-                @include Iphone14{
-                    height: 0;
-                }
+               
                 .next{
                     height: 40px;
                     width: 151px;
@@ -504,34 +417,10 @@ $Karla: 'Karla';
                     gap: 12px;
                     @include width1220{
                         position: relative;
-                        top: 520px;
-                        left: -6%;
-                    }
-                    @include width650{
-                        //top: 580px;
-                    }
-                    @include width400{
-                        top: 532px ;
-                        left: 3%;
-                        gap: 8px;
-                        margin-bottom: 10px;
-                    }
-                    @include Iphone14{
                         top: 460px;
+                        left: 1%;
                     }
-                    @include IphoneXr{
-                        top: 455px;
-                    }
-                    @include GalaxyS8{
-                        top: 480px;
-                    }
-                    @include IphoneSE{
-                        top: 380px;
-                    }
-                    //////////////////////////////////////////
-                    @include heightQuer{
-                        top: 400px;
-                    }
+                    
                     
                     p{
                         color: #3DCFB6;
@@ -564,9 +453,4 @@ $Karla: 'Karla';
     }
    
 
-}
-@media (max-width: 1220px){
-    .content{
-        height: 654px !important;
-    }
 }
