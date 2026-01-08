@@ -1,4 +1,5 @@
 
+$breakpoint-1400: 1400px;
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
@@ -10,13 +11,17 @@ $breakpoint-IphoneSe: 667px;
 $breakpoint-GalaxyS8: 740px;
 
 $breakpoint-IphoneXr: 896px;
+$breakpoint-Surface: 912px;
 $breakpoint-Iphone14: 932px;
+
 $breakpoint-IpadMini: 1024px;
 $breakpoint-1279: 1180px;
 $breakpoint-IpadMiniQuer: 768px;
 
 
-
+@mixin width1400{
+    @media (max-width: #{$breakpoint-1400}){@content;}
+}
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
 }
@@ -44,6 +49,9 @@ $breakpoint-IpadMiniQuer: 768px;
 };
 @mixin IphoneXr{
     @media (max-height: #{$breakpoint-IphoneXr}){@content}
+};
+@mixin Surface{
+    @media (max-height: #{$breakpoint-Surface}){@content}
 };
 @mixin Iphone14{
     @media (max-height: #{$breakpoint-Iphone14}){@content}
@@ -114,11 +122,17 @@ $Karla: 'Karla';
             overflow-x: hidden;
         }
         @include width370{
-            width: 100%;
+            height: 653px;
+            width: 95%;
             overflow-y: scroll;
         }
         
-        
+        @include Iphone14{
+            height: 600px;
+        }
+        @include heightQuer{
+            height: 90%;
+        }
 
         
         .right-content{
@@ -137,7 +151,12 @@ $Karla: 'Karla';
                 width: 100%;
                 height: auto;
                 max-width: 342px;
+                margin-bottom: 80px;
                 //gap: 10%;
+            }
+
+            @include GalaxyS8{
+                margin-bottom: 0;        
             }
            
 
@@ -184,8 +203,13 @@ $Karla: 'Karla';
                     color: #FFFFFF;
                     white-space: nowrap;
                     @include width1220{
-                        font-size: 56px;
+                        font-size: 48px;
+                        word-spacing: -20px;
                     }
+                    @include width370{
+                        font-size: 40px;
+                    }
+                    
                   
                 }
             }
@@ -201,7 +225,7 @@ $Karla: 'Karla';
                     width: 342px;
                 }
                 @include width370(){
-                    width: 100%;
+                    width: 95%;
                    
                 }
                 h3{
@@ -273,12 +297,29 @@ $Karla: 'Karla';
                 align-items: center;
                 justify-content: space-between;
 
+                //@include width1400{
+                //    margin-bottom: 0 !important;
+                //}
                 @include width1220{
                     width: 342px;
                     height: 48;
                     gap: 32px;
                     justify-content: space-evenly;
 
+                }
+                @include width370{
+                    width: 95%;
+                    margin-top: 40px;
+                    gap: 20px;
+                }
+                @include Iphone14{
+                    margin-bottom: 80px;
+                }
+                //@include Surface{
+                //    margin-bottom: 0;
+                //}
+                @include GalaxyS8{
+                    margin-bottom: 60px;
                 }
                 
         
@@ -411,6 +452,9 @@ $Karla: 'Karla';
                     height: 0;
                     
                 }
+                @include width370{
+                    width: 95%;
+                }
                
                 .next{
                     height: 40px;
@@ -419,10 +463,21 @@ $Karla: 'Karla';
                     flex-direction: row;
                     align-items: center;
                     gap: 12px;
+
                     @include width1220{
                         position: relative;
                         top: 460px;
                         left: 1%;
+                    }
+                    @include width370{
+                        top: 520px;
+                    }
+                    @include GalaxyS8{
+                        //top: 495px;
+                        padding-bottom: 60px;
+                    }
+                    @include IphoneSE{
+                        padding-bottom: 0;
                     }
                     
                     
