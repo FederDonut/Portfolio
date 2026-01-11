@@ -1,6 +1,8 @@
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
+$breakpoint-Iphone14: 932px;
+$breakpoint-IpadAir: 1180px;
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content} 
@@ -10,7 +12,34 @@ $breakpoint-550: 550px;
 };
 @mixin width550{
     @media (max-width: #{$breakpoint-550}){@content}
+};
+@mixin Iphone14{
+    @media (max-height: #{$breakpoint-Iphone14}){@content}
+};
+@mixin IpadAir{
+    @media (max-height: #{$breakpoint-IpadAir}){@content}
+};
+
+
+$breakpoint-iphone-max-w: 932px; // iPhone 14 Pro Max Breite
+$ipad-air-w: 820px;
+$ipad-air-h: 1180px;
+
+// Spezielles Mixin für Tablets (iPad Air / Mini) im Portrait Modus
+// Es prüft: Ist es breit genug um kein Handy zu sein UND hoch genug?
+@mixin ipad-air-portrait {
+    @media screen and (min-width: 819px) and (max-width: 1024px) and (min-height: 1000px) {
+        @content;
+    }
 }
+
+// Wenn du explizit das iPhone im Querformat ansprechen willst:
+@mixin iphone-landscape {
+    @media screen and (max-height: 500px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 
 $font: 'FiraCode';
 $Karla: 'Karla';
@@ -33,6 +62,14 @@ $Karla: 'Karla';
         flex-direction: column;
         gap: 40px;
     }
+   
+    //@include IpadAir{
+    //    margin-top: 100px;
+    //}
+    //@include Iphone14{
+    //    margin-top: 0;
+    //}
+
     .radial-gradient{
         position: absolute;
         margin-top: 50px;
@@ -71,7 +108,7 @@ $Karla: 'Karla';
     
         h3{
             color: #3DCFB6;
-            font-size: 24px;
+            font-size: 19px;
             font-family: $Karla;
         }
     
@@ -90,7 +127,8 @@ $Karla: 'Karla';
 
             @include width650{
                 gap: 32px;
-                height: 520px;
+                height: 580px;
+                padding: 20px;
             }
 
             .headline{
@@ -106,8 +144,12 @@ $Karla: 'Karla';
                         font-size: 56px;
                     }
                     @include width550{
-                        font-size: 38px;
+                        font-size: 38px !important;
                     }
+                    @include IpadAir{
+                        font-size: 56px;
+                    }
+                    
                 }
                 @include width650{
                     height: auto;
@@ -125,10 +167,16 @@ $Karla: 'Karla';
 
                 @include width650{
                     height: auto;
-                    font-weight: 200;
-                    font-size: 14px;
+                    font-weight: 300;
+                    font-size: 16px;
                 }
-                
+                .another-skill{
+
+                    h3{
+                        font-size: 19px;
+                        padding-bottom: 10px;
+                    }
+                }
             }
             .link-wrapper{
                 height: 48px;

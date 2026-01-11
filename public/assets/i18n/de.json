@@ -48,17 +48,17 @@
         "headline": "Kollegen & Arbeitgeber Feedback...",
          "source": "Vollständiges Schreiben.",
         "content": {
-            "one":{
+            "0":{
                 "autor": "Manuela Immendörfer",
                 "text" : "Wir haben Herrn Zwick als absolut zuverlässigen und gewissenhaften Mitarbeiter geschätzt, der alle ihm übertragenen Aufgaben mit äußersrt großem Fleiß und durchdachtem Handeln erledigte. "
             },
-            "two": {
-                "autor": "Infos comming soon",
-                "text": " Infos comming soon"
+            "1": {
+                "autor": "Jennifer Thiel",
+                "text":  "Er zeichnet sich durch eine sehr angenehme und professionelle Zusammenarbeit aus. Als Teammitglied ist er hilfsbereit, zuverlässig und ausgesprochen teamfähig. Herausforderungen und Probleme hat er offen und lösungsorientiert angesprochen, dabei stets mit einem diplomatischen und respektvollen Kommunikationsstil. Auch in anspruchsvollen Situationen trug er aktiv zu einem positiven Teamzusammenhalt bei. Wenn zusätzliche Unterstützung erforderlich war, scheute er sich nicht, gezielt nach Hilfe zu fragen, um gemeinsam die bestmögliche Lösung zu finden."
             },
-            "three": {
-                "autor": "Infos comming soon",
-                "text": " Infos comming soon"
+            "2": {
+                "autor": "Yannick Becker",
+                "text":  "Raphael war ein echt zuverlässiger Projektpartner im gemeinsamen Canban-Projekt. Sein Schwerpunkt lag im Frontend (HTML, CSS, JavaScript), wo er sehr strukturiert und engagiert gearbeitet hat. Dazu hat er noch kleinere Backend-Aufgaben übernommen. Die Zusammenarbeit war professionell, menschlich und auf Augenhöhe. Wir haben uns stets gut verstanden!"
             }
         }
         

@@ -45,17 +45,17 @@
         "headline": "What my colleagus and employers say about me",
         "source": "View full letter.",
         "content": {
-            "one":{
+            "0":{
                 "autor": "Manuela Immendörfer",
                 "text" : "We valued Mr. Zwick as a thoroughly reliable and conscientious employee who approached all assigned tasks with great diligence and professional care. "
             },
-            "two": {
-                "autor": "Infos comming soon",
-                "text": " Infos comming soon"
+            "1": {
+                "autor": "Jennifer Thiel",
+                "text":  "A reliable team player with a professional and diplomatic communication style. He solves problems proactively and contributes to a positive team spirit, even under pressure, by focusing on collaborative and efficient solutions."
             },
-            "three": {
-                "autor": "Infos comming soon",
-                "text": " Infos comming soon"
+            "2": {
+                "autor": "Yannick Becker",
+                "text": "Raphael was a truly reliable partner in our joint Kanban project. His focus was on front-end development (HTML, CSS, JavaScript), where he worked in a very structured and committed manner. He also took on smaller back-end tasks. Our collaboration was professional, personable and on equal terms. We always got on well!"
             }
         }
     },
