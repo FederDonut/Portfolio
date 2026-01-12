@@ -237,9 +237,9 @@ $Karla: 'Karla';
                 gap: 172px;
 
                 &.lang-padding{
-                    padding-left: 30px;
+                    //padding-left: 30px;
                     @include height914{
-                        padding-left: 16px ;
+                        //padding-left: 16px ;
                     }
                 }
                 
@@ -255,8 +255,14 @@ $Karla: 'Karla';
                     font-weight: 400;
                     line-height: 120%;
                     flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
                     p{
                         white-space: nowrap;
+                    }
+                    @include width392{
+                        display: flex;
+                        justify-content: center;
                     }
                     @include height932{
                         display: flex;

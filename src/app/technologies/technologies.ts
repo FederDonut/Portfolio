@@ -23,17 +23,17 @@ export class Technologies {
   
 
   techStackImg = [
-    { titel: 'HTML', source: this.imgPath+'HTML.png'},
-    { titel: 'CSS', source: this.imgPath+'CSS.png'},
-    { titel: 'JS', source: this.imgPath+'JS.png'},
-    { titel: 'Material Design', source: this.imgPath+'Material.png'},
-    { titel: 'TS', source: this.imgPath+'TS.png'},
-    { titel: 'Angular', source: this.imgPath+'Angular.png'},
-    { titel: 'Firebase', source: this.imgPath+'Firebase.png'},
-    { titel: 'GIT', source: this.imgPath+'GIT.png'},
-    { titel: 'API', source: this.imgPath+'API.png'},
-    { titel: 'Scrum', source: this.imgPath+'Scrum.png'},
-    { titel: 'Growth Mindset', source: this.imgPath+'GrowthMindset.png'},
+    { titel: 'HTML', source: this.imgPath+'HTML.svg'},
+    { titel: 'CSS', source: this.imgPath+'CSS.svg'},
+    { titel: 'JS', source: this.imgPath+'JS.svg'},
+    { titel: 'Material Design', source: this.imgPath+'Material.svg'},
+    { titel: 'TS', source: this.imgPath+'TS.svg'},
+    { titel: 'Angular', source: this.imgPath+'Angular.svg'},
+    { titel: 'Firebase', source: this.imgPath+'Firebase.svg'},
+    { titel: 'GIT', source: this.imgPath+'GIT.svg'},
+    { titel: 'API', source: this.imgPath+'API.svg'},
+    { titel: 'Scrum', source: this.imgPath+'Scrum.svg'},
+    { titel: 'Growth Mindset', source: this.imgPath+'GrowthMindset.svg'},
   ]
 
  

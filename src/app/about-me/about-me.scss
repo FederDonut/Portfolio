@@ -212,6 +212,8 @@ $Karla: 'Karla';
                    
                     @include width400{
                         justify-content: flex-start;
+                        gap: 16px;
+                       
                     }
                     @include IpadAir(){
                         height: auto;
@@ -245,7 +247,7 @@ $Karla: 'Karla';
                                 font-size: 56px;
                             }
                             @include width600{
-                                font-size: 56px;
+                                font-size: 48px;
                             }
                             @include width400{
                                 font-size: 38px;
@@ -266,12 +268,16 @@ $Karla: 'Karla';
                         font-family: $Karla;
                         font-size: 16px;
                         font-weight: 400;
+                        @include width1220{
+                            height: auto;
+                        }
                         @include width600{
                             height: auto;
                             margin-bottom: 8px;
                         }
                         @include width400{
-                            height: auto;
+                            //height: auto;
+                            width: 90%;
                         }
                         @include IpadAir{
                             margin-bottom: 15px;
@@ -308,6 +314,9 @@ $Karla: 'Karla';
                             padding-bottom: 8%;
                             padding-left: 0;
                             padding-right: 0;
+                        }
+                        @include width400{
+                            width: 90%;
                         }
                        
                        

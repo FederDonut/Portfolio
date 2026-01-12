@@ -1,6 +1,7 @@
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
+$breakpoint-400: 400px;
 $breakpoint-360: 360px;
 $breakpoint-Iphone14: 932px;
 $breakpoint-IpadAir: 1180px;
@@ -13,6 +14,9 @@ $breakpoint-IpadAir: 1180px;
 };
 @mixin width550{
     @media (max-width: #{$breakpoint-550}){@content}
+};
+@mixin width400{
+    @media (max-width: #{$breakpoint-400}){@content;}
 };
 @mixin width360{
     @media (max-width: #{$breakpoint-360}){@content}
@@ -162,6 +166,9 @@ $Karla: 'Karla';
                     font-weight: 400;
                     font-size: 16px;
                 }
+                @include width400{
+                    width: 100%;
+                }
                 .another-skill{
 
                     h3{
@@ -182,7 +189,9 @@ $Karla: 'Karla';
                 justify-content: flex-start;
                 padding-left: 10%;
 
-                
+                @include width400{
+                    padding-left: 0;
+                }
             
                 .link-as-btn{
                     text-decoration: none;
