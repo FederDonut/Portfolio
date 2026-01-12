@@ -47,8 +47,6 @@ export class Projects {
   openOverlay(projectTitel: string){
     this.showProjectOverlay = true
     this.projectName = projectTitel;
-    //document.body.classList.add('no-scroll');
-    //document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
   }
 

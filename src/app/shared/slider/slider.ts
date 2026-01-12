@@ -39,10 +39,8 @@ export class Slider implements AfterViewInit, OnInit {
     const mirrorIndex = Math.round(scrollLeft / slideSize);
     let newOriginalIndex = mirrorIndex - 1;
     if (newOriginalIndex < 0) {
-        // Linker Spiegel-Slide -> wird als letzter echter Slide betrachtet
         newOriginalIndex = this.comments.length - 1; 
     } else if (newOriginalIndex >= this.comments.length) {
-        // Rechter Spiegel-Slide -> wird als erster echter Slide betrachtet
         newOriginalIndex = 0;
     }
     this.currentCommentId = this.comments[newOriginalIndex];
@@ -92,7 +90,7 @@ export class Slider implements AfterViewInit, OnInit {
       return
     }else{
       const sliderEl = this.sliderRef.nativeElement;
-      const commentElement = sliderEl.querySelector('.comment'); // bezieh die css werte
+      const commentElement = sliderEl.querySelector('.comment'); 
       const slideWidth = commentElement?.clientWidth || 0;
       const gap = 32;
       const startPosition = index * (slideWidth + gap);
@@ -112,11 +110,7 @@ export class Slider implements AfterViewInit, OnInit {
     const slideWidth = commentElement?.clientWidth || 0;
     const gap = 32;
     const scrollAmount = slideWidth + gap;
-    
-    // Beim Scrollen wird der Loop-Check durchgeführt
     this.checkPosition(direction);
-
-    // Scrollt um einen Slide
     const scrollByAmount = direction === 'next' ? scrollAmount : -scrollAmount;
     sliderEl.scrollBy({ left: scrollByAmount, behavior: 'smooth' });
   }
