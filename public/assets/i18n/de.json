@@ -33,8 +33,8 @@
         "comp-headline":"Technologien",
         "headline": "Fähigkeiten",
         "description": "Ich verfüge über solide Grundlagen in der Front-End-Entwicklung mit HTML, CSS, JavaScript, TypeScript, Angular, Firebase und Material Design, ergänzt durch Kenntnisse in REST-APIs, Git und Scrum. Ich entwickle gerne benutzerfreundliche, responsive Oberflächen und lerne ständig neue Tools, um in der Webumgebung effizient zu bleiben.",
-        "another-skill": "Sie brauchen noch ",
-        "another-skill-2":"eine weitere Fähigkeit?",
+        "another-skill": "eine",
+        "another-skill-2":"weitere Fähigkeit?",
         "description-2" :"Kontaktieren Sie mich geren, ich freue mich von Ihnen zu lesen.",
         "btn-content": "Kontakt"
     },
@@ -54,11 +54,11 @@
             },
             "1": {
                 "autor": "Jennifer Thiel",
-                "text":  "Ein zuverlässiger Teamplayer mit diplomatischer Kommunikation und lösungsorientierter Arbeitsweise. Er fördert den Teamzusammenhalt auch in fordernden Situationen und setzt auf eine offene, zielgerichtete Zusammenarbeit, um gemeinsam beste Ergebnisse zu erzielen."
+                "text":  "Lösungsorientierter Teamplayer, der durch diplomatische Kommunikation und proaktive Zusammenarbeit auch unter Druck den Teamzusammenhalt stärkt."
             },
             "2": {
                 "autor": "Yannick Becker",
-                "text":  "Raphael war ein echt zuverlässiger Projektpartner im gemeinsamen Canban-Projekt. Sein Schwerpunkt lag im Frontend (HTML, CSS, JavaScript), wo er sehr strukturiert und engagiert gearbeitet hat. Dazu hat er noch kleinere Backend-Aufgaben übernommen. Die Zusammenarbeit war professionell, menschlich und auf Augenhöhe. Wir haben uns stets gut verstanden!"
+                "text":  "Engagierter Frontend-Entwickler mit Backend-Einblicken. Er bereicherte unser Kanban-Projekt durch seine strukturierte Arbeitsweise, Zuverlässigkeit und eine Kommunikation auf Augenhöhe."
             }
         }
         

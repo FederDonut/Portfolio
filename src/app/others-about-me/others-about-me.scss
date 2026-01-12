@@ -1,7 +1,11 @@
 
+$breakpoint-360: 360px;
 $breakpoint-700: 700px;
 $breakpoint-950: 950px;
 
+@mixin width360{
+    @media(max-width:#{$breakpoint-360}){@content}
+};
 @mixin width700{
     @media(max-width:#{$breakpoint-700}){@content}
 };
@@ -43,9 +47,8 @@ $Karla: 'Karla';
     }
     .quotes{
         position: relative;
-        //display: block;
         top: 32px;
-        left: -22%;//-32%
+        left: -22%;
         min-height: 64px !important;
         height: 64px !important;
         width: 90px;
@@ -58,6 +61,9 @@ $Karla: 'Karla';
             width: 66px !important;
             min-height: 0 !important;
             left: -40.5%;
+        }
+        @include width360{
+            left: -36.5%;
         }
     }
     .slider-content{
