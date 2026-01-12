@@ -1,6 +1,7 @@
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
 $breakpoint-550: 550px;
+$breakpoint-360: 360px;
 $breakpoint-Iphone14: 932px;
 $breakpoint-IpadAir: 1180px;
 
@@ -13,32 +14,15 @@ $breakpoint-IpadAir: 1180px;
 @mixin width550{
     @media (max-width: #{$breakpoint-550}){@content}
 };
+@mixin width360{
+    @media (max-width: #{$breakpoint-360}){@content}
+};
 @mixin Iphone14{
     @media (max-height: #{$breakpoint-Iphone14}){@content}
 };
 @mixin IpadAir{
     @media (max-height: #{$breakpoint-IpadAir}){@content}
 };
-
-
-$breakpoint-iphone-max-w: 932px; // iPhone 14 Pro Max Breite
-$ipad-air-w: 820px;
-$ipad-air-h: 1180px;
-
-// Spezielles Mixin für Tablets (iPad Air / Mini) im Portrait Modus
-// Es prüft: Ist es breit genug um kein Handy zu sein UND hoch genug?
-@mixin ipad-air-portrait {
-    @media screen and (min-width: 819px) and (max-width: 1024px) and (min-height: 1000px) {
-        @content;
-    }
-}
-
-// Wenn du explizit das iPhone im Querformat ansprechen willst:
-@mixin iphone-landscape {
-    @media screen and (max-height: 500px) and (orientation: landscape) {
-        @content;
-    }
-}
 
 
 $font: 'FiraCode';
@@ -130,6 +114,9 @@ $Karla: 'Karla';
                 height: 580px;
                 padding: 20px;
             }
+            @include width360{
+                height: auto;
+            }
 
             .headline{
                 height: 64px;
@@ -145,6 +132,7 @@ $Karla: 'Karla';
                     }
                     @include width550{
                         font-size: 38px !important;
+                        letter-spacing: -2px;
                     }
                     @include IpadAir{
                         font-size: 56px;
@@ -273,6 +261,10 @@ $Karla: 'Karla';
         }
         @include width550{
             gap: 16px;
+            margin-bottom: 0;
+        }
+        @include width360{
+            padding-top: 30%;
         }
 
         .imgWrapper{
