@@ -1,7 +1,7 @@
 $breakpoint-1220: 1220px;
 $breakpoint-870: 870px;
 $breakpoint-700: 700px;
-$breakpoint-360: 360px;
+
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content}
@@ -12,9 +12,7 @@ $breakpoint-360: 360px;
 @mixin width700{
     @media(max-width:#{$breakpoint-700}){@content}
 };
-@mixin width360{
-    @media(max-width:#{$breakpoint-360}){@content}
-};
+
 
 $font: 'FiraCode';
 $Karla: 'Karla';
