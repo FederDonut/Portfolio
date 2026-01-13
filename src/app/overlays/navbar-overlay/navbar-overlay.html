@@ -2,9 +2,9 @@
 <section class="overlay-wrapper" (click)="close()">
     <section class="overlay-content" (click)="$event.stopPropagation()">
         <section class="menu">
-            <a href="#about-me">{{'navbar.about-me'|translate}}</a>
-            <a href="#technologies">{{'navbar.skills'|translate}}</a>
-            <a href="#projects">{{'navbar.projects'|translate}}</a>
+            <a href="#about-me" (click)="close()">{{'navbar.about-me'|translate}}</a>
+            <a href="#technologies" (click)="close()">{{'navbar.skills'|translate}}</a>
+            <a href="#projects" (click)="close()">{{'navbar.projects'|translate}}</a>
             <div class="change-language-wrapper">
 
                 <div class=" language choosen-language"

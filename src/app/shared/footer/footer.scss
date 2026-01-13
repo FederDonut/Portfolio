@@ -14,9 +14,7 @@ $Karla: 'Karla';
     display: flex;
     justify-content: center;
     
-    padding-left: 96px;
-    padding-right: 96px;
-
+   
     @include width700{
         padding-left: 18px;
         padding-right: 18px;
@@ -24,11 +22,12 @@ $Karla: 'Karla';
     }
     .content{
         height: 126px;
-        width: 1248px;
+        width: 100%;
+        max-width: 1920px;
         margin-top: 90px;
         margin-bottom: 90px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .left-wrapper{
             height: 100%;

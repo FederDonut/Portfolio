@@ -38,6 +38,7 @@ $Karla: 'Karla';
 .technologies{
     height: 695px;
     width: 100%;
+    max-width: 1920px;
     //background: radial-gradient(circle at -90% 80%, #08463B4D 30%, #1C1C1C 55%);
     //background-color: black;
     display: flex;
@@ -51,12 +52,7 @@ $Karla: 'Karla';
         gap: 40px;
     }
    
-    //@include IpadAir{
-    //    margin-top: 100px;
-    //}
-    //@include Iphone14{
-    //    margin-top: 0;
-    //}
+    
 
     .radial-gradient{
         position: absolute;
@@ -64,7 +60,7 @@ $Karla: 'Karla';
         left: -200px ;
         border: 1px solid red;
         height: 553px;
-        width: 1000px;
+        width: 75%;
         border-radius: 50%;
         filter: blur(35px);
         background: linear-gradient(to right, #08463b8c, #08463b61 50%, #08463b3b 80%, #08463b14);
