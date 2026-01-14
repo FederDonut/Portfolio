@@ -12,114 +12,48 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   templateUrl: './slider.html',
   styleUrl: './slider.scss',
 })
-export class Slider implements AfterViewInit, OnInit {
-
-  // Referenz auf das scrollbare DIV-Element mit der Klasse .slider
+export class Slider implements AfterViewInit {
   @ViewChild('sliderRef') sliderRef!: ElementRef<HTMLDivElement>;
 
-  comments = [0,1,2];
-  mirrorComments:any = []; 
-  firstCurrentSlideIndex:number = 1
-  currentSlideIndex: number = 0
-  currentCommentId: any = this.comments[0];
-
-  ngOnInit(){
-    this.storeMirror();
-    this.currentSlideIndex = 0;
-  }
-
-  updateActivePagination(){
-    
-    const sliderEl = this.sliderRef.nativeElement;
-    const commentElement = sliderEl.querySelector('.comment');
-    const slideWidth = commentElement?.clientWidth || 0;
-    const gap = 32;
-    const slideSize = slideWidth + gap;
-    const scrollLeft = sliderEl.scrollLeft;
-    const mirrorIndex = Math.round(scrollLeft / slideSize);
-    let newOriginalIndex = mirrorIndex - 1;
-    if (newOriginalIndex < 0) {
-        newOriginalIndex = this.comments.length - 1; 
-    } else if (newOriginalIndex >= this.comments.length) {
-        newOriginalIndex = 0;
-    }
-    this.currentCommentId = this.comments[newOriginalIndex];
-    
-  }
+  comments = [0, 1, 2];
+  currentCommentId: number = this.comments[0];
 
   ngAfterViewInit(): void {
-     this.startPosition(this.firstCurrentSlideIndex,'auto');
-    setTimeout(() => {
-        this.updateActivePagination();
-    }, 0);
+    this.updateActivePagination();
   }
 
-  storeMirror(){
-    const content = this.comments;
-    const mirrorLeft = [content[content.length-1]];
-    const mirrorRight = [content[0]]
-    this.mirrorComments = [...mirrorLeft,...content,...mirrorRight];
+  updateActivePagination() {
+    if (!this.sliderRef) return;
 
-  }
-
-  checkPosition(direction: 'next'|'prev'){
     const sliderEl = this.sliderRef.nativeElement;
-    const slideWidth = sliderEl.querySelector('.comment')?.clientWidth || 0;
-    const gap = 32;
-    const slideSize = slideWidth + gap;
-    const scrollLeft = sliderEl.scrollLeft;
-    const currentIndex = Math.round(scrollLeft / slideSize)
-    const lastCurrentSlidendex = this.comments.length;
-    
-    if (direction === 'next' && currentIndex === lastCurrentSlidendex) {
-        setTimeout(() => {
-            this.startPosition(this.firstCurrentSlideIndex, 'auto');
-            this.updateActivePagination()
-        }, 300); 
-    }
-    if (direction === 'prev' && currentIndex === this.firstCurrentSlideIndex) {
-        setTimeout(() => {
-            this.startPosition(lastCurrentSlidendex, 'auto');
-            this.updateActivePagination()
-        }, 300); 
-    }
-  }
-
-  startPosition(index:number, behavior: 'auto'|'smooth'){
-    if(!this.sliderRef || index < 0){
-      return
-    }else{
-      const sliderEl = this.sliderRef.nativeElement;
-      const commentElement = sliderEl.querySelector('.comment'); 
-      const slideWidth = commentElement?.clientWidth || 0;
-      const gap = 32;
-      const startPosition = index * (slideWidth + gap);
-      sliderEl.scrollTo({
-        left: startPosition,
-        behavior: 'auto'
-      });
-    }
-
+    const commentElement = sliderEl.querySelector('.comment');
+    const slideSize = (commentElement?.clientWidth || 0) + 32; 
+    const currentIndex = Math.round(sliderEl.scrollLeft / slideSize);
+    const safeIndex = Math.max(0, Math.min(currentIndex, this.comments.length - 1));
+    this.currentCommentId = this.comments[safeIndex];
   }
 
   scroll(direction: 'next' | 'prev') {
-    if (!this.sliderRef) return;
-    
     const sliderEl = this.sliderRef.nativeElement;
-    const commentElement = sliderEl.querySelector('.comment'); 
-    const slideWidth = commentElement?.clientWidth || 0;
-    const gap = 32;
-    const scrollAmount = slideWidth + gap;
-    this.checkPosition(direction);
-    const scrollByAmount = direction === 'next' ? scrollAmount : -scrollAmount;
-    sliderEl.scrollBy({ left: scrollByAmount, behavior: 'smooth' });
+    const slideSize = (sliderEl.querySelector('.comment')?.clientWidth || 0) + 32;
+    const currentIndex = Math.round(sliderEl.scrollLeft / slideSize);
+
+    if (direction === 'next') {
+      if (currentIndex >= this.comments.length - 1) {
+        sliderEl.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        sliderEl.scrollBy({ left: slideSize, behavior: 'smooth' });
+      }
+    } else {
+      if (currentIndex <= 0) {
+        const lastPos = (this.comments.length - 1) * slideSize;
+        sliderEl.scrollTo({ left: lastPos, behavior: 'smooth' });
+      } else {
+        sliderEl.scrollBy({ left: -slideSize, behavior: 'smooth' });
+      }
+    }
   }
 
-  slidePrev(){
-    this.scroll('prev');
-  }
-
-  slideNext(){
-    this.scroll('next');
-  }
+  slidePrev() { this.scroll('prev'); }
+  slideNext() { this.scroll('next'); }
 }

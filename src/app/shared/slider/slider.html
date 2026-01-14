@@ -1,39 +1,28 @@
+
 <section class="container">
     <div class="slider-wrapper">
         <div class="slider" #sliderRef (scroll)="updateActivePagination()">
-            @for (commentId of mirrorComments; track $index; let i = $index) {
-                <div class="comment"
-                    [class.spotlight]="commentId === currentCommentId"
-                >
+            @for (commentId of comments; track commentId) {
+                <div class="comment" [class.spotlight]="commentId === currentCommentId">
                     <div class="content-up">
-                         <p>{{'others-about-me.content.'+commentId+'.text'|translate}}<!--a href="">{{'others-about-me.source'|translate}}</a>--></p>
-                        
+                         <p>{{'others-about-me.content.' + commentId + '.text' | translate}}</p>
                     </div>
                     <div class="content-down">
                         <div class="separator"></div>
-                        <p>{{'others-about-me.content.'+commentId+'.autor'|translate}}</p>
-                        
+                        <p>{{'others-about-me.content.' + commentId + '.autor' | translate}}</p>
                     </div>
-                       
-                        
                 </div>
             }
         </div>    
     </div>
+
     <div class="slider-nav">
         <div class="btn prev" (click)="slidePrev()"></div>
         <div class="pagination">
-            @for(elipseId of comments; track comments; let i = $index){
-                
-                    <div class="elipse"
-                    id="{{i}}"
-                    [class.active]="elipseId === currentCommentId"
-                    
-                    ></div>     
+            @for(elipseId of comments; track elipseId) {
+                <div class="elipse" [class.active]="elipseId === currentCommentId"></div>     
             }
         </div>
-        <div class="btn next" (click)="slideNext()"
-        
-        ></div>
+        <div class="btn next" (click)="slideNext()"></div>
     </div>
 </section>
