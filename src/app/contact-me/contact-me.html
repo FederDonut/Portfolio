@@ -39,7 +39,7 @@
                                 ? ('contact-me.mailForm.mail-error' | translate) 
                                 : ('contact-me.mailForm.mail-bsp' | translate)" 
                              
-                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}">
                     @if(!mail.valid && mail.touched){
                         @if(mail.errors?.['pattern']){
                             <span>Please check your Emial format  (example@email.com)</span>

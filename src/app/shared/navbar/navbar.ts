@@ -28,7 +28,6 @@ export class Navbar implements OnInit{
   constructor(){
     this.translate.addLangs(['de', 'en']);
     this.translate.setFallbackLang('en');
-    //this.translate.use('en');
   }
 
   ngOnInit(){

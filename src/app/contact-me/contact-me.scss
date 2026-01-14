@@ -237,6 +237,7 @@ $Karla: 'Karla';
                             -webkit-text-fill-color: #FFFFFF !important;
                             font-family: $Karla !important;
                             transition: background-color 5000s ease-in-out 0s;
+                            caret-color: #FFFFFF !important; 
                         }
                         &:focus{
                             outline: none;
@@ -253,7 +254,7 @@ $Karla: 'Karla';
                     }
                     span{
                         font-family: $Karla;
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: 200;
                         color: #C36868;
                     }
