@@ -9,7 +9,7 @@ $breakpoint-370: 370px;
 $breakpoint-heightQuer: 430px;
 $breakpoint-IphoneSe: 667px;
 $breakpoint-GalaxyS8: 740px;
-
+$breakpoint-Iphone12: 844px;
 $breakpoint-IphoneXr: 896px;
 $breakpoint-Surface: 912px;
 $breakpoint-Iphone14: 932px;
@@ -49,6 +49,9 @@ $breakpoint-IpadMiniQuer: 768px;
 };
 @mixin IphoneXr{
     @media (max-height: #{$breakpoint-IphoneXr}){@content}
+};
+@mixin Iphone12{
+    @media (max-height: #{$breakpoint-Iphone12}){@content}
 };
 @mixin Surface{
     @media (max-height: #{$breakpoint-Surface}){@content}
@@ -476,6 +479,7 @@ $Karla: 'Karla';
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    justify-content: center;
                     gap: 12px;
 
                     @include width1220{
@@ -484,6 +488,9 @@ $Karla: 'Karla';
                         left: 1%;
                     }
                     @include width370{
+                        top: 520px;
+                    }
+                    @include Iphone12{
                         top: 520px;
                     }
                     @include GalaxyS8{

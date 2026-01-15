@@ -26,6 +26,7 @@ export class ProjectOverlay implements OnInit, OnChanges {
   OverlayService = inject(OverlayService);
 
   ngOnInit(): void {
+          
       if(this.projectName==="Join"){
         this.counter = 0;
       }
@@ -33,6 +34,7 @@ export class ProjectOverlay implements OnInit, OnChanges {
         this.counter = 1;
       }
       this.currentProject = this.OverlayService.projects[this.counter]
+     
 
   }
 
