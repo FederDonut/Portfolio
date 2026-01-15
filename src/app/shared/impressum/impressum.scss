@@ -134,6 +134,13 @@ $Karla: 'Karla';
                 span{
                     color: #FFFFFF;
                 }
+                a{
+                    color: #FFFFFF;
+                    &:hover{
+                        color: #3DCFB6;
+                        cursor: pointer;
+                    }
+                }
 
             }
             
