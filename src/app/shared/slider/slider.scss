@@ -2,6 +2,8 @@ $breakpoint-1220: 1220px;
 $breakpoint-870: 870px;
 $breakpoint-700: 700px;
 
+$breakpoint-GalaxyA51: 914px;
+
 
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content}
@@ -11,6 +13,10 @@ $breakpoint-700: 700px;
 };
 @mixin width700{
     @media(max-width:#{$breakpoint-700}){@content}
+};
+
+@mixin height914{
+    @media (max-height: #{$breakpoint-GalaxyA51}){@content}
 };
 
 
@@ -40,16 +46,17 @@ $Karla: 'Karla';
 
         @include width700{
             height: 360px;
+            
         }
           
         .slider{
             height: 278px;
             width: 80%;
             max-width: 1920px;
-            overflow-x: auto;
+            overflow-x: hidden;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
-            //aspect-ratio: 16/9;
+            box-sizing: border-box;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -68,8 +75,12 @@ $Karla: 'Karla';
             @include width700{
                 height: auto;
                 width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            @include height914{
                 padding: 0;
-            }  
+            } 
             .comment{
 
                 flex: 1 0 80%;
@@ -87,7 +98,7 @@ $Karla: 'Karla';
                 opacity: 0.5;
                 @include width700{
                     width: 100%;
-                    flex: 1 0 95%;
+                    flex: 1 0 100%;
                 }
                 .content-up{
                     padding-top: 10px;

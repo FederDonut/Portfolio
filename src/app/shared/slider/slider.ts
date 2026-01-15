@@ -16,9 +16,12 @@ export class Slider implements AfterViewInit {
   @ViewChild('sliderRef') sliderRef!: ElementRef<HTMLDivElement>;
 
   comments = [0, 1, 2];
-  currentCommentId: number = this.comments[0];
+  currentCommentId: number = this.comments[1];
 
   ngAfterViewInit(): void {
+    const startIndex = 1;
+    this.currentCommentId = this.comments[startIndex]
+    this.scrollToStartIndex(startIndex)
     this.updateActivePagination();
   }
 
@@ -31,6 +34,14 @@ export class Slider implements AfterViewInit {
     const currentIndex = Math.round(sliderEl.scrollLeft / slideSize);
     const safeIndex = Math.max(0, Math.min(currentIndex, this.comments.length - 1));
     this.currentCommentId = this.comments[safeIndex];
+  }
+
+  scrollToStartIndex(index : number){
+    if(!this.sliderRef) return;
+    const sliderEl = this.sliderRef.nativeElement;
+    const commentElement = sliderEl.querySelector('.comment');
+    const slideSize = (commentElement?.clientWidth || 0) + 32;
+    sliderEl.scrollLeft = index * slideSize;
   }
 
   scroll(direction: 'next' | 'prev') {
