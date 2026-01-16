@@ -1,9 +1,12 @@
 $font: 'FiraCode';
 
+$breakpoint-1220: 1220px;
 $breakpoint-710: 710px;
 $breakpoint-smartphoneQuer: 431px;
 
-
+@mixin width1220{
+    @media(max-width: #{$breakpoint-1220}){@content}
+};
 @mixin width710{
     @media(max-width: #{$breakpoint-710}){@content}
 };
@@ -17,12 +20,16 @@ $breakpoint-smartphoneQuer: 431px;
     left: 0;
     height: 98px;
     width: 100%;
-    max-width: 1940px;
+    max-width: 1920px;
     //background: linear-gradient(165deg,#1C1C1C 35% ,#08463B);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 96px;
+    @include width1220{
+        padding: 0;
+    }
     @include heightQuer{
         flex-direction: row-reverse;
     }

@@ -1,6 +1,10 @@
 
+<div class="app-container">
+    <main class="content">
+        <router-outlet />
+    </main>
+    @if (showFooter()) {
+        <app-footer class="app-footer"></app-footer>
+    }
+</div>
 
-<router-outlet />
-
-
-<app-footer></app-footer>
