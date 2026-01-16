@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output,OnInit,OnChanges, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output,OnInit,OnChanges, SimpleChanges, ElementRef } from '@angular/core';
 import { OverlayService } from '../../overlay-service';
 import { CommonModule } from '@angular/common';
 import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
@@ -20,13 +20,14 @@ export class ProjectOverlay implements OnInit, OnChanges {
   @Output()closeProjectOverlay = new EventEmitter<boolean>();
   @Output()nextProjectOverlay = new EventEmitter<void>();
 
+  
   counter:number = 0;
   currentProject: any;
+  element = inject(ElementRef);
 
   OverlayService = inject(OverlayService);
 
   ngOnInit(): void {
-          
       if(this.projectName==="Join"){
         this.counter = 0;
       }
@@ -61,4 +62,7 @@ export class ProjectOverlay implements OnInit, OnChanges {
   nextProject(projectName:string){
     this.nextProjectOverlay.emit();
   }
+
+  
+ 
 }

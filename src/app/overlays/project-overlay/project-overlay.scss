@@ -20,6 +20,7 @@ $breakpoint-Iphone14: 932px;
 $breakpoint-IpadMini: 1024px;
 $breakpoint-1279: 1180px;
 $breakpoint-IpadPro: 1380px;//1366px;
+$breakpoint-desktop:  1400px;
 $breakpoint-IpadQuer: 820px;
 $breakpoint-surfaceDuo: 720px;
 
@@ -89,6 +90,9 @@ $breakpoint-surfaceDuo: 720px;
 @mixin height1366{
     @media (max-height: #{$breakpoint-IpadPro}){@content}
 };
+@mixin height1400{
+    @media (max-height: #{$breakpoint-desktop}){@content}
+};
 
 
 
@@ -107,8 +111,10 @@ $Karla: 'Karla';
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    //overflow-y: auto;
     padding-left: 16px;
     padding-right: 16px;
+    //overflow-y: auto;
     
     
    @include width370{
@@ -121,6 +127,7 @@ $Karla: 'Karla';
         //max-height: min(90dvh, 658px);
         height: 658px;
         overflow: auto;
+        overflow: visible;
         overscroll-behavior: contain;
         width: 1248px;
         border-radius: 30px;
@@ -141,6 +148,7 @@ $Karla: 'Karla';
        
 
         @include width1220{
+            //height: auto;
             height: 844px;
             width: 850px;
             //flex-direction: column-reverse;
@@ -154,17 +162,26 @@ $Karla: 'Karla';
             flex-direction: row !important;
         }
         @include width650{
-            flex-direction: column-reverse !important;
+            flex-direction: column !important;
+            .left-content{
+                order: 1;
+            }
+            .right-content{
+                order: 2;
+            }
         }
         @include width370{
             height: 653px !important;
             width: 95%;
             overflow-y: scroll;
         }
+        
         @include height1366{
             height: 558px !important;
         }
-       
+        //@include height1400{
+        //    height: 844px !important;
+        //}
         @include Iphone14{
             height: 700px !important;
             //flex-direction: column-reverse;

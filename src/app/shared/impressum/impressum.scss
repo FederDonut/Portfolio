@@ -38,14 +38,10 @@ $Karla: 'Karla';
         width: 100%;
         display: flex;
         justify-content: center;
-        //padding-left: 10%;
-        //padding-right: 10%;
-        //background: linear-gradient(to bottom, #000c, #0006, #00000038, #0000 75%);
         
         .navbar{
             width: 100%;
             max-width: 1920px;
-            //background: linear-gradient(45deg, #1c1c1c 0% 35%, #08463b);
         }
 
         @include width1220{

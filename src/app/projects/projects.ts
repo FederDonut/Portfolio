@@ -48,6 +48,8 @@ export class Projects {
     this.showProjectOverlay = true
     this.projectName = projectTitel;
     document.documentElement.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
+   
   }
 
   changeProjektOverlay(){
