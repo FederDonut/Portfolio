@@ -99,6 +99,7 @@
         "location":"Germany"
     },
     "impressum":{
+        "main-headline":"Legal Notice",
         "headlines":{
             "imprint":"Imprint",
             "explore":"Exploring the Board",
@@ -113,7 +114,7 @@
             "terms":"By accessing and using ",
             "terms-1":"(Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. I, the listed student, may update or change the terms and conditions from time to time without notice.",
             
-            "scope":"has been developed as part of a student group project in a web development bootcamp at the",
+            "scope":"has been developed as part of a student project in a web development bootcamp at the",
             "scope-1":". It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
             "scope-2":"The design of ",
             "scope-3":"is owned by the",

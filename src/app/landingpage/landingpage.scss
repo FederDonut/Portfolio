@@ -4,7 +4,7 @@ $breakpoint-710: 710px;
 $breakponint-485: 485px;
 $breakpoint-392: 392px;;
 
-
+$breakpoint-notebook: 600px;
 $breakpoint-IphoneSe: 667px;
 $breakpoint-Iphone11: 684px;
 $breakpoint-GalaxyS8: 740px;
@@ -16,6 +16,7 @@ $breakpoint-IpadMini: 1024px;
 $breakpoint-IpadAir: 1180px;
 $breakpoint-AsusZenbook: 1280px;
 $breakpoint-IpadPro: 1366px;
+$breakpoint-4K: 3800px;
 $breakpoint-smartphoneQuer: 430px;
 
 @mixin width731{
@@ -31,6 +32,9 @@ $breakpoint-smartphoneQuer: 430px;
     @media (max-width: #{$breakpoint-392}){@content}
 };
 
+@mixin height600{
+    @media (max-height: #{$breakpoint-notebook}){@content}
+};
 @mixin height667{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
 };
@@ -64,6 +68,9 @@ $breakpoint-smartphoneQuer: 430px;
 @mixin height1366{
     @media (max-height: #{$breakpoint-IpadPro}){@content}
 };
+@mixin height3800{
+    @media (max-height: #{$breakpoint-4K}){@content}
+};
 @mixin heightQuer{
     @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
 };
@@ -92,6 +99,7 @@ $Karla: 'Karla';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     
     
     .headline-content{
@@ -468,8 +476,7 @@ $Karla: 'Karla';
         bottom: -362px;
         z-index: 1 !important;
         height: 62px;
-        width: 200%;//1990
-        //max-width: 1920px;//1920
+        width: 110dvw !important;
         rotate: -2.5deg;
         background-color: #FFFFFF1F;
         backdrop-filter: blur(5.3px);
@@ -477,6 +484,9 @@ $Karla: 'Karla';
         opacity: 0.8;
         
         overflow-x: hidden;
+        @include height3800{
+            bottom: -36%;
+        }
         @include height1366{
             bottom: -29%;
         }
@@ -503,6 +513,9 @@ $Karla: 'Karla';
         }
         @include height667{
            bottom: 0;
+        }
+        @include height600{
+            bottom: 3.5%;
         }
         @include heightQuer{
             bottom: -15%;

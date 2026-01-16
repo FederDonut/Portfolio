@@ -103,6 +103,7 @@
         "location":"Deutschland"
     },
     "impressum":{
+        "main-headline":"Rechtlicher Hinweis",
         "headlines":{
             "imprint":"Impressum",
             "explore":"Das Board erkunden",
@@ -117,7 +118,7 @@
             "terms":"Durch den Zugriff auf und die Nutzung von ",
             "terms-1":" (Produkt) erkennen Sie die folgenden Bedingungen und Richtlinien an, die von Zeit zu Zeit aktualisiert werden können. Ich, der genannte Student, behalte mir das Recht vor, diese Bedingungen ohne vorherige Ankündigung zu ändern.",
             
-            "scope":" wurde im Rahmen eines Gruppenprojekts im Webentwicklungs-Bootcamp der",
+            "scope":" wurde im Rahmen eines Projekts im Webentwicklungs-Bootcamp der",
             "scope-1":"entwickelt. Es dient ausschließlich zu Bildungszwecken und ist nicht für eine umfassende private oder geschäftliche Nutzung vorgesehen. Daher kann keine Gewähr für Verfügbarkeit, Zuverlässigkeit oder Genauigkeit übernommen werden.",
             "scope-2":"Das Design von",
             "scope-3":"ist Eigentum der ",
