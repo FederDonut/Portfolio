@@ -42,19 +42,25 @@
                     required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]+)*\.[a-zA-Z]{2,}">
                     @if(!mail.valid && mail.touched){
                         @if(mail.errors?.['pattern']){
-                            <span>Please check your Emial format  (example@email.com)</span>
+                            <span>{{'contact-me.mailForm.mail-vail'|translate}}</span>
                         }
                         
                     }
                 </div>
                  <div class="user-content post">
                     <h4>{{'contact-me.mailForm.content'|translate}}</h4>
-                        <textarea class="your-message" #message="ngModel" minlength="4" [(ngModel)]="contactData.message" type="text" id="message" name="message"
+                        <textarea class="your-message" #message="ngModel" minlength="14" [(ngModel)]="contactData.message" type="text" id="message" name="message"
                             [placeholder]="(!message.valid && message.touched) 
                                 ? ('contact-me.mailForm.content-error' | translate) 
                                 : ('contact-me.mailForm.content-bsp' | translate)" 
                             required
                         ></textarea>
+                    @if(!message.valid && message.touched){
+                        @if(message.errors?.['minlength']){
+                            <span>{{'contact-me.mailForm.message-vail1'|translate}}</span>
+                        }
+                    }
+                   
                 </div>
                 <div class="seperator"></div>
                 <div class="submit-content">
@@ -63,7 +69,7 @@
                             <input type="checkbox" name="privacy" [(ngModel)]="contactData.privacy" #privacy="ngModel"  id="checkbox" class="checkbox" required >
                             <span class="input-check"></span> 
                         </label>
-                        <p>{{'contact-me.mailForm.input-content-1'|translate}}<a routerLink="/imprint">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
+                        <p>{{'contact-me.mailForm.input-content-1'|translate}}<a routerLink="/data-protection">{{'contact-me.mailForm.link'|translate}}</a>{{'contact-me.mailForm.input-content-2'|translate}}</p>
                     </div>
                     @if (!privacy.valid && privacy.touched){
                         <p>{{'contact-me.mailForm.input-error'|translate}}</p>

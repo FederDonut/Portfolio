@@ -1,0 +1,141 @@
+$breakpoint-1080: 1080px;
+$breakpoint-710: 710px;
+
+@mixin width1080 {
+    @media (max-width: #{$breakpoint-1080}) { @content } 
+}
+
+@mixin width710 {
+    @media (max-width: #{$breakpoint-710}) { @content }
+}
+
+$font: 'FiraCode';
+$Karla: 'Karla';
+
+.content-wrapper {
+    // WICHTIG: min-height sorgt dafür, dass der Background immer den Screen füllt
+    min-height: 100dvh;
+    width: 100%;
+    background: linear-gradient(45deg, #1c1c1c 0% 35%, #08463b);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .navbar-wrapper {
+        height: 98px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 16px;
+        padding-right: 16px;
+        
+        .navbar {
+            width: 100%;
+            max-width: 1920px;
+            // Wir lassen den Background transparent, damit der Gradient durchscheint
+            background: transparent; 
+        }
+
+        @include width710 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    .arrow {
+        height: 40px;
+        width: 40px;
+        padding-left: 16px;
+        align-self: flex-start; // Hält den Pfeil links
+        margin-bottom: 30px;
+        cursor: pointer;
+        display: none;
+
+        @include width710 {
+            display: block;
+        }
+    }
+
+    .space-content-wrapper {
+        flex: 1; // Drückt den Footer nach unten, wenn wenig Text da ist
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 1032px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        
+        @include width1080 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            font-family: $font;
+            color: #3DCFB6;
+            margin-bottom: 20px;
+
+            @include width710 {
+                font-size: 32px;
+                color: #FFFFFF;
+            }
+        }
+
+        .inner-content-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            h3 {
+                font-size: 19px;
+                font-weight: 700;
+                font-family: $Karla;
+                color: #FFFFFF;
+                margin: 0;
+            }
+
+            .inner-content {
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $Karla;
+                    color: #3DCFB6;
+                    line-height: 1.5;
+
+                    span {
+                        color: #FFFFFF; // Für wichtige Begriffe
+                        font-weight: 700;
+                    }
+
+                    a {
+                        color: #FFFFFF;
+                        text-decoration: underline;
+                        &:hover {
+                            color: #3DCFB6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Die spezielle Klasse für den Footer in dieser Ansicht
+    .transparent-footer {
+        width: 100%;
+        ::ng-deep .footer-wrapper {
+            background-color: transparent !important;
+            border: none;
+            //width: 100vw;
+        }
+    }
+}

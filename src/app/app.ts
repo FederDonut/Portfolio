@@ -1,8 +1,10 @@
 import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { Footer } from "./shared/footer/footer";
+import { DataProtection } from './shared/data-protection/data-protection';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { filter } from 'rxjs';
+//import { NgStyle } from "../../node_modules/@angular/common/types/_common_module-chunk";
 
 
 
@@ -11,7 +13,9 @@ import { filter } from 'rxjs';
   imports: [
     RouterOutlet,
     Footer,
-    OverlayModule
+    DataProtection,
+    OverlayModule,
+    //NgStyle
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
@@ -20,16 +24,16 @@ export class App {
   protected readonly title = signal('Portfolio');
   private router = inject(Router);
   
-  // Signal, das steuert, ob der Footer sichtbar ist
   showFooter = signal(true);
+  
 
   constructor() {
-    // Wir hören auf Router-Events, um zu wissen, wo wir sind
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      // Wenn die URL '/imprint' ist, setzen wir das Signal auf false
-      this.showFooter.set(event.urlAfterRedirects !== '/imprint');
+        const isLegalPage = event.urlAfterRedirects === '/imprint' || 
+                            event.urlAfterRedirects === '/data-protection';
+        this.showFooter.set(!isLegalPage)
     });
   }
 }

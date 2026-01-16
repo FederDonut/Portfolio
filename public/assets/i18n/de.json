@@ -78,6 +78,9 @@
             "mail": "Ihre Email?",
             "mail-bsp": "ihreEmail@email.com",
             "mail-error": "Hoppla! Ihr Email-Adresse fehlt",
+            "mail-vail":"Bitte überprüfen Sie Ihr E-Mail-Format (name@email.com)",
+            "message-vail1":"Die Nachricht muss mindestens 14 Zeichen lang sein.", 
+            "message-vail2":"Bitte geben Sie eine Nachricht ein.",
             "content": "Kann ich helfen ?",
             "content-bsp": "Hallo Raphael, ich interessiere mich...",
             "content-error": "Was möchten Sie entwickeln?",
@@ -100,12 +103,14 @@
         "btn-content":"Weiter"
     },
     "footer":{
-        "location":"Deutschland"
+        "location":"Deutschland",
+        "datenschutz": "Datenschutz",
+        "impressum":"Impressum"
     },
     "impressum":{
-        "main-headline":"Rechtlicher Hinweis",
+        "main-headline":"Impressum",
         "headlines":{
-            "imprint":"Impressum",
+            "imprint":"Kontakt",
             "explore":"Das Board erkunden",
             "terms":"Nutzungsbedingungen",
             "scope":"Umfang und Eigentum am Produkt",
@@ -140,8 +145,25 @@
             "indemnity-3":"Für Fragen oder Mitteilungen kontaktieren Sie uns bitte unter",
             "date":"Datum: "
             
+        }   
+    },
+    "dataProtection":{
+        "headline":{
+            "headline1":"Verantwortlicher",
+            "headline2":"Datenerfassung auf dieser Website",
+            "headline3":"Hosting",
+            "headline4":"Ihre Rechte",
+            "Headline5":"Soziale Netzwerke"
+        },
+        "content":{
+            "content1":"Kontaktformular:",
+            "content1.5":"Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage bei mir gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
+            "content2":"Mein Portfolio wird bei",
+            "content2.5":"gehostet. Der Provider erhebt automatisch sogenannte Server-Log-Files (z.B. IP-Adresse, Browsertyp, Uhrzeit), die technisch notwendig sind, um die Stabilität und Sicherheit der Seite zu gewährleisten.",
+            "content3":"Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Hierzu können Sie sich jederzeit unter der oben angegebenen Adresse an mich wenden.",
+            "content5":"Ich verweise auf meiner Website auf mein Profil bei",
+            "content5.1":". Bitte beachten Sie, dass beim Anklicken dieser Links die Datenschutzbestimmungen der jeweiligen Plattform gelten."
         }
-            
 
     }
    

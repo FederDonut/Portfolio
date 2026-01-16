@@ -60,12 +60,12 @@ $Karla: 'Karla';
         padding-left: 16px;
         display: none;
         margin-bottom: 30px;
-        @include width710{
-            display: block;
-            &:hover{
-                cursor: pointer;
-            }
-        }
+        //@include width710{
+        //    display: block;
+        //    &:hover{
+        //        cursor: pointer;
+        //    }
+        //}
     }
 
     .space-content-wrapper{

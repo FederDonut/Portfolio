@@ -74,6 +74,9 @@
             "mail": "What's your email?",
             "mail-bsp": "youremail@email.com",
             "mail-error": "Hoppla! your email is required",
+            "mail-vail":"Please check your Emial format  (example@email.com)",
+            "message-vail1":"The message must be at least 14 characters long.", 
+            "message-vail2":"Please enter a message.",
             "content": "How can I help you?",
             "content-bsp": "Hello Raphael, I am intrested in ....",
             "content-error": "What do you need to develop?",
@@ -96,12 +99,14 @@
         "btn-content":"Next project"
     },
     "footer":{
-        "location":"Germany"
+        "location":"Germany",
+        "datenschutz": "Privacy Policy",
+        "impressum":"Imprint"
     },
     "impressum":{
         "main-headline":"Legal Notice",
         "headlines":{
-            "imprint":"Imprint",
+            "imprint":"Contact",
             "explore":"Exploring the Board",
             "terms":"Acceptance of terms",
             "scope":"Scope and ownership of the product",
@@ -137,7 +142,24 @@
             "date":"Date: "
             
         }
-            
+    },
+    "dataProtection":{
+        "headline":{
+            "headline1":"Responsible",
+            "headline2":"Data collection on this website",
+            "headline3":"Hosting",
+            "headline4":"Your rights",
+            "headline5":"Social media"
+        },
+        "content":{
+            "content1":"Contact Form:",
+            "content1.5":"If you send me enquiries via the contact form, your details from the enquiry form, including the contact details you provided there, will be stored by me for the purpose of processing the enquiry. I will not pass on this data without your consent.",
+            "content2":"My portfolio is hosted by",
+            "content2.5":". The provider automatically collects so-called server log files (e.g. IP address, browser type, time), which are technically necessary to ensure the stability and security of the site.",
+            "content3":"You have the right to receive information about the origin, recipient and purpose of your stored personal data free of charge at any time. You also have the right to request the correction or deletion of this data. To do so, you can contact me at any time at the address given above.",
+            "content5":"On my website, I refer to my profile",
+            "content5.1":". Please note that when you click on these links, the privacy policy of the respective platform applies."
+        }
 
     }  
 }
