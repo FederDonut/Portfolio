@@ -9,6 +9,7 @@ $breakpoint-370: 370px;
 
 $breakpoint-heightQuer: 430px;
 $breakpoint-notebook: 600px;
+$breakponint-GalaxyS9:658px;
 $breakpoint-IphoneSe: 667px;
 $breakpoint-GalaxyS8: 740px;
 $breakpoint-Iphone12: 844px;
@@ -50,6 +51,9 @@ $breakpoint-surfaceDuo: 720px;
 };
 @mixin notebook{
     @media (max-height: #{$breakpoint-notebook}){@content}
+};
+@mixin GalaxyS9{
+    @media (max-height: #{$breakponint-GalaxyS9}){@content}
 };
 @mixin IphoneSE{
     @media (max-height: #{$breakpoint-IphoneSe}){@content}
@@ -129,6 +133,11 @@ $Karla: 'Karla';
         align-items: center;
         gap: 40px;
         box-sizing: border-box;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
        
 
         @include width1220{
@@ -193,6 +202,9 @@ $Karla: 'Karla';
                 align-items: center;
                 padding-left: 8px;
             }
+            @include width650{
+                margin-bottom: 100px;
+            }
             @include width370{
                 width: 100%;
                 height: auto;
@@ -200,7 +212,9 @@ $Karla: 'Karla';
                 margin-bottom: 80px;
                 //gap: 10%;
             }
-            
+            @include Iphone14{
+                margin-bottom: 0;
+            }
             @include GalaxyS8{
                 margin-bottom: 0;        
             }
@@ -364,17 +378,20 @@ $Karla: 'Karla';
                     width: 95%;
                     //margin-top: 60px;
                     gap: 20px;
+                    padding-top: 20%;
                 }
                 @include Iphone14{
-                    margin-bottom: 80px;
+                    margin-bottom: 90px;
                 }
                 @include GalaxyS8{
                     margin-bottom: 60px;
                     padding-top: 20%;
                 }
                 @include IphoneSE(){
-                    padding-top: 10%;
+                    margin-bottom: 75px;
+                    padding-top: 20%;
                 }
+               
                 
         
 
@@ -525,15 +542,23 @@ $Karla: 'Karla';
                 border-radius: 30px;
                 @include width1220{
                     //width: 342px;
-                    width: 100% !important;
-                    height: 216px !important;
+                    width: 100%t;
+                    height: 216px;
+                }
+                @include width650{
+                    height: 300px;
+                    
                 }
                 @include width370{
-                    width: 95% !important;
+                    width: 90% !important;
+                    height: 216px !important;
                 }
                 @include height1366{
                     height: 300px;
                     width: 90%;
+                }
+                @include IphoneSE{
+                    height: 216px !important;
                 }
               
             }
@@ -561,26 +586,30 @@ $Karla: 'Karla';
 
                     @include width1220{
                         position: relative;
-                        top: 470px;
+                        top: 30px;
                         left: 1%;
                     }
                     @include width1024{
-                        top: 100px !important;
+                        //top: 100px !important;
+                        top: 30px !important
                     }
                     @include width650{
-                        top: 475px !important;
+                        top: 495px !important;
+                        //left: -90px
                     }
+                    
                     @include width370{
-                        top: 520px !important;
+                        //top: 520px !important;
+                        top: 475px !important;
                     }
                     //@include height1366{
                     //    top: 0 !important;
                     //}
                     @include Iphone12{
-                        top: 470px !important;
+                        top: 490px !important;
                     }
                     @include IpadQuer{
-                        top: 100px !important;
+                        top: 30px !important;
                     }
                     @include GalaxyS8{
                         top: 495px !important;
@@ -592,13 +621,16 @@ $Karla: 'Karla';
                     @include IphoneSE{
                         padding-bottom: 0;
                         //top: 510px;
-                        top: 460px !important;
+                        top: 495px !important;
+                    }
+                    @include GalaxyS9{
+                        top: 475px !important;
                     }
                     @include notebook{
                         top: 100px !important;
                     }
                     @include heightQuer{
-                        top: 465px !important;
+                        top: 495px !important;
                     }
                     
                     
