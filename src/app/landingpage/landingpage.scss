@@ -16,7 +16,12 @@ $breakpoint-IpadMini: 1024px;
 $breakpoint-IpadAir: 1180px;
 $breakpoint-AsusZenbook: 1280px;
 $breakpoint-IpadPro: 1366px;
+$breakpoint-4K-2000: 2000px;
+$breakpoint-4K-min: 2650px;
 $breakpoint-4K: 3800px;
+$breakpoint-4K-mid: 4000px;
+$breakpoint-4K-max: 4800px;
+$breakpoint-4k-xxl: 5300px; 
 $breakpoint-smartphoneQuer: 430px;
 
 @mixin width731{
@@ -65,11 +70,27 @@ $breakpoint-smartphoneQuer: 430px;
 @mixin height1280{
     @media (max-height: #{$breakpoint-AsusZenbook}){@content}
 };
+
 @mixin height1366{
     @media (max-height: #{$breakpoint-IpadPro}){@content}
 };
+@mixin height2000{
+    @media (max-height: #{$breakpoint-4K-2000}){@content}
+};
+@mixin height2650{
+    @media (max-height: #{$breakpoint-4K-min}){@content}
+};
 @mixin height3800{
     @media (max-height: #{$breakpoint-4K}){@content}
+};
+@mixin height4000{
+    @media (max-height: #{$breakpoint-4K-mid}){@content}
+};
+@mixin height4800{
+    @media (max-height: #{$breakpoint-4K-max}){@content}
+};
+@mixin height5300{
+    @media (max-height: #{$breakpoint-4k-xxl}){@content}
 };
 @mixin heightQuer{
     @media (max-height: #{$breakpoint-smartphoneQuer}){@content}
@@ -393,7 +414,7 @@ $Karla: 'Karla';
             transform: rotate(180deg);
             font-family: $font;
             font-weight: 400;
-            font-size: 14px;//18px
+            font-size: 16px;//18px
             line-height: 120%;
            
             .mail{
@@ -484,8 +505,24 @@ $Karla: 'Karla';
         opacity: 0.8;
         
         overflow-x: hidden;
+
+        @include height5300{
+            bottom: -45%;
+        }
+        @include height4800{
+            bottom: -43%;
+        }
+        @include height4000{
+            bottom: -42.5%;
+        }
         @include height3800{
             bottom: -36%;
+        }
+        @include height2650{
+            bottom: -38%;
+        }
+        @include height2000{
+            bottom: -35%;
         }
         @include height1366{
             bottom: -29%;

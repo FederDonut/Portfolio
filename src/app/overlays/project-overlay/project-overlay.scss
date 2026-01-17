@@ -314,7 +314,8 @@ $Karla: 'Karla';
                 flex-direction: column;
                 gap: 32px;
                 @include width1220{
-                    height: 169px;
+                    height: auto;
+                    //height: 169px;
                     gap: 20px;
                     width: 342px;
                 }
@@ -400,33 +401,33 @@ $Karla: 'Karla';
                     height: 48;
                     gap: 32px;
                     justify-content: space-evenly;
-                    padding-top: 10%;
+                    //padding-top: 10%;
 
                 }
                
                 @include width400{
                     width: 95%;
                     gap: 20px;
-                    padding-top: 20%;
+                    //padding-top: 20%;
                 }
                 @include Iphone14{
                     margin-bottom: 90px;
                 }
                 @include GalaxyS8{
                     margin-bottom: 60px;
-                    padding-top: 20%;
+                    //padding-top: 20%;
                 }
                 @include IphoneSE{
                     margin-bottom: 75px;
-                    padding-top: 20%;
+                    //padding-top: 20%;
                 }
                 @include GalaxyS9{
                     margin-bottom: 75px;
-                    padding-top: 30%;
+                    //padding-top: 30%;
                 }
                 @include heightQuer(){
                     margin-bottom: 75px;
-                    padding-top: 10%;
+                    //padding-top: 10%;
                 }
                
                 
@@ -629,7 +630,7 @@ $Karla: 'Karla';
 
                     @include width1220{
                         position: relative;
-                        top: 30px;
+                        top: 100px;
                         left: 1%;
                     }
                     @include width1024{
@@ -637,46 +638,51 @@ $Karla: 'Karla';
                         //top: 30px !important
                     }
                     @include width650{
-                        top: 495px !important;
+                        top: 520px;
                         //left: -90px
                     }
                     
                     @include width370{
-                        //top: 520px !important;
-                        top: 475px !important;
+                        top: 520px;
+                        //top: 475px !important;
                     }
                     @include height1370{
-                        top: 100px ;
+                        //top: 525px ;
                     }
-                    @include height1310{
+                    @include height1310(){
+                        top: 20px;
+                    }
+                    @include IpadMini{
                         top: 30px ;
                     }
+                    @include Iphone14{
+                        top: 520px;
+                    }
+                   
                     @include Iphone12{
-                        top: 515px !important;
+                        top: 545px ;
                     }
                     @include IpadQuer{
-                        top: 80px !important;
+                        top: 80px ;
                     }
                     @include GalaxyS8{
-                        top: 495px !important;
-                        padding-bottom: 60px;
+                        top: 510px ;
                     }
                     @include SurfaceDuo{
-                        top: 100px !important;
+                        top: 100px;
                     }
                     @include IphoneSE{
                         padding-bottom: 0;
-                        //top: 510px;
-                        top: 495px !important;
+                        top: 520px;
                     }
                     @include GalaxyS9{
-                        //top: 475px !important;
+                        top: 520px;
                     }
                     @include notebook{
-                        top: 100px !important;
+                        top: 55px;
                     }
                     @include heightQuer{
-                        top: 495px !important;
+                        top: 495px;
                     }
                     
                     
