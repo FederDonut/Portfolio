@@ -13,7 +13,7 @@ import { filter } from 'rxjs';
   imports: [
     RouterOutlet,
     Footer,
-    DataProtection,
+    //DataProtection,
     OverlayModule,
     //NgStyle
 ],
