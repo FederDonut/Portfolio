@@ -37,12 +37,7 @@ $breakpoint-Iphone14: 932px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //new
     background-color: #1C1C1C;
-    //gap: 100px;
-    //max-width: 1920px;
-
-    
     
     @include height896{
         overflow-x: hidden
