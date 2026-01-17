@@ -4,7 +4,7 @@ import { Footer } from "./shared/footer/footer";
 import { DataProtection } from './shared/data-protection/data-protection';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { filter } from 'rxjs';
-//import { NgStyle } from "../../node_modules/@angular/common/types/_common_module-chunk";
+
 
 
 
@@ -13,9 +13,7 @@ import { filter } from 'rxjs';
   imports: [
     RouterOutlet,
     Footer,
-    //DataProtection,
     OverlayModule,
-    //NgStyle
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
