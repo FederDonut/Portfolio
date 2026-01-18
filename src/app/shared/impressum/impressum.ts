@@ -17,6 +17,8 @@ import { Footer } from '../footer/footer';
 export class Impressum implements OnInit{
 
   ngOnInit(): void {
-      window.scrollTo(0, 0)
+  setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 0);
   }
 }

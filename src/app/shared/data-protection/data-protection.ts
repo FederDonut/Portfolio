@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { Navbar } from '../navbar/navbar';
 import { Footer } from '../footer/footer';
 import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
@@ -14,6 +14,11 @@ import { TranslatePipe, TranslateDirective } from '@ngx-translate/core';
   templateUrl: './data-protection.html',
   styleUrl: './data-protection.scss',
 })
-export class DataProtection {
+export class DataProtection implements OnInit{
 
+  ngOnInit(): void {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 0);
+  }
 }
