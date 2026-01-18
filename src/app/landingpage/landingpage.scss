@@ -105,15 +105,15 @@ $font: 'FiraCode';
 $Karla: 'Karla';
 
 .navbar-wrapper{
-    width: 85%;
-    height: 98px;
+    width: 100%;
     max-width: 1920px;
     display: flex;
+    padding: 0 8%;
     .navbar{
         width: 100%;
         
         ::ng-deep .navbar-wrapper{
-            padding: 0 0 !important;
+            padding: 20px 0 !important;
         }
     
     }
@@ -122,8 +122,6 @@ $Karla: 'Karla';
     height: 100dvh;
     width: 100%;
     max-width: 1920px;
-
-    //background: linear-gradient(60deg,#1C1C1C 20%,#08463B);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -398,7 +396,7 @@ $Karla: 'Karla';
             }
         }
         .green-line{
-            width: 1px;
+            width: 1.01px;
             height: 240px;
             background-color:  #3DCFB6;
             
