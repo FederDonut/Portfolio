@@ -45,7 +45,7 @@ $Karla: 'Karla';
         .content-info{
             height: auto;
             width: 568px;
-            @include width580{
+            @include width650{
                 width: 100%;
                 padding-left: 8px;
                 padding-right: 8px;
@@ -61,7 +61,7 @@ $Karla: 'Karla';
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
-                @include width580{
+                @include width650{
                     width: 95%;
                     gap: 20px;
                 }
@@ -73,7 +73,7 @@ $Karla: 'Karla';
                     flex-direction: column;
                     gap: 40px;
                     color: #3DCFB6;
-                    @include width580{
+                    @include width650{
                         width: auto;
                     }
                     h4{
@@ -104,7 +104,7 @@ $Karla: 'Karla';
                     display: flex;
                     flex-direction: column;
                     gap: 16px;
-                    @include width580{
+                    @include width650{
                         width: auto;
                     }
                     h3{
