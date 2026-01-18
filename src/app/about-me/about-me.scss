@@ -1,3 +1,5 @@
+
+$breakpoint-1350: 1350px;
 $breakpoint-1220: 1220px;
 $breakpoint-1180: 1180px;
 $breakpoint-710: 710px;
@@ -14,7 +16,9 @@ $breakpoint-IpadAir: 1180px;
 $breakpoint-IpadPro: 1366px;
 $breakpoint-smartphoneQuer: 500px;
 
-
+@mixin width1350{
+    @media (max-width: #{$breakpoint-1350}){@content;}
+}
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content;}
 }
@@ -65,7 +69,8 @@ $Karla: 'Karla';
 
 .photo-wrapper, .description-wrapper {
     opacity: 0; 
-    transition: opacity 0.5s ease; 
+    transition: opacity 0.5s ease;
+    //overflow-x: hidden; 
 }
 
 .photo-wrapper.visible {
@@ -89,7 +94,7 @@ $Karla: 'Karla';
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
     to {
         opacity: 1;
@@ -105,6 +110,7 @@ $Karla: 'Karla';
     justify-content: center;
     opacity: 1;
     transform: scale(1);
+    max-width: 1920px;
     
     .who-i-am{
         height: 708px;
@@ -113,17 +119,21 @@ $Karla: 'Karla';
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        @include width1220{
+        padding: 0 76px;
+        @include width1350{
             flex-direction: column;
             height: auto;
             align-items: center;
+        }
+        @include width600{
+            padding: 0 0;
         }
        
         .photo-wrapper{
             height: 100%;
             width: 568px;
 
-            @include width1220{
+            @include width1350{
                 width: 520px;
             }
             @include width600{
@@ -196,7 +206,7 @@ $Karla: 'Karla';
 
             
             
-            @include width1220{
+            @include width1350{
                 width: 520px;
                 padding-left: 8px;
                 padding-right: 8px;
@@ -224,9 +234,6 @@ $Karla: 'Karla';
                 }
                 @include IpadAir(){
                     max-width: 520px;
-                    padding-right: 8px;
-                    padding-left: 8px;
-
                 }
                 h3{
                     font-family: $Karla;

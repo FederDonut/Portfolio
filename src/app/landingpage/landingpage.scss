@@ -36,6 +36,9 @@ $breakpoint-smartphoneQuer: 430px;
 @mixin width392{
     @media (max-width: #{$breakpoint-392}){@content}
 };
+@mixin width2000{
+    @media (max-width: #{$breakpoint-4K-2000}){@content}
+};
 
 @mixin height600{
     @media (max-height: #{$breakpoint-notebook}){@content}
@@ -108,6 +111,11 @@ $Karla: 'Karla';
     display: flex;
     .navbar{
         width: 100%;
+        
+        ::ng-deep .navbar-wrapper{
+            padding: 0 0 !important;
+        }
+    
     }
 }
 .landingpage-content{
@@ -321,12 +329,16 @@ $Karla: 'Karla';
     .lateral-space{
         position: absolute;
         bottom: 0;
-        width: 85%;
+        width: 90%;
         height: 480px;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        max-width: 1920px;
+        max-width: 1680px;
+        padding: 0 2.8%;
+        @include width2000{
+            padding: 0 2.5%;
+        }
         @include height932{
             //bottom: -20%;
             height: 250px;
@@ -617,7 +629,7 @@ $Karla: 'Karla';
     .carousel::-webkit-scrollbar{
         display: none;
     }
-
+    
     
 
 }

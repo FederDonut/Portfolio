@@ -1,17 +1,29 @@
+$breakpoint-1350: 1350px;
 $breakpoint-1220: 1220px;
 $breakpoint-650: 650px;
+$breakpoint-600: 600px;
 $breakpoint-550: 550px;
 $breakpoint-400: 400px;
 $breakpoint-360: 360px;
 $breakpoint-Iphone14: 932px;
 $breakpoint-IpadAir: 1180px;
+$breakpoint-1600: 1600px;
 
+@mixin width1600{
+    @media (max-width: #{$breakpoint-1600}){@content} 
+};
+@mixin width1350{
+    @media (max-width: #{$breakpoint-1350}){@content;}
+}
 @mixin width1220{
     @media (max-width: #{$breakpoint-1220}){@content} 
 };
 @mixin width650{
     @media (max-width: #{$breakpoint-650}){@content}
 };
+@mixin width600{
+    @media (max-width: #{$breakpoint-600}){@content;}
+}
 @mixin width550{
     @media (max-width: #{$breakpoint-550}){@content}
 };
@@ -59,7 +71,7 @@ $Karla: 'Karla';
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
     to {
         opacity: 1;
@@ -75,13 +87,21 @@ $Karla: 'Karla';
     //background-color: black;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    
-    @include width1220{
+    //gap: 80px;
+    padding: 0 76px;
+    //@include width1600{
+    //    padding-right: 0;
+    //}
+
+    @include width1350{
         height: auto;
         flex-direction: column;
         gap: 40px;
+    }
+    @include width600{
+        padding: 0 0;
     }
    
     
@@ -112,7 +132,7 @@ $Karla: 'Karla';
         gap: 20px;
         z-index: 1;
 
-        @include width1220{
+        @include width1350{
             
             padding-left: 8px;
             padding-right: 8px;
@@ -143,12 +163,12 @@ $Karla: 'Karla';
 
             @include width650{
                 gap: 32px;
-                height: 580px;
+                height: auto;
                 padding: 20px;
             }
-            @include width360{
-                height: auto;
-            }
+            //@include width360{
+            //    height: auto;
+            //}
 
             .headline{
                 height: 64px;
@@ -289,16 +309,16 @@ $Karla: 'Karla';
         
         display: flex;
         flex-wrap: wrap;
-        gap: 32px;
+        gap: 72px;
 
-        @include width1220{
+        @include width1350{
             height: auto;
             margin-bottom: 80px;
             justify-content: center;
             align-items: center;
             padding-left: 8px;
             padding-right: 8px;
-            //gap: 16px;
+            gap: 32px;
             z-index: 1;
         }
         @include width650{
