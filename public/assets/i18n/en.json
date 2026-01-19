@@ -104,7 +104,7 @@
         "impressum":"Imprint"
     },
     "impressum":{
-        "main-headline":"Legal Notice",
+        "main-headline":"Imprint",
         "headlines":{
             "imprint":"Contact",
             "explore":"Exploring the Board",
@@ -144,6 +144,7 @@
         }
     },
     "dataProtection":{
+        "main-headline":"Privacy Policy",
         "headline":{
             "headline1":"Responsible",
             "headline2":"Data collection on this website",
